@@ -1,0 +1,437 @@
+2025-10-17 15:56:41,724 - distributed.scheduler - INFO - State start
+2025-10-17 15:56:41,726 - distributed.scheduler - INFO -   Scheduler at:     tcp://127.0.0.1:46141
+2025-10-17 15:56:41,726 - distributed.scheduler - INFO -   dashboard at:            127.0.0.1:8790
+2025-10-17 15:56:41,753 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:36181'
+Weather Data Multi-Year Processor
+========================================
+Processing years: 1950 to 2025
+Data directory: data
+Dask cluster: 20 workers, 4GB per worker
+Started at: 2025-10-17 15:56:39
+
+==================================================
+Setting up Dask cluster
+==================================================
+Checking for existing Dask clusters...
+No current client found
+All existing clusters closed.
+Setting up new cluster with 20 workers...
+2025-10-17 15:56:41,754 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:39537'
+2025-10-17 15:56:41,755 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:40021'
+2025-10-17 15:56:41,756 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:35319'
+2025-10-17 15:56:41,757 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:41137'
+2025-10-17 15:56:41,758 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:45805'
+2025-10-17 15:56:41,759 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:40811'
+2025-10-17 15:56:41,761 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:34871'
+2025-10-17 15:56:41,761 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:41031'
+2025-10-17 15:56:41,763 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:42851'
+2025-10-17 15:56:41,765 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:42681'
+2025-10-17 15:56:41,767 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:36757'
+2025-10-17 15:56:41,769 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:36295'
+2025-10-17 15:56:41,770 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:40085'
+2025-10-17 15:56:41,771 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:40773'
+2025-10-17 15:56:41,773 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:36815'
+2025-10-17 15:56:41,774 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:34381'
+2025-10-17 15:56:41,775 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:44549'
+2025-10-17 15:56:41,777 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:44299'
+2025-10-17 15:56:41,779 - distributed.nanny - INFO -         Start Nanny at: 'tcp://127.0.0.1:44347'
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 41851 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 33995 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 34005 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 35723 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 33253 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 40551 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 34625 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 41973 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 43555 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 39873 instead
+  warnings.warn(
+2025-10-17 15:56:42,448 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:45015
+2025-10-17 15:56:42,449 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:45015
+2025-10-17 15:56:42,449 - distributed.worker - INFO -           Worker name:                          5
+2025-10-17 15:56:42,449 - distributed.worker - INFO -          dashboard at:            127.0.0.1:41851
+2025-10-17 15:56:42,449 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,449 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,449 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,449 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:40957
+2025-10-17 15:56:42,449 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,449 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-fw5lh615
+2025-10-17 15:56:42,449 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:40957
+2025-10-17 15:56:42,449 - distributed.worker - INFO -           Worker name:                          4
+2025-10-17 15:56:42,449 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,449 - distributed.worker - INFO -          dashboard at:             127.0.0.1:8791
+2025-10-17 15:56:42,449 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,449 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,449 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,449 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,449 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-m6u5w59e
+2025-10-17 15:56:42,449 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,451 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:40957', name: 4, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,453 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:40957
+2025-10-17 15:56:42,453 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40786
+2025-10-17 15:56:42,453 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,454 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,454 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:45015', name: 5, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,454 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:45109
+2025-10-17 15:56:42,454 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:45109
+2025-10-17 15:56:42,454 - distributed.worker - INFO -           Worker name:                          7
+2025-10-17 15:56:42,454 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:45015
+2025-10-17 15:56:42,454 - distributed.worker - INFO -          dashboard at:            127.0.0.1:33995
+2025-10-17 15:56:42,454 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40772
+2025-10-17 15:56:42,454 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,454 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,454 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,454 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,454 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-mrvi0zot
+2025-10-17 15:56:42,454 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,454 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,454 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,454 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,454 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,456 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:45109', name: 7, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,456 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:45109
+2025-10-17 15:56:42,456 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40802
+2025-10-17 15:56:42,456 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,456 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,457 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,461 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:46327
+2025-10-17 15:56:42,461 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:46327
+2025-10-17 15:56:42,461 - distributed.worker - INFO -           Worker name:                         11
+2025-10-17 15:56:42,461 - distributed.worker - INFO -          dashboard at:            127.0.0.1:34005
+2025-10-17 15:56:42,461 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,461 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,461 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,461 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,461 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-voac4q8w
+2025-10-17 15:56:42,461 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,463 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:46327', name: 11, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,464 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:46327
+2025-10-17 15:56:42,464 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40818
+2025-10-17 15:56:42,464 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,464 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,464 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,465 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:45203
+2025-10-17 15:56:42,465 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:45203
+2025-10-17 15:56:42,465 - distributed.worker - INFO -           Worker name:                          2
+2025-10-17 15:56:42,465 - distributed.worker - INFO -          dashboard at:            127.0.0.1:35723
+2025-10-17 15:56:42,465 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,465 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,465 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,465 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,465 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-u_gpgyf7
+2025-10-17 15:56:42,465 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,467 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:45203', name: 2, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,467 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:45203
+2025-10-17 15:56:42,467 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40828
+2025-10-17 15:56:42,467 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,467 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,468 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 40453 instead
+  warnings.warn(
+2025-10-17 15:56:42,518 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:42275
+2025-10-17 15:56:42,518 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:42275
+2025-10-17 15:56:42,518 - distributed.worker - INFO -           Worker name:                         10
+2025-10-17 15:56:42,518 - distributed.worker - INFO -          dashboard at:            127.0.0.1:33253
+2025-10-17 15:56:42,518 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,518 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,518 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,518 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,518 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-oqz998cn
+2025-10-17 15:56:42,518 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,520 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:42275', name: 10, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,521 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:42275
+2025-10-17 15:56:42,521 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40834
+2025-10-17 15:56:42,521 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,521 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,522 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,523 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:38297
+2025-10-17 15:56:42,523 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:38297
+2025-10-17 15:56:42,523 - distributed.worker - INFO -           Worker name:                          9
+2025-10-17 15:56:42,523 - distributed.worker - INFO -          dashboard at:            127.0.0.1:40551
+2025-10-17 15:56:42,523 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,523 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,523 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,523 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,523 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-v5k9ef4e
+2025-10-17 15:56:42,523 - distributed.worker - INFO - -------------------------------------------------
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 40787 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 43059 instead
+  warnings.warn(
+2025-10-17 15:56:42,525 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:38297', name: 9, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,525 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:38297
+2025-10-17 15:56:42,525 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40838
+2025-10-17 15:56:42,526 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,526 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,526 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 43371 instead
+  warnings.warn(
+2025-10-17 15:56:42,526 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:42723
+2025-10-17 15:56:42,526 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:42723
+2025-10-17 15:56:42,526 - distributed.worker - INFO -           Worker name:                         14
+2025-10-17 15:56:42,527 - distributed.worker - INFO -          dashboard at:            127.0.0.1:34625
+2025-10-17 15:56:42,527 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,527 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,527 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,527 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,527 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-p5svdtku
+2025-10-17 15:56:42,527 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,529 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:42723', name: 14, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,529 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:42723
+2025-10-17 15:56:42,529 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40842
+2025-10-17 15:56:42,529 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,529 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,530 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 45633 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 41365 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 38481 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 45885 instead
+  warnings.warn(
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/site-packages/distributed/node.py:182: UserWarning: Port 8791 is already in use.
+Perhaps you already have a cluster running?
+Hosting the HTTP server on port 41675 instead
+  warnings.warn(
+2025-10-17 15:56:42,577 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:40471
+2025-10-17 15:56:42,578 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:40471
+2025-10-17 15:56:42,578 - distributed.worker - INFO -           Worker name:                          3
+2025-10-17 15:56:42,578 - distributed.worker - INFO -          dashboard at:            127.0.0.1:39873
+2025-10-17 15:56:42,578 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,578 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,578 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,578 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,578 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-xq5n4gdr
+2025-10-17 15:56:42,578 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,580 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:40471', name: 3, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,581 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:40471
+2025-10-17 15:56:42,581 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40858
+2025-10-17 15:56:42,581 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,581 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,581 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,585 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:36189
+2025-10-17 15:56:42,585 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:36189
+2025-10-17 15:56:42,585 - distributed.worker - INFO -           Worker name:                          1
+2025-10-17 15:56:42,585 - distributed.worker - INFO -          dashboard at:            127.0.0.1:43555
+2025-10-17 15:56:42,585 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,585 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,585 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,585 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,585 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-6dbalvp7
+2025-10-17 15:56:42,585 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,588 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:36189', name: 1, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,588 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:36189
+2025-10-17 15:56:42,588 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40874
+2025-10-17 15:56:42,588 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,588 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,589 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,617 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:46249
+2025-10-17 15:56:42,617 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:46249
+2025-10-17 15:56:42,618 - distributed.worker - INFO -           Worker name:                          0
+2025-10-17 15:56:42,618 - distributed.worker - INFO -          dashboard at:            127.0.0.1:41973
+2025-10-17 15:56:42,618 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,618 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,618 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,618 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,618 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-z0p49soe
+2025-10-17 15:56:42,618 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,621 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:46249', name: 0, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,621 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:46249
+2025-10-17 15:56:42,621 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40882
+2025-10-17 15:56:42,621 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,621 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,622 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,652 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:43145
+2025-10-17 15:56:42,653 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:43145
+2025-10-17 15:56:42,653 - distributed.worker - INFO -           Worker name:                          8
+2025-10-17 15:56:42,653 - distributed.worker - INFO -          dashboard at:            127.0.0.1:40787
+2025-10-17 15:56:42,653 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,653 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,653 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,653 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,653 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-ski8u4up
+2025-10-17 15:56:42,653 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,654 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:35309
+2025-10-17 15:56:42,654 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:35309
+2025-10-17 15:56:42,655 - distributed.worker - INFO -           Worker name:                         17
+2025-10-17 15:56:42,655 - distributed.worker - INFO -          dashboard at:            127.0.0.1:43059
+2025-10-17 15:56:42,655 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,655 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,655 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,655 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,655 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-032b7piq
+2025-10-17 15:56:42,655 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,655 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:43145', name: 8, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,655 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:43145
+2025-10-17 15:56:42,655 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40896
+2025-10-17 15:56:42,655 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,655 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,655 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:35429
+2025-10-17 15:56:42,655 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:35429
+2025-10-17 15:56:42,655 - distributed.worker - INFO -           Worker name:                         18
+2025-10-17 15:56:42,656 - distributed.worker - INFO -          dashboard at:            127.0.0.1:43371
+2025-10-17 15:56:42,656 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,656 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,656 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,656 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,656 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-cu2_1290
+2025-10-17 15:56:42,656 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,656 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,657 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:35309', name: 17, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,658 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:35309
+2025-10-17 15:56:42,658 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40908
+2025-10-17 15:56:42,658 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,658 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,658 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:35429', name: 18, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,658 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,658 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:35429
+2025-10-17 15:56:42,658 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40920
+2025-10-17 15:56:42,658 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,658 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,659 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,662 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:34007
+2025-10-17 15:56:42,662 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:34007
+2025-10-17 15:56:42,662 - distributed.worker - INFO -           Worker name:                         16
+2025-10-17 15:56:42,662 - distributed.worker - INFO -          dashboard at:            127.0.0.1:45633
+2025-10-17 15:56:42,662 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,662 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,662 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,662 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,662 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-xgbues_w
+2025-10-17 15:56:42,662 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,664 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:34007', name: 16, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,665 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:34007
+2025-10-17 15:56:42,665 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40934
+2025-10-17 15:56:42,665 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,665 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,665 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,668 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:33545
+2025-10-17 15:56:42,668 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:33545
+2025-10-17 15:56:42,668 - distributed.worker - INFO -           Worker name:                          6
+2025-10-17 15:56:42,668 - distributed.worker - INFO -          dashboard at:            127.0.0.1:40453
+2025-10-17 15:56:42,668 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,668 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,668 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,668 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,668 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-pymutoxx
+2025-10-17 15:56:42,668 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,669 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:41877
+2025-10-17 15:56:42,669 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:41877
+2025-10-17 15:56:42,669 - distributed.worker - INFO -           Worker name:                         13
+2025-10-17 15:56:42,669 - distributed.worker - INFO -          dashboard at:            127.0.0.1:38481
+2025-10-17 15:56:42,669 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,669 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,669 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,669 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,669 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-lt5njnfd
+2025-10-17 15:56:42,669 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,670 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:33545', name: 6, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,670 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:33545
+2025-10-17 15:56:42,670 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40942
+2025-10-17 15:56:42,670 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,670 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,671 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,672 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:41877', name: 13, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,672 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:41877
+2025-10-17 15:56:42,672 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40958
+2025-10-17 15:56:42,672 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,672 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,673 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,689 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:37373
+2025-10-17 15:56:42,689 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:37373
+2025-10-17 15:56:42,689 - distributed.worker - INFO -           Worker name:                         12
+2025-10-17 15:56:42,689 - distributed.worker - INFO -          dashboard at:            127.0.0.1:41365
+2025-10-17 15:56:42,689 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,689 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,689 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,689 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,690 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-sig3wrp8
+2025-10-17 15:56:42,690 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,692 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:37373', name: 12, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,692 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:37373
+2025-10-17 15:56:42,692 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40970
+2025-10-17 15:56:42,692 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,692 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,693 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,708 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:44493
+2025-10-17 15:56:42,708 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:44493
+2025-10-17 15:56:42,708 - distributed.worker - INFO -           Worker name:                         19
+2025-10-17 15:56:42,708 - distributed.worker - INFO -          dashboard at:            127.0.0.1:41675
+2025-10-17 15:56:42,708 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,708 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,708 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,708 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,708 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-fxwl7oya
+2025-10-17 15:56:42,708 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,710 - distributed.worker - INFO -       Start worker at:      tcp://127.0.0.1:43389
+2025-10-17 15:56:42,710 - distributed.worker - INFO -          Listening to:      tcp://127.0.0.1:43389
+2025-10-17 15:56:42,710 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:44493', name: 19, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,710 - distributed.worker - INFO -           Worker name:                         15
+2025-10-17 15:56:42,710 - distributed.worker - INFO -          dashboard at:            127.0.0.1:45885
+2025-10-17 15:56:42,710 - distributed.worker - INFO - Waiting to connect to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,710 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,710 - distributed.worker - INFO -               Threads:                          1
+2025-10-17 15:56:42,710 - distributed.worker - INFO -                Memory:                   3.73 GiB
+2025-10-17 15:56:42,710 - distributed.worker - INFO -       Local Directory: /tmp/dask-worker-space/worker-0ale7agv
+2025-10-17 15:56:42,710 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,710 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:44493
+2025-10-17 15:56:42,710 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40980
+2025-10-17 15:56:42,710 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,710 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,711 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,712 - distributed.scheduler - INFO - Register worker <WorkerState 'tcp://127.0.0.1:43389', name: 15, status: init, memory: 0, processing: 0>
+2025-10-17 15:56:42,713 - distributed.scheduler - INFO - Starting worker compute stream, tcp://127.0.0.1:43389
+2025-10-17 15:56:42,713 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:40990
+2025-10-17 15:56:42,713 - distributed.worker - INFO -         Registered to:      tcp://127.0.0.1:46141
+2025-10-17 15:56:42,713 - distributed.worker - INFO - -------------------------------------------------
+2025-10-17 15:56:42,713 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:46141
+2025-10-17 15:56:42,759 - distributed.scheduler - INFO - Receive client connection: Client-6724da7f-ab93-11f0-a272-5811224a71df
+2025-10-17 15:56:42,760 - distributed.core - INFO - Starting established connection to tcp://127.0.0.1:41000
+/home/yfreund/.conda/envs/dask-tutorial/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 120 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
