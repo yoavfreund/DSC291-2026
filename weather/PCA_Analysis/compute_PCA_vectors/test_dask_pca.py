@@ -4,6 +4,8 @@ Test program for dask_pca.py
 
 This module provides comprehensive tests for the Dask PCA implementation,
 including unit tests and performance benchmarks.
+
+IN class we will add a test of exact reconstruction
 """
 
 import numpy as np

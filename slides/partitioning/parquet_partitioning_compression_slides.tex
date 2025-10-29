@@ -1,0 +1,390 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+
+% Code listing setup
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    language=Python
+}
+
+\title{Parquet, Partitioning, and Compression with Dask}
+\subtitle{Optimizing Data Storage for Scalable Analytics}
+\author{CSE255 - Scalable Data Analysis}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Why Parquet?}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Traditional Formats:}
+\begin{itemize}
+    \item CSV: Text-based, no schema
+    \item JSON: Nested, but verbose
+    \item Pickle: Python-only, not cross-platform
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Parquet Advantages:}
+\begin{itemize}
+    \item \textbf{Columnar} storage
+    \item \textbf{Schema} embedded
+    \item \textbf{Compression} built-in
+    \item \textbf{Cross-platform} (Java, Python, R, Spark, etc.)
+    \item Efficient \textbf{projection} (read only needed columns)
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Columnar vs Row-Oriented Storage}
+\begin{center}
+\begin{tabular}{|l|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+\hline
+Format & Year & Temp & Station \\
+\hline
+Row 1 & 1950 & 15.2 & US001 \\
+Row 2 & 1950 & 18.5 & US002 \\
+Row 3 & 1950 & 12.8 & US003 \\
+\hline
+\end{tabular}
+
+\vspace{0.5cm}
+
+\textbf{Columnar (Parquet):}
+\begin{minipage}{0.45\textwidth}
+\textbf{Year}: 1950, 1950, 1950...
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\textbf{Temp}: 15.2, 18.5, 12.8...
+\end{minipage}
+
+\vspace{0.3cm}
+\small{Only read columns you need $\rightarrow$ Faster queries}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Basic Parquet with Dask}
+\begin{lstlisting}
+import dask.dataframe as dd
+
+# Read multiple Parquet files
+df = dd.read_parquet('s3://bucket/data/*.parquet')
+
+# Convert DataFrame to Parquet
+df.to_parquet(
+    'output/',
+    engine='pyarrow',
+    compression='snappy'
+)
+\end{lstlisting}
+
+\textbf{Key Features:}
+\begin{itemize}
+    \item Automatic schema inference
+    \item Partitioned by default (one file per partition)
+    \item Compression reduces size 3-10x vs CSV
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Parquet Schema}
+\begin{center}
+\textbf{Schema = Data Type + Metadata}
+
+\vspace{0.5cm}
+\begin{tabular}{|l|l|l|}
+\hline
+Column & Type & Metadata \\
+\hline
+year & int32 & nullable \\
+temp & float64 & nullable \\
+station\_id & string & categorical \\
+date & timestamp & timezone=UTC \\
+\hline
+\end{tabular}
+
+\vspace{0.3cm}
+\small{Benefits:}
+\begin{itemize}
+    \item No guessing data types when reading
+    \item Automatic validation
+    \item Categorical encoding for strings
+\end{itemize}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Partitioning Strategy}
+\begin{lstlisting}
+# Partition by single column
+df.to_parquet(
+    'output/',
+    partition_on=['year']  # Creates: year=2020/, year=2021/
+)
+
+# Partition by multiple columns
+df.to_parquet(
+    'output/',
+    partition_on=['year', 'country']  # year=2020/country=US/
+)
+
+# Custom partitioning with repartition
+df = df.repartition(npartitions=20)
+df.to_parquet('output/')
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Partitioning Benefits}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Time-based Partitioning:}
+\begin{itemize}
+    \item \texttt{year=2020/day=01/}
+    \item Filter before reading
+    \item Skip entire directories
+    \item Fast time-range queries
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Size-based:}
+\begin{itemize}
+    \item Target: 128MB per file
+    \item Balanced parallel processing
+    \item Reasonable memory usage
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Strategy Examples:}
+
+\vspace{0.2cm}
+\textbf{Weather Data:}
+\begin{itemize}
+    \item \texttt{year=YYYY/month=MM/}
+    \item Read: Last 3 months
+    \item Read: Single year for yearly analysis
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{Taxi Data:}
+\begin{itemize}
+    \item \texttt{year=YYYY/month=MM/}
+    \item Filter: Peak season only
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Reading Partitioned Data}
+\begin{lstlisting}
+# Read entire dataset
+df = dd.read_parquet('s3://bucket/data/')
+
+# Read specific partition (skips others!)
+df = dd.read_parquet('s3://bucket/data/')[
+    (dd['year'] == 2020) & 
+    (dd['month'] == 12)
+]
+
+# Read multiple partitions efficiently
+df = dd.read_parquet('s3://bucket/data/', 
+    filters=[('year', '>', 2019),
+             ('country', '==', 'US')]
+)
+\end{lstlisting}
+
+\vspace{0.2cm}
+\textbf{Dask + Parquet:} Automatic predicate pushdown
+\end{frame}
+
+\begin{frame}{Compression Options}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Codec & Speed & Ratio & Best For \\
+\hline
+\textbf{uncompressed} & Fastest & 1x & Development \\
+\textbf{snappy} & Fast & 2-3x & General purpose \\
+\textbf{gzip} & Medium & 3-5x & Balancing act \\
+\textbf{brotli} & Medium & 4-6x & Archival \\
+\textbf{zstd} & Fast-Med & 3-5x & Modern standard \\
+\hline
+\end{tabular}
+
+\vspace{0.5cm}
+\textbf{Recommendation:}
+\begin{itemize}
+    \item \textbf{snappy}: Good balance, widely supported
+    \item \textbf{zstd}: Better compression, fast
+    \item Avoid \textbf{gzip} for analytical workloads (slower)
+\end{itemize}
+\end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Setting Compression}
+\begin{lstlisting}
+# Global compression
+df.to_parquet(
+    'output/',
+    compression='zstd',
+    compression_level=1  # Balance speed/size
+)
+
+# Per-column compression (advanced)
+df.to_parquet(
+    'output/',
+    compression={
+        'numeric_cols': 'zstd',
+        'text_cols': 'snappy',  # Text compresses differently
+        'large_blobs': 'brotli'
+    }
+)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Real-World Example: Weather Data}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Before (CSV):}
+\begin{itemize}
+    \item 10GB uncompressed
+    \item Read entire file for any query
+    \item No schema validation
+    \item Slow filters
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Partitioning:}
+\begin{itemize}
+    \item \texttt{year=YYYY/month=MM/}
+    \item 24 partitions for 2 years
+    \item \textbf{50\% faster} queries
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{After (Parquet):}
+\begin{itemize}
+    \item 3GB with snappy (\textbf{3.3x reduction})
+    \item Read only needed columns
+    \item Schema validated on read
+    \item Fast columnar scans
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Compression:}
+\begin{itemize}
+    \item snappy: Balanced
+    \item Brotli: \textbf{4GB → 1.5GB} (better ratio, slower)
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Best Practices: Raw→Bronze→Silver}
+\begin{lstlisting}
+# Step 1: Raw (untouched)
+download_data('raw_data/')
+
+# Step 2: Bronze (schema + compression)
+raw = dd.read_csv('raw_data/*.csv')
+bronze = (raw
+    .assign(date=dd.to_datetime(raw['date']))
+    .dropna(subset=['key_cols'])
+)
+bronze.to_parquet(
+    'bronze/',
+    partition_on=['year'],
+    compression='snappy'
+)
+
+# Step 3: Silver (joined + optimized)
+bronze = dd.read_parquet('bronze/')
+metadata = dd.read_parquet('metadata/')
+silver = bronze.merge(metadata, on='station_id')
+silver.to_parquet(
+    'silver/',
+    partition_on=['year', 'country'],
+    compression='zstd'
+)
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Choosing Partition Columns}
+\begin{enumerate}
+    \item \textbf{Frequently filtered} (year, month, country)
+    \item \textbf{Balanced cardinality} (not too many, not too few)
+    \item \textbf{Query patterns} match your filters
+    \item \textbf{Avoid high-cardinality} columns (user\_id, timestamp)
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{Examples:}
+\begin{itemize}
+    \item Good: \texttt{partition\_on=['year', 'state']}
+    \item Bad: \texttt{partition\_on=['timestamp']} (millions of partitions)
+    \item Good: \texttt{partition\_on=['year']} then repartition by size
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Monitoring Partition Sizes}
+\begin{lstlisting}
+import pyarrow.parquet as pq
+
+# Check partition sizes
+table = pq.read_table('output/')
+print(f"Row groups: {table.num_row_groups}")
+print(f"Compressed size: {table.nbytes}")
+print(f"Rows: {len(table)}")
+
+# Inspect in Dask
+df = dd.read_parquet('output/')
+df.map_partitions(len).compute()  # Rows per partition
+df.npartitions  # Number of partitions
+\end{lstlisting}
+
+\vspace{0.3cm}
+\textbf{Target:} 128MB - 1GB per partition (for S3)
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{block}{Parquet}
+Columnar format with schema $\rightarrow$ Fast analytical queries
+\end{block}
+
+\begin{block}{Partitioning}
+Organize by query patterns $\rightarrow$ Skip irrelevant data
+\end{block}
+
+\begin{block}{Compression}
+Balance speed vs size (snappy/zstd) $\rightarrow$ Cost savings
+\end{block}
+
+\vspace{0.3cm}
+\textbf{Dask Integration:}
+\begin{itemize}
+    \item Automatic predicate pushdown (filters)
+    \item Column projection (read only needed columns)
+    \item Parallel I/O across partitions
+    \item Lazy evaluation (combine multiple operations)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\centering
+\Huge{Questions?}
+
+\vspace{1cm}
+\large{Demo: Converting CSV $\rightarrow$ Parquet with Dask}
+\end{frame}
+
+\end{document}
+

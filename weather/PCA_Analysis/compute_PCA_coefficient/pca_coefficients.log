@@ -1,0 +1,216 @@
+2025-10-28 21:14:14,934 - INFO - Loading PCA results...
+2025-10-28 21:14:14,935 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:14:14,935 - INFO - Loaded PCA results for PRCP: components (10, 365), variances (10,)
+2025-10-28 21:14:14,935 - WARNING - PCA file not found: /tmp/tmppk6y00ro/pca_results/tmin_pca_results.pkl
+2025-10-28 21:14:14,935 - WARNING - PCA file not found: /tmp/tmppk6y00ro/pca_results/snow_pca_results.pkl
+2025-10-28 21:14:14,935 - WARNING - PCA file not found: /tmp/tmppk6y00ro/pca_results/tmax_pca_results.pkl
+2025-10-28 21:14:14,935 - WARNING - PCA file not found: /tmp/tmppk6y00ro/pca_results/tobs_pca_results.pkl
+2025-10-28 21:14:14,935 - WARNING - PCA file not found: /tmp/tmppk6y00ro/pca_results/tavg_pca_results.pkl
+2025-10-28 21:14:14,935 - INFO - Successfully loaded PCA results for 2 measurement types
+2025-10-28 21:14:14,935 - INFO - Processing SNWD...
+2025-10-28 21:14:15,009 - INFO - Processing 10 records for SNWD
+2025-10-28 21:14:15,019 - INFO - Generated 10 records with PCA coefficients for SNWD
+2025-10-28 21:14:15,019 - INFO - Processing PRCP...
+2025-10-28 21:14:15,029 - INFO - Processing 10 records for PRCP
+2025-10-28 21:14:15,038 - INFO - Generated 10 records with PCA coefficients for PRCP
+2025-10-28 21:14:15,041 - INFO - Loading PCA results...
+2025-10-28 21:14:15,041 - WARNING - PCA file not found: /tmp/tmpcyx2ppzu/pca_results/snwd_pca_results.pkl
+2025-10-28 21:14:15,041 - WARNING - PCA file not found: /tmp/tmpcyx2ppzu/pca_results/prcp_pca_results.pkl
+2025-10-28 21:14:15,041 - WARNING - PCA file not found: /tmp/tmpcyx2ppzu/pca_results/tmin_pca_results.pkl
+2025-10-28 21:14:15,041 - WARNING - PCA file not found: /tmp/tmpcyx2ppzu/pca_results/snow_pca_results.pkl
+2025-10-28 21:14:15,041 - WARNING - PCA file not found: /tmp/tmpcyx2ppzu/pca_results/tmax_pca_results.pkl
+2025-10-28 21:14:15,041 - WARNING - PCA file not found: /tmp/tmpcyx2ppzu/pca_results/tobs_pca_results.pkl
+2025-10-28 21:14:15,041 - WARNING - PCA file not found: /tmp/tmpcyx2ppzu/pca_results/tavg_pca_results.pkl
+2025-10-28 21:14:15,041 - INFO - Successfully loaded PCA results for 0 measurement types
+2025-10-28 21:14:15,043 - INFO - Loading PCA results...
+2025-10-28 21:14:15,044 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:14:15,044 - INFO - Loaded PCA results for PRCP: components (10, 365), variances (10,)
+2025-10-28 21:14:15,044 - WARNING - PCA file not found: /tmp/tmpwtcf7bqh/pca_results/tmin_pca_results.pkl
+2025-10-28 21:14:15,044 - WARNING - PCA file not found: /tmp/tmpwtcf7bqh/pca_results/snow_pca_results.pkl
+2025-10-28 21:14:15,044 - WARNING - PCA file not found: /tmp/tmpwtcf7bqh/pca_results/tmax_pca_results.pkl
+2025-10-28 21:14:15,044 - WARNING - PCA file not found: /tmp/tmpwtcf7bqh/pca_results/tobs_pca_results.pkl
+2025-10-28 21:14:15,044 - WARNING - PCA file not found: /tmp/tmpwtcf7bqh/pca_results/tavg_pca_results.pkl
+2025-10-28 21:14:15,044 - INFO - Successfully loaded PCA results for 2 measurement types
+2025-10-28 21:14:15,046 - INFO - Loading PCA results...
+2025-10-28 21:14:15,046 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:14:15,046 - INFO - Loaded PCA results for PRCP: components (10, 365), variances (10,)
+2025-10-28 21:14:15,046 - INFO - Loaded PCA results for TMIN: components (10, 365), variances (10,)
+2025-10-28 21:14:15,046 - INFO - Loaded PCA results for SNOW: components (10, 365), variances (10,)
+2025-10-28 21:14:15,046 - INFO - Loaded PCA results for TMAX: components (10, 365), variances (10,)
+2025-10-28 21:14:15,046 - INFO - Loaded PCA results for TOBS: components (10, 365), variances (10,)
+2025-10-28 21:14:15,046 - INFO - Loaded PCA results for TAVG: components (10, 365), variances (10,)
+2025-10-28 21:14:15,046 - INFO - Successfully loaded PCA results for 7 measurement types
+2025-10-28 21:14:15,050 - INFO - Starting PCA coefficients computation...
+2025-10-28 21:14:15,050 - INFO - Input file: test.parquet
+2025-10-28 21:14:15,050 - INFO - Output file: ../../../weather_data/pca_coefficients.parquet
+2025-10-28 21:14:15,050 - INFO - Chunk size: 10000
+2025-10-28 21:14:15,050 - INFO - Loading weather data...
+2025-10-28 21:14:15,050 - INFO - Loaded weather data: (1000, 379)
+2025-10-28 21:14:15,050 - INFO - Combining all results...
+2025-10-28 21:14:15,050 - INFO - Saving results to ../../../weather_data/pca_coefficients.parquet...
+2025-10-28 21:14:15,051 - INFO - Successfully saved 1 records to ../../../weather_data/pca_coefficients.parquet
+2025-10-28 21:14:15,051 - INFO - Output columns: ['ELEMENT', 'PC1']
+2025-10-28 21:14:15,051 - INFO - 
+Summary Statistics:
+2025-10-28 21:14:15,051 - INFO -   SNWD: 1 records
+2025-10-28 21:14:15,051 - INFO - PCA coefficients computation completed successfully!
+2025-10-28 21:14:15,054 - ERROR - Missing daily columns for SNWD
+2025-10-28 21:14:15,066 - INFO - Loading PCA results...
+2025-10-28 21:14:15,066 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:14:15,066 - WARNING - PCA file not found: /tmp/tmp87fgtm_0/pca_results/prcp_pca_results.pkl
+2025-10-28 21:14:15,067 - WARNING - PCA file not found: /tmp/tmp87fgtm_0/pca_results/tmin_pca_results.pkl
+2025-10-28 21:14:15,067 - WARNING - PCA file not found: /tmp/tmp87fgtm_0/pca_results/snow_pca_results.pkl
+2025-10-28 21:14:15,067 - WARNING - PCA file not found: /tmp/tmp87fgtm_0/pca_results/tmax_pca_results.pkl
+2025-10-28 21:14:15,067 - WARNING - PCA file not found: /tmp/tmp87fgtm_0/pca_results/tobs_pca_results.pkl
+2025-10-28 21:14:15,067 - WARNING - PCA file not found: /tmp/tmp87fgtm_0/pca_results/tavg_pca_results.pkl
+2025-10-28 21:14:15,067 - INFO - Successfully loaded PCA results for 1 measurement types
+2025-10-28 21:14:15,067 - INFO - Processing SNWD...
+2025-10-28 21:14:15,070 - WARNING - No data found for SNWD
+2025-10-28 21:14:15,077 - INFO - Processing SNWD...
+2025-10-28 21:14:15,077 - WARNING - No PCA results found for SNWD
+2025-10-28 21:14:15,084 - INFO - Loading PCA results...
+2025-10-28 21:14:15,084 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:14:15,084 - WARNING - PCA file not found: /tmp/tmp18vasryr/pca_results/prcp_pca_results.pkl
+2025-10-28 21:14:15,084 - WARNING - PCA file not found: /tmp/tmp18vasryr/pca_results/tmin_pca_results.pkl
+2025-10-28 21:14:15,084 - WARNING - PCA file not found: /tmp/tmp18vasryr/pca_results/snow_pca_results.pkl
+2025-10-28 21:14:15,084 - WARNING - PCA file not found: /tmp/tmp18vasryr/pca_results/tmax_pca_results.pkl
+2025-10-28 21:14:15,084 - WARNING - PCA file not found: /tmp/tmp18vasryr/pca_results/tobs_pca_results.pkl
+2025-10-28 21:14:15,084 - WARNING - PCA file not found: /tmp/tmp18vasryr/pca_results/tavg_pca_results.pkl
+2025-10-28 21:14:15,084 - INFO - Successfully loaded PCA results for 1 measurement types
+2025-10-28 21:14:15,084 - INFO - Processing SNWD...
+2025-10-28 21:14:15,089 - INFO - Processing 30 records for SNWD
+2025-10-28 21:14:15,092 - INFO - Generated 30 records with PCA coefficients for SNWD
+2025-10-28 21:14:15,093 - ERROR - Missing daily columns for SNWD
+2025-10-28 21:16:31,376 - INFO - Loading PCA results...
+2025-10-28 21:16:31,377 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:16:31,377 - INFO - Loaded PCA results for PRCP: components (10, 365), variances (10,)
+2025-10-28 21:16:31,377 - WARNING - PCA file not found: /tmp/tmpilbs4bil/pca_results/tmin_pca_results.pkl
+2025-10-28 21:16:31,377 - WARNING - PCA file not found: /tmp/tmpilbs4bil/pca_results/snow_pca_results.pkl
+2025-10-28 21:16:31,377 - WARNING - PCA file not found: /tmp/tmpilbs4bil/pca_results/tmax_pca_results.pkl
+2025-10-28 21:16:31,377 - WARNING - PCA file not found: /tmp/tmpilbs4bil/pca_results/tobs_pca_results.pkl
+2025-10-28 21:16:31,377 - WARNING - PCA file not found: /tmp/tmpilbs4bil/pca_results/tavg_pca_results.pkl
+2025-10-28 21:16:31,377 - INFO - Successfully loaded PCA results for 2 measurement types
+2025-10-28 21:16:31,377 - INFO - Processing SNWD...
+2025-10-28 21:16:31,451 - INFO - Processing 10 records for SNWD
+2025-10-28 21:16:31,462 - INFO - Generated 10 records with PCA coefficients for SNWD
+2025-10-28 21:16:31,462 - INFO - Processing PRCP...
+2025-10-28 21:16:31,471 - INFO - Processing 10 records for PRCP
+2025-10-28 21:16:31,480 - INFO - Generated 10 records with PCA coefficients for PRCP
+2025-10-28 21:16:31,483 - INFO - Loading PCA results...
+2025-10-28 21:16:31,484 - WARNING - PCA file not found: /tmp/tmpla34u503/pca_results/snwd_pca_results.pkl
+2025-10-28 21:16:31,484 - WARNING - PCA file not found: /tmp/tmpla34u503/pca_results/prcp_pca_results.pkl
+2025-10-28 21:16:31,484 - WARNING - PCA file not found: /tmp/tmpla34u503/pca_results/tmin_pca_results.pkl
+2025-10-28 21:16:31,484 - WARNING - PCA file not found: /tmp/tmpla34u503/pca_results/snow_pca_results.pkl
+2025-10-28 21:16:31,484 - WARNING - PCA file not found: /tmp/tmpla34u503/pca_results/tmax_pca_results.pkl
+2025-10-28 21:16:31,484 - WARNING - PCA file not found: /tmp/tmpla34u503/pca_results/tobs_pca_results.pkl
+2025-10-28 21:16:31,484 - WARNING - PCA file not found: /tmp/tmpla34u503/pca_results/tavg_pca_results.pkl
+2025-10-28 21:16:31,484 - INFO - Successfully loaded PCA results for 0 measurement types
+2025-10-28 21:16:31,486 - INFO - Loading PCA results...
+2025-10-28 21:16:31,486 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:16:31,486 - INFO - Loaded PCA results for PRCP: components (10, 365), variances (10,)
+2025-10-28 21:16:31,486 - WARNING - PCA file not found: /tmp/tmptqjg89bx/pca_results/tmin_pca_results.pkl
+2025-10-28 21:16:31,486 - WARNING - PCA file not found: /tmp/tmptqjg89bx/pca_results/snow_pca_results.pkl
+2025-10-28 21:16:31,486 - WARNING - PCA file not found: /tmp/tmptqjg89bx/pca_results/tmax_pca_results.pkl
+2025-10-28 21:16:31,486 - WARNING - PCA file not found: /tmp/tmptqjg89bx/pca_results/tobs_pca_results.pkl
+2025-10-28 21:16:31,486 - WARNING - PCA file not found: /tmp/tmptqjg89bx/pca_results/tavg_pca_results.pkl
+2025-10-28 21:16:31,486 - INFO - Successfully loaded PCA results for 2 measurement types
+2025-10-28 21:16:31,489 - INFO - Loading PCA results...
+2025-10-28 21:16:31,489 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:16:31,489 - INFO - Loaded PCA results for PRCP: components (10, 365), variances (10,)
+2025-10-28 21:16:31,489 - INFO - Loaded PCA results for TMIN: components (10, 365), variances (10,)
+2025-10-28 21:16:31,489 - INFO - Loaded PCA results for SNOW: components (10, 365), variances (10,)
+2025-10-28 21:16:31,489 - INFO - Loaded PCA results for TMAX: components (10, 365), variances (10,)
+2025-10-28 21:16:31,489 - INFO - Loaded PCA results for TOBS: components (10, 365), variances (10,)
+2025-10-28 21:16:31,489 - INFO - Loaded PCA results for TAVG: components (10, 365), variances (10,)
+2025-10-28 21:16:31,489 - INFO - Successfully loaded PCA results for 7 measurement types
+2025-10-28 21:16:31,493 - INFO - Starting PCA coefficients computation...
+2025-10-28 21:16:31,493 - INFO - Input file: test.parquet
+2025-10-28 21:16:31,493 - INFO - Output file: ../../../weather_data/pca_coefficients.parquet
+2025-10-28 21:16:31,493 - INFO - Chunk size: 10000
+2025-10-28 21:16:31,493 - INFO - Loading weather data...
+2025-10-28 21:16:31,493 - INFO - Loaded weather data: (1000, 379)
+2025-10-28 21:16:31,493 - INFO - Combining all results...
+2025-10-28 21:16:31,493 - INFO - Saving results to ../../../weather_data/pca_coefficients.parquet...
+2025-10-28 21:16:31,493 - INFO - Successfully saved 1 records to ../../../weather_data/pca_coefficients.parquet
+2025-10-28 21:16:31,493 - INFO - Output columns: ['ELEMENT', 'PC1']
+2025-10-28 21:16:31,493 - INFO - 
+Summary Statistics:
+2025-10-28 21:16:31,494 - INFO -   SNWD: 1 records
+2025-10-28 21:16:31,494 - INFO - PCA coefficients computation completed successfully!
+2025-10-28 21:16:31,496 - ERROR - Missing daily columns for SNWD
+2025-10-28 21:16:31,509 - INFO - Loading PCA results...
+2025-10-28 21:16:31,509 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:16:31,510 - WARNING - PCA file not found: /tmp/tmpwawc1ta9/pca_results/prcp_pca_results.pkl
+2025-10-28 21:16:31,510 - WARNING - PCA file not found: /tmp/tmpwawc1ta9/pca_results/tmin_pca_results.pkl
+2025-10-28 21:16:31,510 - WARNING - PCA file not found: /tmp/tmpwawc1ta9/pca_results/snow_pca_results.pkl
+2025-10-28 21:16:31,510 - WARNING - PCA file not found: /tmp/tmpwawc1ta9/pca_results/tmax_pca_results.pkl
+2025-10-28 21:16:31,510 - WARNING - PCA file not found: /tmp/tmpwawc1ta9/pca_results/tobs_pca_results.pkl
+2025-10-28 21:16:31,510 - WARNING - PCA file not found: /tmp/tmpwawc1ta9/pca_results/tavg_pca_results.pkl
+2025-10-28 21:16:31,510 - INFO - Successfully loaded PCA results for 1 measurement types
+2025-10-28 21:16:31,510 - INFO - Processing SNWD...
+2025-10-28 21:16:31,513 - WARNING - No data found for SNWD
+2025-10-28 21:16:31,520 - INFO - Processing SNWD...
+2025-10-28 21:16:31,520 - WARNING - No PCA results found for SNWD
+2025-10-28 21:16:31,527 - INFO - Loading PCA results...
+2025-10-28 21:16:31,527 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:16:31,527 - WARNING - PCA file not found: /tmp/tmp9jf1d2i9/pca_results/prcp_pca_results.pkl
+2025-10-28 21:16:31,527 - WARNING - PCA file not found: /tmp/tmp9jf1d2i9/pca_results/tmin_pca_results.pkl
+2025-10-28 21:16:31,527 - WARNING - PCA file not found: /tmp/tmp9jf1d2i9/pca_results/snow_pca_results.pkl
+2025-10-28 21:16:31,527 - WARNING - PCA file not found: /tmp/tmp9jf1d2i9/pca_results/tmax_pca_results.pkl
+2025-10-28 21:16:31,527 - WARNING - PCA file not found: /tmp/tmp9jf1d2i9/pca_results/tobs_pca_results.pkl
+2025-10-28 21:16:31,527 - WARNING - PCA file not found: /tmp/tmp9jf1d2i9/pca_results/tavg_pca_results.pkl
+2025-10-28 21:16:31,527 - INFO - Successfully loaded PCA results for 1 measurement types
+2025-10-28 21:16:31,527 - INFO - Processing SNWD...
+2025-10-28 21:16:31,532 - INFO - Processing 18 records for SNWD
+2025-10-28 21:16:31,536 - INFO - Generated 18 records with PCA coefficients for SNWD
+2025-10-28 21:16:31,536 - ERROR - Missing daily columns for SNWD
+2025-10-28 21:19:47,294 - INFO - Starting PCA coefficients computation...
+2025-10-28 21:19:47,294 - INFO - Input file: ../../../../weather_data/stations_weather_with_dist2coast.parquet/
+2025-10-28 21:19:47,294 - INFO - Output file: ../../../../weather_data/per_row_coefficients.parquet
+2025-10-28 21:19:47,294 - INFO - Chunk size: 10000
+2025-10-28 21:19:47,294 - INFO - Loading weather data...
+2025-10-28 21:19:47,332 - INFO - Loaded weather data: (Delayed('int-849a3e4b-70b1-4593-a4b3-5549d3995e01'), 379)
+2025-10-28 21:19:47,332 - INFO - Loading PCA results...
+2025-10-28 21:19:47,332 - INFO - Loaded PCA results for SNWD: components (10, 365), variances (10,)
+2025-10-28 21:19:47,332 - INFO - Loaded PCA results for PRCP: components (10, 365), variances (10,)
+2025-10-28 21:19:47,332 - INFO - Loaded PCA results for TMIN: components (10, 365), variances (10,)
+2025-10-28 21:19:47,332 - INFO - Loaded PCA results for SNOW: components (10, 365), variances (10,)
+2025-10-28 21:19:47,332 - INFO - Loaded PCA results for TMAX: components (10, 365), variances (10,)
+2025-10-28 21:19:47,332 - INFO - Loaded PCA results for TOBS: components (10, 365), variances (10,)
+2025-10-28 21:19:47,332 - INFO - Loaded PCA results for TAVG: components (10, 365), variances (10,)
+2025-10-28 21:19:47,332 - INFO - Successfully loaded PCA results for 7 measurement types
+2025-10-28 21:19:47,332 - INFO - Processing SNWD...
+2025-10-28 21:19:55,198 - INFO - Processing 1015287 records for SNWD
+2025-10-28 21:20:15,557 - INFO - Generated 1015287 records with PCA coefficients for SNWD
+2025-10-28 21:20:15,600 - INFO - Processing PRCP...
+2025-10-28 21:20:23,579 - INFO - Processing 2443678 records for PRCP
+2025-10-28 21:20:52,026 - INFO - Generated 2443678 records with PCA coefficients for PRCP
+2025-10-28 21:20:52,122 - INFO - Processing TMIN...
+2025-10-28 21:21:00,834 - INFO - Processing 1122218 records for TMIN
+2025-10-28 21:21:20,077 - INFO - Generated 1122218 records with PCA coefficients for TMIN
+2025-10-28 21:21:20,126 - INFO - Processing SNOW...
+2025-10-28 21:21:28,761 - INFO - Processing 1012768 records for SNOW
+2025-10-28 21:21:47,557 - INFO - Generated 1012768 records with PCA coefficients for SNOW
+2025-10-28 21:21:47,603 - INFO - Processing TMAX...
+2025-10-28 21:21:56,618 - INFO - Processing 1121369 records for TMAX
+2025-10-28 21:22:16,364 - INFO - Generated 1121369 records with PCA coefficients for TMAX
+2025-10-28 21:22:16,415 - INFO - Processing TOBS...
+2025-10-28 21:22:24,987 - INFO - Processing 403796 records for TOBS
+2025-10-28 21:22:39,976 - INFO - Generated 403796 records with PCA coefficients for TOBS
+2025-10-28 21:22:39,993 - INFO - Processing TAVG...
+2025-10-28 21:22:48,939 - INFO - Processing 295949 records for TAVG
+2025-10-28 21:23:04,564 - INFO - Generated 295949 records with PCA coefficients for TAVG
+2025-10-28 21:23:04,577 - INFO - Combining all results...
+2025-10-28 21:23:08,065 - INFO - Saving results to ../../../../weather_data/per_row_coefficients.parquet...
+2025-10-28 21:23:52,853 - INFO - Successfully saved 7415065 records to ../../../../weather_data/per_row_coefficients.parquet
+2025-10-28 21:23:52,853 - INFO - Output columns: ['station_id_x', 'latitude', 'longitude', 'elevation', 'state', 'name', 'gsn_flag', 'hcn_crn_flag', 'wmo_id', 'ID', 'year', 'ELEMENT', 'day_1', 'day_2', 'day_3', 'day_4', 'day_5', 'day_6', 'day_7', 'day_8', 'day_9', 'day_10', 'day_11', 'day_12', 'day_13', 'day_14', 'day_15', 'day_16', 'day_17', 'day_18', 'day_19', 'day_20', 'day_21', 'day_22', 'day_23', 'day_24', 'day_25', 'day_26', 'day_27', 'day_28', 'day_29', 'day_30', 'day_31', 'day_32', 'day_33', 'day_34', 'day_35', 'day_36', 'day_37', 'day_38', 'day_39', 'day_40', 'day_41', 'day_42', 'day_43', 'day_44', 'day_45', 'day_46', 'day_47', 'day_48', 'day_49', 'day_50', 'day_51', 'day_52', 'day_53', 'day_54', 'day_55', 'day_56', 'day_57', 'day_58', 'day_59', 'day_60', 'day_61', 'day_62', 'day_63', 'day_64', 'day_65', 'day_66', 'day_67', 'day_68', 'day_69', 'day_70', 'day_71', 'day_72', 'day_73', 'day_74', 'day_75', 'day_76', 'day_77', 'day_78', 'day_79', 'day_80', 'day_81', 'day_82', 'day_83', 'day_84', 'day_85', 'day_86', 'day_87', 'day_88', 'day_89', 'day_90', 'day_91', 'day_92', 'day_93', 'day_94', 'day_95', 'day_96', 'day_97', 'day_98', 'day_99', 'day_100', 'day_101', 'day_102', 'day_103', 'day_104', 'day_105', 'day_106', 'day_107', 'day_108', 'day_109', 'day_110', 'day_111', 'day_112', 'day_113', 'day_114', 'day_115', 'day_116', 'day_117', 'day_118', 'day_119', 'day_120', 'day_121', 'day_122', 'day_123', 'day_124', 'day_125', 'day_126', 'day_127', 'day_128', 'day_129', 'day_130', 'day_131', 'day_132', 'day_133', 'day_134', 'day_135', 'day_136', 'day_137', 'day_138', 'day_139', 'day_140', 'day_141', 'day_142', 'day_143', 'day_144', 'day_145', 'day_146', 'day_147', 'day_148', 'day_149', 'day_150', 'day_151', 'day_152', 'day_153', 'day_154', 'day_155', 'day_156', 'day_157', 'day_158', 'day_159', 'day_160', 'day_161', 'day_162', 'day_163', 'day_164', 'day_165', 'day_166', 'day_167', 'day_168', 'day_169', 'day_170', 'day_171', 'day_172', 'day_173', 'day_174', 'day_175', 'day_176', 'day_177', 'day_178', 'day_179', 'day_180', 'day_181', 'day_182', 'day_183', 'day_184', 'day_185', 'day_186', 'day_187', 'day_188', 'day_189', 'day_190', 'day_191', 'day_192', 'day_193', 'day_194', 'day_195', 'day_196', 'day_197', 'day_198', 'day_199', 'day_200', 'day_201', 'day_202', 'day_203', 'day_204', 'day_205', 'day_206', 'day_207', 'day_208', 'day_209', 'day_210', 'day_211', 'day_212', 'day_213', 'day_214', 'day_215', 'day_216', 'day_217', 'day_218', 'day_219', 'day_220', 'day_221', 'day_222', 'day_223', 'day_224', 'day_225', 'day_226', 'day_227', 'day_228', 'day_229', 'day_230', 'day_231', 'day_232', 'day_233', 'day_234', 'day_235', 'day_236', 'day_237', 'day_238', 'day_239', 'day_240', 'day_241', 'day_242', 'day_243', 'day_244', 'day_245', 'day_246', 'day_247', 'day_248', 'day_249', 'day_250', 'day_251', 'day_252', 'day_253', 'day_254', 'day_255', 'day_256', 'day_257', 'day_258', 'day_259', 'day_260', 'day_261', 'day_262', 'day_263', 'day_264', 'day_265', 'day_266', 'day_267', 'day_268', 'day_269', 'day_270', 'day_271', 'day_272', 'day_273', 'day_274', 'day_275', 'day_276', 'day_277', 'day_278', 'day_279', 'day_280', 'day_281', 'day_282', 'day_283', 'day_284', 'day_285', 'day_286', 'day_287', 'day_288', 'day_289', 'day_290', 'day_291', 'day_292', 'day_293', 'day_294', 'day_295', 'day_296', 'day_297', 'day_298', 'day_299', 'day_300', 'day_301', 'day_302', 'day_303', 'day_304', 'day_305', 'day_306', 'day_307', 'day_308', 'day_309', 'day_310', 'day_311', 'day_312', 'day_313', 'day_314', 'day_315', 'day_316', 'day_317', 'day_318', 'day_319', 'day_320', 'day_321', 'day_322', 'day_323', 'day_324', 'day_325', 'day_326', 'day_327', 'day_328', 'day_329', 'day_330', 'day_331', 'day_332', 'day_333', 'day_334', 'day_335', 'day_336', 'day_337', 'day_338', 'day_339', 'day_340', 'day_341', 'day_342', 'day_343', 'day_344', 'day_345', 'day_346', 'day_347', 'day_348', 'day_349', 'day_350', 'day_351', 'day_352', 'day_353', 'day_354', 'day_355', 'day_356', 'day_357', 'day_358', 'day_359', 'day_360', 'day_361', 'day_362', 'day_363', 'day_364', 'day_365', 'station_id_y', 'dist_to_coast', 'PC1', 'PC2', 'PC3', 'PC4', 'PC5', 'PC6', 'PC7', 'PC8', 'PC9', 'PC10']
+2025-10-28 21:23:52,853 - INFO - 
+Summary Statistics:
+2025-10-28 21:24:31,572 - INFO -   SNWD: 1015287 records
+2025-10-28 21:24:35,240 - INFO -   PRCP: 2443678 records
+2025-10-28 21:24:36,595 - INFO -   TMIN: 1122218 records
+2025-10-28 21:24:37,860 - INFO -   SNOW: 1012768 records
+2025-10-28 21:24:39,225 - INFO -   TMAX: 1121369 records
+2025-10-28 21:24:40,052 - INFO -   TOBS: 403796 records
+2025-10-28 21:24:41,162 - INFO -   TAVG: 295949 records
+2025-10-28 21:24:41,163 - INFO - PCA coefficients computation completed successfully!
