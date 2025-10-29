@@ -170,7 +170,3 @@ def close_dask_cluster(cluster, client):
     client.close()
     cluster.close()
     print("✓ Cluster closed successfully")
-
-
-
-

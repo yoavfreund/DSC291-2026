@@ -1,0 +1,45 @@
+Weather Data PCA Analysis Summary
+========================================
+
+Measurement: PRCP
+  Data shape: (2443678, 365)
+  Components computed: 10
+  Total explained variance: 1.000
+  Top 3 components explain: 0.659
+
+Measurement: SNOW
+  Data shape: (1012768, 365)
+  Components computed: 10
+  Total explained variance: 1.000
+  Top 3 components explain: 0.877
+
+Measurement: SNWD
+  Data shape: (324568, 365)
+  Components computed: 10
+  Total explained variance: 1.000
+  Top 3 components explain: 0.912
+
+Measurement: TAVG
+  Data shape: (295949, 365)
+  Components computed: 10
+  Total explained variance: 1.000
+  Top 3 components explain: 0.953
+
+Measurement: TMAX
+  Data shape: (1121369, 365)
+  Components computed: 10
+  Total explained variance: 1.000
+  Top 3 components explain: 0.917
+
+Measurement: TMIN
+  Data shape: (1122218, 365)
+  Components computed: 10
+  Total explained variance: 1.000
+  Top 3 components explain: 0.939
+
+Measurement: TOBS
+  Data shape: (403796, 365)
+  Components computed: 10
+  Total explained variance: 1.000
+  Top 3 components explain: 0.909
+
