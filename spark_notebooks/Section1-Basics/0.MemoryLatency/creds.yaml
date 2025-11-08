@@ -1,0 +1,6 @@
+Yoav-DSC291:
+  access_key_id: ASIAXNLJHYPLYTCTZGFN
+  secret_access_key: H+OZNbm6IjFJw5jXj1IJratwmqYVdF7UrfCCdOMH
+  email_address: yfreund@eng.ucsd.edu
+  key_name: YoavDSC291KeyPair
+  ssh_key: /Users/yoavfreund/.ssh/YoavDSC291KeyPair.pem

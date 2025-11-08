@@ -1,0 +1,875 @@
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/jovyan/work
+[NotebookApp | INFO] 0 active kernels
+[NotebookApp | INFO] The Jupyter Notebook is running at:
+[NotebookApp | INFO] http://[all ip addresses on your system]:8888/
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | WARNING] 404 GET /api/kernels/4699508f-d0f5-49d0-a397-0c2fa14930d7/channels?session_id=67637a71809045bfa96ba34733871ba4 (172.17.0.1): Kernel does not exist: 4699508f-d0f5-49d0-a397-0c2fa14930d7
+[NotebookApp | WARNING] 404 GET /api/kernels/4699508f-d0f5-49d0-a397-0c2fa14930d7/channels?session_id=67637a71809045bfa96ba34733871ba4 (172.17.0.1) 57.44ms referer=None
+[NotebookApp | INFO] Writing notebook-signing key to /home/jovyan/.local/share/jupyter/notebook_secret
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 8662d023-873c-493c-88cc-3315cdcc0531
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20190416232401 (172.17.0.1) 2.95ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 8662d023-873c-493c-88cc-3315cdcc0531
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/1.SparkSQL.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1) 5.20ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1) 3.22ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/PCA/1.FunctionsAsVectors.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: c13e44e6-faef-44dd-a171-b819894ec256
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20190416232401 (172.17.0.1) 2.90ms referer=http://localhost:8888/notebooks/Section2-PCA/PCA/1.FunctionsAsVectors.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel c13e44e6-faef-44dd-a171-b819894ec256
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/PCA/1.FunctionsAsVectors.ipynb
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/jovyan/work
+[NotebookApp | INFO] 0 active kernels
+[NotebookApp | INFO] The Jupyter Notebook is running at:
+[NotebookApp | INFO] http://[all ip addresses on your system]:8888/
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | INFO] Writing notebook-signing key to /home/jovyan/.local/share/jupyter/notebook_secret
+[NotebookApp | WARNING] Notebook Section4-Classification/XGBoost/XGBoost_Whales.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20190520184348 (172.17.0.1) 9.98ms referer=http://localhost:8891/notebooks/Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Kernel started: 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | WARNING] Notebook Section4-Classification/XGBoost/XGBoost_Whales.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | WARNING] Notebook Section4-Classification/XGBoost/XGBoost_Whales.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | WARNING] Notebook Section4-Classification/XGBoost/XGBoost_Whales.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 0e18993f-e625-4d91-8b64-7cc327ee6b49:d5136e82c26249ab8246171bd672f5e6
+[NotebookApp | INFO] Kernel restarted: 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Restoring connection for 0e18993f-e625-4d91-8b64-7cc327ee6b49:d5136e82c26249ab8246171bd672f5e6
+[NotebookApp | INFO] Replaying 6 buffered messages
+[NotebookApp | INFO] Starting buffering for 0e18993f-e625-4d91-8b64-7cc327ee6b49:d5136e82c26249ab8246171bd672f5e6
+[NotebookApp | INFO] Kernel restarted: 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Restoring connection for 0e18993f-e625-4d91-8b64-7cc327ee6b49:d5136e82c26249ab8246171bd672f5e6
+[NotebookApp | INFO] Replaying 3 buffered messages
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | WARNING] Notebook Section4-Classification/XGBoost/XGBoost_Whales.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 0e18993f-e625-4d91-8b64-7cc327ee6b49:d5136e82c26249ab8246171bd672f5e6
+[NotebookApp | INFO] Kernel restarted: 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Restoring connection for 0e18993f-e625-4d91-8b64-7cc327ee6b49:d5136e82c26249ab8246171bd672f5e6
+[NotebookApp | INFO] Replaying 6 buffered messages
+[NotebookApp | INFO] Starting buffering for 0e18993f-e625-4d91-8b64-7cc327ee6b49:d5136e82c26249ab8246171bd672f5e6
+[NotebookApp | INFO] Kernel restarted: 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | INFO] Restoring connection for 0e18993f-e625-4d91-8b64-7cc327ee6b49:d5136e82c26249ab8246171bd672f5e6
+[NotebookApp | INFO] Replaying 5 buffered messages
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section4-Classification/XGBoost/XGBoost_Whales.css (172.17.0.1): No such file or directory: Section4-Classification/XGBoost/XGBoost_Whales.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section4-Classification/XGBoost/XGBoost_Whales.css (172.17.0.1) 16.23ms referer=http://localhost:8891/notebooks/Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section4-Classification/XGBoost/rise.css (172.17.0.1): No such file or directory: Section4-Classification/XGBoost/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section4-Classification/XGBoost/rise.css (172.17.0.1) 4.22ms referer=http://localhost:8891/notebooks/Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Saving file at /Section4-Classification/XGBoost/XGBoost_Whales.ipynb
+[NotebookApp | INFO] Starting buffering for 0e18993f-e625-4d91-8b64-7cc327ee6b49:d5136e82c26249ab8246171bd672f5e6
+[NotebookApp | INFO] Kernel shutdown: 0e18993f-e625-4d91-8b64-7cc327ee6b49
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/jovyan/work/notebooks
+[NotebookApp | INFO] 0 active kernels
+[NotebookApp | INFO] The Jupyter Notebook is running at:
+[NotebookApp | INFO] http://[all ip addresses on your system]:8888/
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | INFO] 302 GET / (172.17.0.1) 0.71ms
+[NotebookApp | INFO] Writing notebook-signing key to /home/jovyan/.local/share/jupyter/notebook_secret
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/0. README.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 0df08079-4b57-42e6-b4d0-06f67a076f36
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 30.75ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/0.%20README.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0df08079-4b57-42e6-b4d0-06f67a076f36
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/0. README.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: cd588533-2bf5-4d32-b317-b2ed4e1810ef
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 4.32ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel cd588533-2bf5-4d32-b317-b2ed4e1810ef
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb is not trusted
+[NotebookApp | WARNING] No nbgrader_config.py file found. Rerun with DEBUG log level to see where nbgrader is looking.
+[NotebookApp | INFO] Validating '/home/jovyan/work/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb'
+[NotebookApp | INFO] Executing notebook with kernel: python3
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 6.70ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.css (172.17.0.1) 4.03ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb
+[NotebookApp | INFO] Starting buffering for cd588533-2bf5-4d32-b317-b2ed4e1810ef:726a61829ca8411482e65c1f26cca6bf
+[NotebookApp | INFO] Starting buffering for 0df08079-4b57-42e6-b4d0-06f67a076f36:de8315c261744f9d970dc52563d17628
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb is not trusted
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel cd588533-2bf5-4d32-b317-b2ed4e1810ef
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 2.76ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: b1b7f787-c808-4155-91c4-4f177848a8ca
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel b1b7f787-c808-4155-91c4-4f177848a8ca
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 3.45ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 5.93ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 4.85ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 5.32ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 4.44ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/1.FunctionsAsVectors.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | WARNING] Notebook regression/2.Matrix notation and operations.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 38bc7127-b817-45b8-8899-cb4fc4bd1120
+[NotebookApp | INFO] 302 GET /notebooks/regression/images/Matrix.svg.png (172.17.0.1) 10.43ms
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 38bc7127-b817-45b8-8899-cb4fc4bd1120
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 3.94ms referer=http://localhost:8888/notebooks/regression/2.Matrix%20notation%20and%20operations.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 7.40ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 11.51ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 14.56ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 8.80ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 5.96ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 3.85ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for b1b7f787-c808-4155-91c4-4f177848a8ca:1e51e117c8c644eea05a9388910ca904
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel b1b7f787-c808-4155-91c4-4f177848a8ca
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 10.41ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 6.99ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 7.60ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 7.43ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 6.70ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 8.67ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 4.03ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 16.48ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 7.04ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.css (172.17.0.1) 5.18ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1): No such file or directory: Section2-PCA/Section2-Weather-PCA_PART1/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART1/rise.css (172.17.0.1) 4.17ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation%20per%20state.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/3. Weather Analysis - Initial Visualisation.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 7.32ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/3.%20Weather%20Analysis%20-%20Initial%20Visualisation.ipynb
+[NotebookApp | INFO] Kernel started: 1c073ce8-a255-4683-a593-7d6643cac2d4
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1c073ce8-a255-4683-a593-7d6643cac2d4
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/3. Weather Analysis - Initial Visualisation.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/3. Weather Analysis - Initial Visualisation.ipynb is not trusted
+[NotebookApp | INFO] Creating new notebook in /Section2-PCA/Section2-Weather-PCA_PART1
+[NotebookApp | INFO] Kernel started: 8db635f4-cf71-43d8-b214-c4930b766df4
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 6.77ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/Untitled.ipynb?kernel_name=python3
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 8db635f4-cf71-43d8-b214-c4930b766df4
+[NotebookApp | INFO] Starting buffering for 8db635f4-cf71-43d8-b214-c4930b766df4:51bd83fa2f294ccebb9c4cdddefc429e
+[NotebookApp | INFO] Kernel shutdown: 0df08079-4b57-42e6-b4d0-06f67a076f36
+[NotebookApp | INFO] Kernel shutdown: 1c073ce8-a255-4683-a593-7d6643cac2d4
+[NotebookApp | INFO] Kernel shutdown: 8db635f4-cf71-43d8-b214-c4930b766df4
+[NotebookApp | INFO] Kernel shutdown: b1b7f787-c808-4155-91c4-4f177848a8ca
+[NotebookApp | INFO] Kernel shutdown: cd588533-2bf5-4d32-b317-b2ed4e1810ef
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: de11418b-4932-4996-aa46-e75b851839f6
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 2.78ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel de11418b-4932-4996-aa46-e75b851839f6
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1) 7.57ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/1.SparkSQL.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1) 5.91ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/2.PCA_computation per state.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1) 29.26ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/1.SparkSQL.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1) 21.76ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1) 13.77ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/1.SparkSQL.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1) 9.84ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1) 9.47ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/1.SparkSQL.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1) 10.39ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/1.SparkSQL.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.css (172.17.0.1) 7.58ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1) 6.80ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/1.SparkSQL.ipynb
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 54319923-c006-48a6-9d1e-84c065674193
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 10084.86ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 54319923-c006-48a6-9d1e-84c065674193
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/rise.css (172.17.0.1) 9.95ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.css (172.17.0.1): No such file or directory: Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.css (172.17.0.1) 25.61ms referer=http://localhost:8888/notebooks/Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb is not trusted
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | INFO] 302 GET /notebooks/regression/images/vector.png (172.17.0.1) 26.52ms
+[NotebookApp | INFO] 302 GET /notebooks/regression/images/vectorGeom1.png (172.17.0.1) 25.27ms
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 7.96ms referer=http://localhost:8888/notebooks/regression/1.Linear%20Algebra%20Review.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | WARNING] 404 GET /notebooks/regression/rise.css (172.17.0.1): No such file or directory: regression/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/regression/rise.css (172.17.0.1) 16.07ms referer=http://localhost:8888/notebooks/regression/1.Linear%20Algebra%20Review.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/regression/1.Linear%20Algebra%20Review.css (172.17.0.1): No such file or directory: regression/1.Linear Algebra Review.css
+[NotebookApp | WARNING] 404 GET /notebooks/regression/1.Linear%20Algebra%20Review.css (172.17.0.1) 16.31ms referer=http://localhost:8888/notebooks/regression/1.Linear%20Algebra%20Review.ipynb
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:9e35f647a2a74fe48908925ac0cceb25
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] 302 GET /notebooks/regression/images/vector.png (172.17.0.1) 14.81ms
+[NotebookApp | INFO] 302 GET /notebooks/regression/images/vectorGeom1.png (172.17.0.1) 11.38ms
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 5.16ms referer=http://localhost:8888/notebooks/regression/1.Linear%20Algebra%20Review.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | WARNING] 404 GET /notebooks/regression/1.Linear%20Algebra%20Review.css (172.17.0.1): No such file or directory: regression/1.Linear Algebra Review.css
+[NotebookApp | WARNING] 404 GET /notebooks/regression/1.Linear%20Algebra%20Review.css (172.17.0.1) 10.38ms referer=http://localhost:8888/notebooks/regression/1.Linear%20Algebra%20Review.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/regression/rise.css (172.17.0.1): No such file or directory: regression/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/regression/rise.css (172.17.0.1) 8.07ms referer=http://localhost:8888/notebooks/regression/1.Linear%20Algebra%20Review.ipynb
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:179d34b1b22540bf80649f01ef832bd6
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] 302 GET /notebooks/regression/images/vector.png (172.17.0.1) 10.63ms
+[NotebookApp | INFO] 302 GET /notebooks/regression/images/vectorGeom1.png (172.17.0.1) 9.02ms
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200421192304 (172.17.0.1) 1.94ms referer=http://localhost:8888/notebooks/regression/1.Linear%20Algebra%20Review.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | WARNING] 404 GET /notebooks/regression/rise.css (172.17.0.1): No such file or directory: regression/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/regression/rise.css (172.17.0.1) 4.87ms referer=http://localhost:8888/notebooks/regression/1.Linear%20Algebra%20Review.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/regression/1.Linear%20Algebra%20Review.css (172.17.0.1): No such file or directory: regression/1.Linear Algebra Review.css
+[NotebookApp | WARNING] 404 GET /notebooks/regression/1.Linear%20Algebra%20Review.css (172.17.0.1) 5.09ms referer=http://localhost:8888/notebooks/regression/1.Linear%20Algebra%20Review.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/contrib_nbextensions_help_item/icon.png (172.17.0.1) 2.97ms referer=http://localhost:8888/tree/regression
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | WARNING] No nbgrader_config.py file found. Rerun with DEBUG log level to see where nbgrader is looking.
+[NotebookApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[NotebookApp | ERROR] Traceback (most recent call last):
+      File "/opt/conda/lib/python3.6/site-packages/nbgrader/server_extensions/assignment_list/handlers.py", line 65, in list_released_assignments
+        assignments = lister.start()
+      File "/opt/conda/lib/python3.6/site-packages/nbgrader/exchange/list.py", line 129, in start
+        super(ExchangeList, self).start()
+      File "/opt/conda/lib/python3.6/site-packages/nbgrader/exchange/exchange.py", line 122, in start
+        self.ensure_root()
+      File "/opt/conda/lib/python3.6/site-packages/nbgrader/exchange/exchange.py", line 100, in ensure_root
+        self.fail("Unwritable directory, please contact your instructor: {}".format(self.root))
+      File "/opt/conda/lib/python3.6/site-packages/nbgrader/exchange/exchange.py", line 78, in fail
+        raise ExchangeError(msg)
+    nbgrader.exchange.exchange.ExchangeError: Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+    
+[NotebookApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[NotebookApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[NotebookApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[NotebookApp | CRITICAL] Unwritable directory, please contact your instructor: /srv/nbgrader/exchange
+[NotebookApp | INFO] Starting buffering for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Starting buffering for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | INFO] Starting buffering for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Starting buffering for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 54319923-c006-48a6-9d1e-84c065674193
+[NotebookApp | INFO] Restoring connection for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | INFO] Restoring connection for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel de11418b-4932-4996-aa46-e75b851839f6
+[NotebookApp | INFO] Restoring connection for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | WARNING] 404 GET /api/kernels/1c073ce8-a255-4683-a593-7d6643cac2d4/channels?session_id=ae365a195206464e85af88b2f937a151 (172.17.0.1): Kernel does not exist: 1c073ce8-a255-4683-a593-7d6643cac2d4
+[NotebookApp | WARNING] 404 GET /api/kernels/1c073ce8-a255-4683-a593-7d6643cac2d4/channels?session_id=ae365a195206464e85af88b2f937a151 (172.17.0.1) 5.41ms referer=None
+[NotebookApp | WARNING] 404 GET /api/kernels/b1b7f787-c808-4155-91c4-4f177848a8ca/channels?session_id=5194b8931c254c818a09ac772a51d93a (172.17.0.1): Kernel does not exist: b1b7f787-c808-4155-91c4-4f177848a8ca
+[NotebookApp | WARNING] 404 GET /api/kernels/b1b7f787-c808-4155-91c4-4f177848a8ca/channels?session_id=5194b8931c254c818a09ac772a51d93a (172.17.0.1) 5.17ms referer=None
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 38bc7127-b817-45b8-8899-cb4fc4bd1120
+[NotebookApp | INFO] Restoring connection for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | WARNING] 404 GET /api/kernels/cd588533-2bf5-4d32-b317-b2ed4e1810ef/channels?session_id=6d13f5e2ccfa43458f81bde4d29c3e47 (172.17.0.1): Kernel does not exist: cd588533-2bf5-4d32-b317-b2ed4e1810ef
+[NotebookApp | WARNING] 404 GET /api/kernels/cd588533-2bf5-4d32-b317-b2ed4e1810ef/channels?session_id=6d13f5e2ccfa43458f81bde4d29c3e47 (172.17.0.1) 17.23ms referer=None
+[NotebookApp | WARNING] Replacing stale connection: 1c073ce8-a255-4683-a593-7d6643cac2d4:ae365a195206464e85af88b2f937a151
+[NotebookApp | WARNING] Replacing stale connection: b1b7f787-c808-4155-91c4-4f177848a8ca:5194b8931c254c818a09ac772a51d93a
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | WARNING] Replacing stale connection: cd588533-2bf5-4d32-b317-b2ed4e1810ef:6d13f5e2ccfa43458f81bde4d29c3e47
+[NotebookApp | WARNING] Replacing stale connection: 1c073ce8-a255-4683-a593-7d6643cac2d4:ae365a195206464e85af88b2f937a151
+[NotebookApp | WARNING] Replacing stale connection: b1b7f787-c808-4155-91c4-4f177848a8ca:5194b8931c254c818a09ac772a51d93a
+[NotebookApp | WARNING] Replacing stale connection: cd588533-2bf5-4d32-b317-b2ed4e1810ef:6d13f5e2ccfa43458f81bde4d29c3e47
+[NotebookApp | WARNING] Replacing stale connection: cd588533-2bf5-4d32-b317-b2ed4e1810ef:6d13f5e2ccfa43458f81bde4d29c3e47
+[NotebookApp | WARNING] Replacing stale connection: 1c073ce8-a255-4683-a593-7d6643cac2d4:ae365a195206464e85af88b2f937a151
+[NotebookApp | WARNING] Replacing stale connection: cd588533-2bf5-4d32-b317-b2ed4e1810ef:6d13f5e2ccfa43458f81bde4d29c3e47
+[NotebookApp | WARNING] Replacing stale connection: 1c073ce8-a255-4683-a593-7d6643cac2d4:ae365a195206464e85af88b2f937a151
+[NotebookApp | WARNING] Replacing stale connection: cd588533-2bf5-4d32-b317-b2ed4e1810ef:6d13f5e2ccfa43458f81bde4d29c3e47
+[NotebookApp | WARNING] Replacing stale connection: 1c073ce8-a255-4683-a593-7d6643cac2d4:ae365a195206464e85af88b2f937a151
+[NotebookApp | WARNING] Replacing stale connection: cd588533-2bf5-4d32-b317-b2ed4e1810ef:6d13f5e2ccfa43458f81bde4d29c3e47
+[NotebookApp | WARNING] Replacing stale connection: 1c073ce8-a255-4683-a593-7d6643cac2d4:ae365a195206464e85af88b2f937a151
+[NotebookApp | INFO] Starting buffering for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | INFO] Starting buffering for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | INFO] Starting buffering for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Starting buffering for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 38bc7127-b817-45b8-8899-cb4fc4bd1120
+[NotebookApp | INFO] Restoring connection for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | INFO] Restoring connection for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel de11418b-4932-4996-aa46-e75b851839f6
+[NotebookApp | INFO] Restoring connection for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 54319923-c006-48a6-9d1e-84c065674193
+[NotebookApp | INFO] Restoring connection for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | INFO] Starting buffering for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Starting buffering for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Starting buffering for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 38bc7127-b817-45b8-8899-cb4fc4bd1120
+[NotebookApp | INFO] Restoring connection for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | INFO] Restoring connection for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel de11418b-4932-4996-aa46-e75b851839f6
+[NotebookApp | INFO] Restoring connection for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 54319923-c006-48a6-9d1e-84c065674193
+[NotebookApp | INFO] Restoring connection for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Starting buffering for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | INFO] Starting buffering for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Starting buffering for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 54319923-c006-48a6-9d1e-84c065674193
+[NotebookApp | INFO] Restoring connection for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 38bc7127-b817-45b8-8899-cb4fc4bd1120
+[NotebookApp | INFO] Restoring connection for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | INFO] Restoring connection for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel de11418b-4932-4996-aa46-e75b851839f6
+[NotebookApp | INFO] Restoring connection for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | INFO] Starting buffering for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | INFO] Starting buffering for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Starting buffering for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel de11418b-4932-4996-aa46-e75b851839f6
+[NotebookApp | INFO] Restoring connection for de11418b-4932-4996-aa46-e75b851839f6:15c2c2a52abf4d5b81c0706f42a81be1
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | INFO] Restoring connection for 51198c87-87ec-4bfc-b229-b4d9839b2e5c:1780fc2fd4a849d8966971a0045cf39a
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 38bc7127-b817-45b8-8899-cb4fc4bd1120
+[NotebookApp | INFO] Restoring connection for 38bc7127-b817-45b8-8899-cb4fc4bd1120:31b105297f5f40eb89629f1d3bf00426
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 54319923-c006-48a6-9d1e-84c065674193
+[NotebookApp | INFO] Restoring connection for 54319923-c006-48a6-9d1e-84c065674193:ffafb9d8abba49229409e54304ce836e
+[NotebookApp | INFO] Saving file at /Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb
+[NotebookApp | WARNING] Notebook Section1-Basics/2.SparkSQL/2.SparkSQLDataFrameOperations.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/1.Linear Algebra Review.ipynb
+[NotebookApp | WARNING] Notebook regression/1.Linear Algebra Review.ipynb is not trusted
+[NotebookApp | CRITICAL] received signal 15, stopping
+[NotebookApp | INFO] Shutting down 4 kernels
+[NotebookApp | INFO] Kernel shutdown: 38bc7127-b817-45b8-8899-cb4fc4bd1120
+[NotebookApp | INFO] Kernel shutdown: de11418b-4932-4996-aa46-e75b851839f6
+[NotebookApp | INFO] Kernel shutdown: 54319923-c006-48a6-9d1e-84c065674193
+[NotebookApp | INFO] Kernel shutdown: 51198c87-87ec-4bfc-b229-b4d9839b2e5c
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/jovyan/work/notebooks
+[NotebookApp | INFO] 0 active kernels
+[NotebookApp | INFO] The Jupyter Notebook is running at:
+[NotebookApp | INFO] http://[all ip addresses on your system]:8888/
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART1/3. Weather Analysis - Initial Visualisation.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200423172600 (172.17.0.1) 11.93ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART1/3.%20Weather%20Analysis%20-%20Initial%20Visualisation.ipynb
+[NotebookApp | INFO] Kernel started: 578afbe6-a8c8-4357-9818-272ee5bf4171
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 578afbe6-a8c8-4357-9818-272ee5bf4171
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/3. Weather Analysis - Initial Visualisation.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb is not trusted
+[NotebookApp | INFO] 302 GET /notebooks/Section2-PCA/Section2-Weather-PCA_PART2/Figures/MeanStdSNWD_NY.png (172.17.0.1) 17.13ms
+[NotebookApp | INFO] Kernel started: 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200423172600 (172.17.0.1) 5.12ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART2/4.%20Weather%20Analysis%20-%20reconstruction%20SNWD.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Kernel interrupted: 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] Kernel interrupted: 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] Kernel interrupted: 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] Kernel interrupted: 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] Kernel interrupted: 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] Kernel interrupted: 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] KernelRestarter: restarting kernel (1/5), keep random ports
+[NotebookApp | INFO] Starting buffering for 20eeb3f9-fb36-4e13-b138-d2c6464b41a2:bdd6772c02bd4e15b77a34ebc9726199
+[NotebookApp | INFO] Kernel restarted: 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] Restoring connection for 20eeb3f9-fb36-4e13-b138-d2c6464b41a2:bdd6772c02bd4e15b77a34ebc9726199
+[NotebookApp | INFO] Replaying 6 buffered messages
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200423172600 (172.17.0.1) 12.11ms referer=http://localhost:8888/notebooks/Section2-PCA/Section2-Weather-PCA_PART2/4a.%20Weather%20Analysis%20-%20reconstruction%20PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Kernel started: cdc95f03-61c5-4fe8-b635-0fa99d0e3b66
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel cdc95f03-61c5-4fe8-b635-0fa99d0e3b66
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Kernel restarted: 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | WARNING] zmq message arrived on closed channel
+[NotebookApp | INFO] Starting buffering for 20eeb3f9-fb36-4e13-b138-d2c6464b41a2:bdd6772c02bd4e15b77a34ebc9726199
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb is not trusted
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 20eeb3f9-fb36-4e13-b138-d2c6464b41a2
+[NotebookApp | INFO] Restoring connection for 20eeb3f9-fb36-4e13-b138-d2c6464b41a2:bdd6772c02bd4e15b77a34ebc9726199
+[NotebookApp | INFO] Replaying 3 buffered messages
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | WARNING] Notebook Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for cdc95f03-61c5-4fe8-b635-0fa99d0e3b66:3e0f8c5919b64b618de51a66c37e9a1a
+[NotebookApp | INFO] Kernel restarted: cdc95f03-61c5-4fe8-b635-0fa99d0e3b66
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel cdc95f03-61c5-4fe8-b635-0fa99d0e3b66
+[NotebookApp | INFO] Restoring connection for cdc95f03-61c5-4fe8-b635-0fa99d0e3b66:3e0f8c5919b64b618de51a66c37e9a1a
+[NotebookApp | INFO] Replaying 3 buffered messages
+[NotebookApp | INFO] Kernel interrupted: cdc95f03-61c5-4fe8-b635-0fa99d0e3b66
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/3. Weather Analysis - Initial Visualisation.ipynb
+[NotebookApp | WARNING] Notebook regression/2.Matrix notation and operations.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: a1f11362-1771-4f8b-a217-410997ca2c9f
+[NotebookApp | INFO] 302 GET /notebooks/regression/images/Matrix.svg.png (172.17.0.1) 9.80ms
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200423172600 (172.17.0.1) 50.50ms referer=http://localhost:8888/notebooks/regression/2.Matrix%20notation%20and%20operations.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel a1f11362-1771-4f8b-a217-410997ca2c9f
+[NotebookApp | INFO] Kernel interrupted: a1f11362-1771-4f8b-a217-410997ca2c9f
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /regression/2.Matrix notation and operations.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4a. Weather Analysis - reconstruction PRCP-Smoothed.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART2/4. Weather Analysis - reconstruction SNWD.ipynb
+[NotebookApp | INFO] Saving file at /Section2-PCA/Section2-Weather-PCA_PART1/3. Weather Analysis - Initial Visualisation.ipynb
+[NotebookApp | INFO] New terminal with automatic name: 1
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/jovyan/work
+[NotebookApp | INFO] 0 active kernels
+[NotebookApp | INFO] The Jupyter Notebook is running at:
+[NotebookApp | INFO] http://[all ip addresses on your system]:8888/
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | WARNING] 404 GET /api/kernels/0a40b9bf-0113-46b4-a11a-7a0d70f48f07/channels?session_id=7fb19f6d19584ab893410100d9f02fe7 (172.17.0.1): Kernel does not exist: 0a40b9bf-0113-46b4-a11a-7a0d70f48f07
+[NotebookApp | WARNING] 404 GET /api/kernels/0a40b9bf-0113-46b4-a11a-7a0d70f48f07/channels?session_id=7fb19f6d19584ab893410100d9f02fe7 (172.17.0.1) 49.46ms referer=None
+[NotebookApp | INFO] Writing notebook-signing key to /home/jovyan/.local/share/jupyter/notebook_secret
+[NotebookApp | WARNING] Notebook regression/4.Regression I.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 8.41ms referer=http://localhost:8888/notebooks/regression/4.Regression%20I.ipynb
+[NotebookApp | INFO] Kernel started: df4502f2-3ae9-4393-b13b-caccd39843e2
+[NotebookApp | WARNING] 404 GET /notebooks/data/hw/reg_ex_table.png (172.17.0.1): No such file or directory: data/hw/reg_ex_table.png
+[NotebookApp | WARNING] 404 GET /notebooks/data/hw/reg_ex_table.png (172.17.0.1) 7.83ms referer=http://localhost:8888/notebooks/regression/4.Regression%20I.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel df4502f2-3ae9-4393-b13b-caccd39843e2
+[NotebookApp | WARNING] Notebook regression/7.PCA.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 6b268f0e-2410-486d-842d-344100a2dd28
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 5.86ms referer=http://localhost:8888/notebooks/regression/7.PCA.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 6b268f0e-2410-486d-842d-344100a2dd28
+[NotebookApp | INFO] Saving file at /regression/4.Regression I.ipynb
+[NotebookApp | WARNING] Notebook regression/4.Regression I.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/7.PCA.ipynb
+[NotebookApp | INFO] Saving file at /regression/4.Regression I.ipynb
+[NotebookApp | WARNING] Notebook regression/4.Regression I.ipynb is not trusted
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/4.K-Means/Analyze Clusters.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 97c3394c-59fd-4da8-82c5-df41f342b36d
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 3.08ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/4.K-Means/Analyze%20Clusters.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 97c3394c-59fd-4da8-82c5-df41f342b36d
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/4.K-Means/K-means example.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 49eb1840-7c81-4514-8c1b-654e0e237ffd
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 3.14ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/4.K-Means/K-means%20example.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 49eb1840-7c81-4514-8c1b-654e0e237ffd
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 3.20ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | INFO] Kernel started: 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/4.K-Means/Analyze Clusters.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/4.K-Means/Analyze Clusters.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/4.K-Means/K-means example.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 6b268f0e-2410-486d-842d-344100a2dd28:eb12d9be87064cd6824584c528d1afa4
+[NotebookApp | INFO] Starting buffering for 97c3394c-59fd-4da8-82c5-df41f342b36d:d9aff2a8010b4b1587817ea5167cc733
+[NotebookApp | INFO] Starting buffering for 1dd0292c-2dda-496f-a4cf-3144fba887e3:be60e99c2b3f4f0b863b366cfa9fb3c1
+[NotebookApp | INFO] Starting buffering for df4502f2-3ae9-4393-b13b-caccd39843e2:d85a057f0ba142a482ea764b00fd256e
+[NotebookApp | INFO] Starting buffering for 49eb1840-7c81-4514-8c1b-654e0e237ffd:8eb4a4c075294259aca85b9a16740a0f
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 97c3394c-59fd-4da8-82c5-df41f342b36d
+[NotebookApp | INFO] Restoring connection for 97c3394c-59fd-4da8-82c5-df41f342b36d:d9aff2a8010b4b1587817ea5167cc733
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Restoring connection for 1dd0292c-2dda-496f-a4cf-3144fba887e3:be60e99c2b3f4f0b863b366cfa9fb3c1
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 6b268f0e-2410-486d-842d-344100a2dd28
+[NotebookApp | INFO] Restoring connection for 6b268f0e-2410-486d-842d-344100a2dd28:eb12d9be87064cd6824584c528d1afa4
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel df4502f2-3ae9-4393-b13b-caccd39843e2
+[NotebookApp | INFO] Restoring connection for df4502f2-3ae9-4393-b13b-caccd39843e2:d85a057f0ba142a482ea764b00fd256e
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 49eb1840-7c81-4514-8c1b-654e0e237ffd
+[NotebookApp | INFO] Restoring connection for 49eb1840-7c81-4514-8c1b-654e0e237ffd:8eb4a4c075294259aca85b9a16740a0f
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/4.Regression I.ipynb
+[NotebookApp | WARNING] Notebook regression/4.Regression I.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/7.PCA.ipynb
+[NotebookApp | INFO] Starting buffering for 97c3394c-59fd-4da8-82c5-df41f342b36d:d9aff2a8010b4b1587817ea5167cc733
+[NotebookApp | INFO] Starting buffering for 6b268f0e-2410-486d-842d-344100a2dd28:eb12d9be87064cd6824584c528d1afa4
+[NotebookApp | INFO] Starting buffering for df4502f2-3ae9-4393-b13b-caccd39843e2:d85a057f0ba142a482ea764b00fd256e
+[NotebookApp | INFO] Starting buffering for 49eb1840-7c81-4514-8c1b-654e0e237ffd:8eb4a4c075294259aca85b9a16740a0f
+[NotebookApp | INFO] Starting buffering for 1dd0292c-2dda-496f-a4cf-3144fba887e3:be60e99c2b3f4f0b863b366cfa9fb3c1
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 49eb1840-7c81-4514-8c1b-654e0e237ffd
+[NotebookApp | INFO] Restoring connection for 49eb1840-7c81-4514-8c1b-654e0e237ffd:8eb4a4c075294259aca85b9a16740a0f
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 6b268f0e-2410-486d-842d-344100a2dd28
+[NotebookApp | INFO] Restoring connection for 6b268f0e-2410-486d-842d-344100a2dd28:eb12d9be87064cd6824584c528d1afa4
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 97c3394c-59fd-4da8-82c5-df41f342b36d
+[NotebookApp | INFO] Restoring connection for 97c3394c-59fd-4da8-82c5-df41f342b36d:d9aff2a8010b4b1587817ea5167cc733
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Restoring connection for 1dd0292c-2dda-496f-a4cf-3144fba887e3:be60e99c2b3f4f0b863b366cfa9fb3c1
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel df4502f2-3ae9-4393-b13b-caccd39843e2
+[NotebookApp | INFO] Restoring connection for df4502f2-3ae9-4393-b13b-caccd39843e2:d85a057f0ba142a482ea764b00fd256e
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/4.Regression I.ipynb
+[NotebookApp | WARNING] Notebook regression/4.Regression I.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /regression/7.PCA.ipynb
+[NotebookApp | INFO] Starting buffering for df4502f2-3ae9-4393-b13b-caccd39843e2:d85a057f0ba142a482ea764b00fd256e
+[NotebookApp | INFO] Starting buffering for 49eb1840-7c81-4514-8c1b-654e0e237ffd:8eb4a4c075294259aca85b9a16740a0f
+[NotebookApp | INFO] Starting buffering for 6b268f0e-2410-486d-842d-344100a2dd28:eb12d9be87064cd6824584c528d1afa4
+[NotebookApp | INFO] Starting buffering for 97c3394c-59fd-4da8-82c5-df41f342b36d:d9aff2a8010b4b1587817ea5167cc733
+[NotebookApp | INFO] Starting buffering for 1dd0292c-2dda-496f-a4cf-3144fba887e3:be60e99c2b3f4f0b863b366cfa9fb3c1
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 3.60ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1) 6.81ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.css (172.17.0.1) 6.71ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans, Theory.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: 31788100-ae38-4b62-8c40-0583359cd3d5
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 5.82ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans%2C%20Theory.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 31788100-ae38-4b62-8c40-0583359cd3d5
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1) 6.49ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans%2C%20Theory.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans%2C%20Theory.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans, Theory.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans%2C%20Theory.css (172.17.0.1) 8.47ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans%2C%20Theory.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans, Theory.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1) 9.28ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans%2C%20Theory.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans%2C%20Theory.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans, Theory.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans%2C%20Theory.css (172.17.0.1) 6.00ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/2.Kmeans%2C%20Theory.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 5.10ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | INFO] Kernel started: 67bcc5ef-ac26-484b-a59b-a6df67f1ad28
+[NotebookApp | INFO] 302 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/Figs/Elbow.png (172.17.0.1) 19.48ms
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67bcc5ef-ac26-484b-a59b-a6df67f1ad28
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb is not trusted
+[NotebookApp | WARNING] No nbgrader_config.py file found. Rerun with DEBUG log level to see where nbgrader is looking.
+[NotebookApp | INFO] Validating '/home/jovyan/work/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb'
+[NotebookApp | INFO] Executing notebook with kernel: python3
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.css (172.17.0.1) 9.98ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1) 7.12ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | INFO] Starting buffering for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:379ac6b2d35544ca89bb3bd8747f4014
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 9.26ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | INFO] 302 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/Figs/Elbow.png (172.17.0.1) 7.39ms
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67bcc5ef-ac26-484b-a59b-a6df67f1ad28
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1) 7.08ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.css (172.17.0.1) 6.48ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.css (172.17.0.1) 6.02ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1) 4.83ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.css (172.17.0.1) 13.94ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1) 4.51ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring%20K-means.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/4-Data in high dimensions behaves strangely.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: d8e2fa72-9093-4de1-a395-00f4b74bfe4c
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 11.11ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/4-Data%20in%20high%20dimensions%20behaves%20strangely.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d8e2fa72-9093-4de1-a395-00f4b74bfe4c
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/4-Data in high dimensions behaves strangely.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/4-Data in high dimensions behaves strangely.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/rise.css (172.17.0.1) 8.19ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/4-Data%20in%20high%20dimensions%20behaves%20strangely.ipynb
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/4-Data%20in%20high%20dimensions%20behaves%20strangely.css (172.17.0.1): No such file or directory: Section3-Kmeans-dim-reduction/BasicAnalysis/4-Data in high dimensions behaves strangely.css
+[NotebookApp | WARNING] 404 GET /notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/4-Data%20in%20high%20dimensions%20behaves%20strangely.css (172.17.0.1) 12.67ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/BasicAnalysis/4-Data%20in%20high%20dimensions%20behaves%20strangely.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 4.39ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy%20Based%20Analysis%200.ipynb
+[NotebookApp | INFO] Kernel started: d30b7c26-e83f-4398-89ba-f9a9a1397767
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d30b7c26-e83f-4398-89ba-f9a9a1397767
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb is not trusted
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb is not trusted
+[NotebookApp | WARNING] 404 GET /static/components/bootstrap/js/tooltip.js?v=20200501214630 (172.17.0.1) 4.66ms referer=http://localhost:8888/notebooks/Section3-Kmeans-dim-reduction/GraphLaplacian/Graph%20Laplacian.ipynb
+[NotebookApp | INFO] Kernel started: 6767172b-ec68-4b67-9604-63c700008c2f
+[NotebookApp | INFO] 302 GET /notebooks/Section3-Kmeans-dim-reduction/GraphLaplacian/images/EigenVectors/twoBlob.jpg (172.17.0.1) 11.75ms
+[NotebookApp | INFO] 302 GET /notebooks/Section3-Kmeans-dim-reduction/GraphLaplacian/images/EigenVectors/twoD.1.jpg (172.17.0.1) 10.07ms
+[NotebookApp | INFO] 302 GET /notebooks/Section3-Kmeans-dim-reduction/GraphLaplacian/images/EigenVectors/twoD.2.jpg (172.17.0.1) 11.33ms
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 6767172b-ec68-4b67-9604-63c700008c2f
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb
+[NotebookApp | INFO] 302 GET /notebooks/Section3-Kmeans-dim-reduction/GraphLaplacian/images/EigenVectors/twoBlob.jpg (172.17.0.1) 10.00ms
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb
+[NotebookApp | INFO] Starting buffering for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Starting buffering for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Starting buffering for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Starting buffering for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Starting buffering for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Starting buffering for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 6767172b-ec68-4b67-9604-63c700008c2f
+[NotebookApp | INFO] Restoring connection for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d8e2fa72-9093-4de1-a395-00f4b74bfe4c
+[NotebookApp | INFO] Restoring connection for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67bcc5ef-ac26-484b-a59b-a6df67f1ad28
+[NotebookApp | INFO] Restoring connection for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d30b7c26-e83f-4398-89ba-f9a9a1397767
+[NotebookApp | INFO] Restoring connection for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 31788100-ae38-4b62-8c40-0583359cd3d5
+[NotebookApp | INFO] Restoring connection for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Restoring connection for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb
+[NotebookApp | INFO] Starting buffering for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Starting buffering for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Starting buffering for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Starting buffering for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Starting buffering for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Starting buffering for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 6767172b-ec68-4b67-9604-63c700008c2f
+[NotebookApp | INFO] Restoring connection for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Restoring connection for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 31788100-ae38-4b62-8c40-0583359cd3d5
+[NotebookApp | INFO] Restoring connection for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d30b7c26-e83f-4398-89ba-f9a9a1397767
+[NotebookApp | INFO] Restoring connection for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67bcc5ef-ac26-484b-a59b-a6df67f1ad28
+[NotebookApp | INFO] Restoring connection for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d8e2fa72-9093-4de1-a395-00f4b74bfe4c
+[NotebookApp | INFO] Restoring connection for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb
+[NotebookApp | INFO] Starting buffering for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Starting buffering for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Starting buffering for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Starting buffering for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Starting buffering for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Starting buffering for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 6767172b-ec68-4b67-9604-63c700008c2f
+[NotebookApp | INFO] Restoring connection for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d8e2fa72-9093-4de1-a395-00f4b74bfe4c
+[NotebookApp | INFO] Restoring connection for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67bcc5ef-ac26-484b-a59b-a6df67f1ad28
+[NotebookApp | INFO] Restoring connection for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d30b7c26-e83f-4398-89ba-f9a9a1397767
+[NotebookApp | INFO] Restoring connection for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 31788100-ae38-4b62-8c40-0583359cd3d5
+[NotebookApp | INFO] Restoring connection for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Restoring connection for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb
+[NotebookApp | INFO] Starting buffering for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Starting buffering for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Starting buffering for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Starting buffering for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Starting buffering for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Starting buffering for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 6767172b-ec68-4b67-9604-63c700008c2f
+[NotebookApp | INFO] Restoring connection for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d8e2fa72-9093-4de1-a395-00f4b74bfe4c
+[NotebookApp | INFO] Restoring connection for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67bcc5ef-ac26-484b-a59b-a6df67f1ad28
+[NotebookApp | INFO] Restoring connection for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Restoring connection for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 31788100-ae38-4b62-8c40-0583359cd3d5
+[NotebookApp | INFO] Restoring connection for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d30b7c26-e83f-4398-89ba-f9a9a1397767
+[NotebookApp | INFO] Restoring connection for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Starting buffering for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Starting buffering for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Starting buffering for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Starting buffering for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Starting buffering for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d30b7c26-e83f-4398-89ba-f9a9a1397767
+[NotebookApp | INFO] Restoring connection for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 31788100-ae38-4b62-8c40-0583359cd3d5
+[NotebookApp | INFO] Restoring connection for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 1dd0292c-2dda-496f-a4cf-3144fba887e3
+[NotebookApp | INFO] Restoring connection for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67bcc5ef-ac26-484b-a59b-a6df67f1ad28
+[NotebookApp | INFO] Restoring connection for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d8e2fa72-9093-4de1-a395-00f4b74bfe4c
+[NotebookApp | INFO] Restoring connection for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 6767172b-ec68-4b67-9604-63c700008c2f
+[NotebookApp | INFO] Restoring connection for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/GraphLaplacian/Graph Laplacian.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/1.animated_Kmeans.ipynb
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/diffusionAnalysis/Entropy Based Analysis 0.ipynb is not trusted
+[NotebookApp | INFO] Saving file at /Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb
+[NotebookApp | WARNING] Notebook Section3-Kmeans-dim-reduction/BasicAnalysis/3.Exploring K-means.ipynb is not trusted
+[NotebookApp | INFO] Starting buffering for 6767172b-ec68-4b67-9604-63c700008c2f:ba99ef22de18466c8f0247ca34a5b17c
+[NotebookApp | INFO] Starting buffering for d8e2fa72-9093-4de1-a395-00f4b74bfe4c:17087aa713eb4ffcbc49dee74d0d2153
+[NotebookApp | INFO] Starting buffering for d30b7c26-e83f-4398-89ba-f9a9a1397767:109f0038853e4ebeae19fa936a820e70
+[NotebookApp | INFO] Starting buffering for 67bcc5ef-ac26-484b-a59b-a6df67f1ad28:28eed34391b74e59a4c7018c53c1f909
+[NotebookApp | INFO] Starting buffering for 1dd0292c-2dda-496f-a4cf-3144fba887e3:7c6964c103f341728e7984a0ac834714
+[NotebookApp | INFO] Starting buffering for 31788100-ae38-4b62-8c40-0583359cd3d5:c9bd336f1b4247a191002af50b684553
