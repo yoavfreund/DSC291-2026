@@ -26,6 +26,7 @@ The importance of concisement. Separating notebooks/modules/reports
 - **Class 2 (Wed)**: Intro Notebook, Dataframes Notebook
 Efficiency issues: lazyness, compute, persist, computation graph, partitioning
 - **class 3 (Fri)** Dask in practice using weather data.
+--HW: download NYT 2015 from S3 and compute the scatterplot of ride-length vs fare.
 
 
 ### Week 3 — Data Cleaning and Basic Statistical Analysis
