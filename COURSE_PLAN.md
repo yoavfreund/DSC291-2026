@@ -28,7 +28,8 @@
 - **Class (Mon)**: Cursor and Vibe coding, 
 - **Class (Wed)**: Dask Theory, Intro Notebook, Dataframes Notebook
 Efficiency issues: lazyness, compute, persist, computation graph, partitioning
-- **Class (Fri)**: Dask in practice using weather data.
+- **class 3 (Fri)** Dask in practice using weather data.
+--HW: download NYT 2015 from S3 and compute the scatterplot of ride-length vs fare.
 
 ### Week 4 — Data Ingestion, Data Cleaning and Basic Statistical Analysis
 - **Class (Mon)**: Loading CSVs, creating flat Parquet (using weather data), calculating mean, variance, and analyzing distribution of values (including NaN)

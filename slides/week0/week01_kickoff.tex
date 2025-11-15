@@ -1,0 +1,277 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title{CSE255: Scalable Data Analysis with Dask}
+\subtitle{Week 1: Kickoff, AWS/S3, Vacoreum, Team Formation}
+\author{Course Instructor}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Course Overview}
+\begin{itemize}
+\item \textbf{Format}: 10 weeks; 3 × 45-minute lectures; one 30-minute Zoom meeting weekly
+\item \textbf{Teams}: 8 students/team; each team selects a public dataset
+\item \textbf{Grading}: 80\% project, 20\% homework (4 HWs × 5\% each)
+\item \textbf{Focus}: AWS/S3, Parquet-centric data engineering, Dask, visualization, PCA, regression/GAMs, K-means/Decision Trees/XGBoost, hypothesis-driven modeling
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Learning Objectives}
+\begin{itemize}
+\item Understand course scope, evaluation, and example questions
+\item Set up AWS accounts and understand IAM basics
+\item Organize S3 buckets and understand data access patterns
+\item Select appropriate datasets for the project
+\item Set up Vacoreum for cost management
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Course Scope}
+\begin{block}{What We'll Cover}
+\begin{itemize}
+\item AWS/S3 infrastructure with cost management
+\item Parquet-centric data engineering
+\item Dask for scalable analytics
+\item Visualization (including geospatial with ipyleaflet)
+\item Machine learning: PCA, regression, GAMs, K-means, trees, XGBoost
+\item Statistical inference and hypothesis testing
+\end{itemize}
+\end{block}
+\begin{block}{What You'll Build}
+Complete data science pipelines from raw data to reproducible insights
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example Questions}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\textbf{Example Domain Questions:}
+\begin{itemize}
+\item How does weather affect crime patterns?
+\item What are the spatial clusters of air quality?
+\item How do taxi trips vary by time and location?
+\end{itemize}
+\end{column}
+\begin{column}{0.5\textwidth}
+\textbf{Technical Questions:}
+\begin{itemize}
+\item How to partition data efficiently?
+\item What are the cost trade-offs?
+\item How to validate at scale?
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{AWS Account Setup}
+\begin{itemize}
+\item Create AWS account (if needed)
+\item Set up IAM users and roles
+\item \textbf{Best Practice}: Use IAM users, not root account
+\item Enable MFA for security
+\item Set up billing alerts
+\end{itemize}
+\begin{block}{IAM Basics}
+\begin{itemize}
+\item Users: individual access
+\item Groups: collections of users
+\item Roles: temporary permissions
+\item Policies: define permissions
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{S3 Organization}
+\begin{block}{Bucket Structure}
+\begin{itemize}
+\item \texttt{s3://team-name-project/}
+  \begin{itemize}
+    \item \texttt{raw/} — original data
+    \item \texttt{bronze/} — initial Parquet
+    \item \texttt{silver/} — cleaned, validated
+    \item \texttt{results/} — analysis outputs
+  \end{itemize}
+\end{itemize}
+\end{block}
+\begin{block}{Best Practices}
+\begin{itemize}
+\item Use versioning for important data
+\item Enable lifecycle policies
+\item Use tags for cost tracking
+\item Set appropriate access policies
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Dataset Selection Criteria}
+\begin{itemize}
+\item \textbf{Size}: Prefer ≥3 GB, not more than 6GB
+\item \textbf{Access}: Public, stable access
+\item \textbf{License}: Permissible for academic use
+\item \textbf{Potential}: Clear geospatial or temporal aggregation
+\end{itemize}
+\begin{block}{Good Examples}
+\begin{itemize}
+\item NYC TLC trips
+\item OpenAQ air quality
+\item OpenStreetMap extracts
+\item NOAA water data
+\item GDELT, Yelp, Common Crawl subsets
+\end{itemize}
+\end{block}
+\begin{alertblock}{Not Allowed}
+Instructor's weather dataset (reserved for demos)
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vacoreum Cost Management}
+\begin{block}{Setup Steps}
+\begin{enumerate}
+\item Link AWS account to Vacoreum
+\item Create budget for the project
+\item Set up alert policies
+\item Configure tagging strategy
+\end{enumerate}
+\end{block}
+\begin{block}{What to Monitor}
+\begin{itemize}
+\item Daily spend trends
+\item Cost per service (EC2, S3, etc.)
+\item Cost per 1M rows ingested
+\item Storage footprint
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Week 1 Deliverables}
+\begin{block}{Project Proposal (1–2 pages)}
+\begin{itemize}
+\item Dataset description and access plan
+\item Initial research questions
+\item Identified risks and mitigation
+\end{itemize}
+\end{block}
+\begin{block}{Repository Setup}
+\begin{itemize}
+\item Initialize repo with \texttt{environment.yml}
+\item Create \texttt{README.md}
+\item Define team roles
+\item Document tagging policy
+\end{itemize}
+\end{block}
+\begin{block}{Vacoreum Evidence}
+Screenshot: linked account, active budget, alert policy
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Homework 1 (5\%)}
+\begin{block}{AWS/S3 Setup Validation}
+\begin{itemize}
+\item Create S3 bucket and upload sample data
+\item Verify IAM permissions
+\item Test data fetch from S3 using Python
+\end{itemize}
+\end{block}
+\begin{block}{Cost Hygiene Checklist}
+\begin{itemize}
+\item Billing alerts configured
+\item Vacoreum budget active
+\item Tagging strategy documented
+\end{itemize}
+\end{block}
+\begin{block}{Vacoreum Alert Test}
+Trigger a test alert to verify notification system
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Team Formation}
+\begin{block}{Suggested Roles}
+\begin{itemize}
+\item Data Engineer
+\item Infra/DevOps
+\item Visualization Lead
+\item Modeling Lead
+\item QA/Validation
+\item PM/Documentation
+\item Research/Reading
+\item \textbf{Cost \& Governance Lead} — Vacoreum dashboards, tagging compliance
+\end{itemize}
+\end{block}
+\begin{block}{Process}
+\begin{itemize}
+\item Weekly stand-ups with progress notes
+\item GitHub Projects for task tracking
+\item PR reviews required
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Technology Stack}
+\begin{block}{Core Packages}
+\begin{itemize}
+\item \texttt{dask[complete]}, \texttt{distributed}
+\item \texttt{pandas}, \texttt{pyarrow}, \texttt{s3fs}
+\item \texttt{bokeh}, \texttt{matplotlib}, \texttt{plotly}
+\end{itemize}
+\end{block}
+\begin{block}{ML/Stats}
+\begin{itemize}
+\item \texttt{dask-ml}, \texttt{scikit-learn}, \texttt{xarray}
+\item \texttt{statsmodels}, \texttt{pygam}
+\end{itemize}
+\end{block}
+\begin{block}{Visualization}
+\texttt{ipyleaflet} for geospatial maps
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Key Principles}
+\begin{block}{Parquet is Canonical}
+All data should be stored in Parquet format
+\end{block}
+\begin{block}{S3 URIs for Data Access}
+Use S3 URIs consistently: \texttt{s3://bucket/path/to/file.parquet}
+\end{block}
+\begin{block}{Cost Awareness}
+Monitor and optimize costs from day one
+\end{block}
+\begin{block}{Reproducibility}
+All code must be runnable via \texttt{make} or single entrypoint
+\end{block}
+\end{frame}
+
+\begin{frame}
+\frametitle{Next Steps}
+\begin{enumerate}
+\item Form teams and assign roles
+\item Select dataset and write proposal
+\item Set up AWS account and S3 buckets
+\item Configure Vacoreum
+\item Initialize repository
+\item Complete HW1
+\end{enumerate}
+\begin{block}{Questions?}
+Office hours: [TBD]\\
+Slack: [TBD]
+\end{block}
+\end{frame}
+
+\end{document}
+
