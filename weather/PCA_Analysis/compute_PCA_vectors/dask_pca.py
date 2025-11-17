@@ -156,10 +156,16 @@ def dask_pca_explained_variance_ratio(explained_variances_):
     return explained_variance_ratio_
 
 
-def plot_mean_std(df, title="Mean and Std Dev of TAVG by Day of Year", ylabel="TAVG (°C)"):
+def plot_mean_std(df, title="Mean and Std Dev of TAVG by Day of Year", ylabel="TAVG (°C)", figsize=(6, 3)):
     """
     Compute, plot, and return the mean and std dev by day-of-year columns for a TAVG dataframe.
     Assumes columns are named as 'day_1', 'day_2', ..., 'day_365'.
+    
+    Parameters:
+        df: DataFrame with day columns
+        title: Plot title
+        ylabel: Y-axis label
+        figsize: Figure size tuple (width, height), default (6, 3)
     
     Returns:
         daily_means, daily_stds
@@ -178,7 +184,7 @@ def plot_mean_std(df, title="Mean and Std Dev of TAVG by Day of Year", ylabel="T
 
     days = np.arange(1, len(day_cols_sorted) + 1)
 
-    plt.figure(figsize=(12,6))
+    plt.figure(figsize=figsize)
     plt.plot(days, daily_means, label='Mean')
     plt.fill_between(days, daily_means-daily_stds, daily_means+daily_stds, color='b', alpha=0.2, label='±1 Std Dev')
 
@@ -201,7 +207,7 @@ def plot_mean_std(df, title="Mean and Std Dev of TAVG by Day of Year", ylabel="T
 
 def plot_mean_and_pcs(data, n_components=3, title="Mean and Principal Components", 
                      xlabel="Time", ylabel="Signal Value", signal_name="Signal",
-                     x_values=None, figsize=(12, 6)):
+                     x_values=None, figsize=(6, 3)):
     """
     Plot the mean signal and top K principal components for any signal data.
     

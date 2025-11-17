@@ -25,7 +25,7 @@
 - HDFS, Map Reduce, (slides.com) Lazy computation and computation plans 
 
 ### Week 3 - Dask
-- **Class (Mon)**: Cursor and Vibe coding, 
+- **Class (Mon)**: Cursor and AI-based coding, 
 - **Class (Wed)**: Dask Theory, Intro Notebook, Dataframes Notebook
 Efficiency issues: lazyness, compute, persist, computation graph, partitioning
 - **class 3 (Fri)** Dask in practice using weather data.

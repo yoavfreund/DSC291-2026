@@ -100,10 +100,10 @@ def convert_csvs_to_parquet(
         if output_path.exists():
             output_path.unlink()
 
-        writer: Optional[pq.ParquetWriter] = None
-        total_rows = 0
+    writer: Optional[pq.ParquetWriter] = None
+    total_rows = 0
 
-        try:
+    try:
             for chunk in pd.read_csv(csv_path, chunksize=chunksize):
                 for column in NULLABLE_INT_COLUMNS:
                     if column in chunk.columns:
@@ -114,9 +114,9 @@ def convert_csvs_to_parquet(
                     writer = pq.ParquetWriter(output_path, table.schema)
                 writer.write_table(table)
                 total_rows += len(chunk)
-        finally:
-            if writer is not None:
-                writer.close()
+    finally:
+        if writer is not None:
+            writer.close()
 
         if writer is None:
             empty_df = pd.read_csv(csv_path, nrows=0)
