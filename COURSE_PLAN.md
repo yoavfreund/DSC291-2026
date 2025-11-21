@@ -11,57 +11,64 @@
 ---
 
 ### Week 1 — Introduction and Setup
-- **Class (Mon)**: Prediction vs. explanation
-- **Class(Wed)** getting organized
-- The importance of concise reports.
-- separating notebooks, python code and reports
-- Teams of 5. responsibilities: Cluster controller, report creator, code organizer (gthub), Statistician, 
-- **Class (Fri)**: AWS, EC2, S3, firing up an instance, using GitHub, price monitoring
-- **Deliverables / Notes**: A working instance of EC2 at user and at team levelmv ../
+- **Class (Mon)**: Course overview, prediction vs. explanation, tooling expectations, weekly quiz cadence
+- **Class (Wed)**: Team formation (roles: cluster controller, report creator, repo organizer, statistician, comms lead), repo hygiene, concise reporting patter
+- **Class (Fri)**: AWS orientation (EC2, S3, IAM basics), launching cost-controlled instances, GitHub workflow primer
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
 
-### Week 2 - Memory Hierarchy , HDFS, Parquet
-- The memory Hierarchy and Latency (pptx)
-- History cheap super-computation (pptx), parquet
-- HDFS, Map Reduce, (slides.com) Lazy computation and computation plans 
+### Week 2 — Memory Hierarchy, HDFS, Parquet
+- **Class (Mon)**: Memory hierarchy, cache vs. disk vs. network latency, implications for distributed jobs
+- **Class (Wed)**: History of large-scale storage (HDFS evolution, object stores), Parquet layout, compression/encoding options
+- **Class (Fri)**: MapReduce patterns, lazy computation planning, translating conceptual execution plans into Dask
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
 
-### Week 3 - Dask
-- **Class (Mon)**: Cursor and AI-based coding, 
-- **Class (Wed)**: Dask Theory, Intro Notebook, Dataframes Notebook
-Efficiency issues: lazyness, compute, persist, computation graph, partitioning
-- **class 3 (Fri)** Dask in practice using weather data.
---HW: download NYT 2015 from S3 and compute the scatterplot of ride-length vs fare.
+### Week 3 — Dask
+- **Class (Mon)**: Cursor + AI-supported coding workflow, Dask APIs tour, navigating documentation efficiently
+- **Class (Wed)**: Dask theory—graphs, schedulers, persistence, partitioning strategies, debugging lazy execution
+- **Class (Fri)**: Hands-on lab with weather and taxi data; profiling `compute()`, `persist()`, and diagnostics dashboard
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
 
-### Week 4 — Data Ingestion, Data Cleaning and Basic Statistical Analysis
-- **Class (Mon)**: Loading CSVs, creating flat Parquet (using weather data), calculating mean, variance, and analyzing distribution of values (including NaN)
-- **Class (Wed)**: Dask efficiency issues, lazy evaluation, execution graphs, partitions, calculating covariance and co-occurrence
-- **Class (Fri)**: Pivoting selected measurements, repartitioning, NaN analysis, removing records which are rare or hold little information
-- **Deliverables / Notes**: Translating CSV files to Parquet files; loading Parquet files to DataFrames and counting number of rows; cleaning flight data
+### Week 4 — Data Ingestion, Data Cleaning and Basic Statistical Analysis, Visualization on maps
+- **Class (Mon)**: CSV ingestion pipelines, schema enforcement, writing tidy Parquet datasets
+- **Class (Wed)**: Data quality metrics, covariance/correlation tracking at scale, partition-aware statistics; geospatial visualization with Folium and vector tiles
+- **Class (Fri)**: Pivoting/repartitioning scenarios, rare-category pruning, NaN remediation strategies; meteorological mapping (xarray + cartopy + interactive maps)
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
 
-### Week 5 — Visualization
-- **Class (Mon)**: Folium
-- **Class (Wed)**: Statistical graphs (Q-Q graphs etc)
-- **Class (Fri)**: interactive plots
-- **Deliverables / Notes**: Visualizing flight paths using Folium
+### Week 5 — PCA I: Theory
+- **Class (Mon)**: Linear algebra refresher, singular value decomposition intuition, Sanjoy's slides walkthrough
+- **Class (Wed)**: Eigenvalue decomposition, principal components derivation, variance explained concepts
+- **Class (Fri)**: Mathematical foundations, geometric interpretation, theoretical properties of PCA
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
 
-### Week 6 — PCA I: Theory
-- **Class (Mon)**: Linear algebra, slides from Sanjoy
-- **Class (Wed)**: Application to TAVG
-- **Class (Fri)**: reconstruction
-- **Deliverables / Notes**: _TBD_
+### Week 6 — PCA II: applications
+- **Class (Mon)**: Applying PCA to temperature anomalies (TAVG), interpreting components
+- **Class (Wed)**: Reconstruction error analysis, dimensionality selection heuristics
+- **Class (Fri)**: Communicating findings, practical considerations, case studies
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
 
-### Week 7 Boosting 
+### Week 7 — Splines
+- **Class (Mon)**: Basis functions, smoothing penalties, interpreting spline terms
+- **Class (Wed)**: Spline fitting techniques, knot selection, degrees of freedom
+- **Class (Fri)**: Tensor-product splines, regularization tuning, practical applications
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
 
-### Week 8 — Splines and GAMs
-- **Class (Mon)**: _Pending definition_
-- **Class (Wed)**: _Pending definition_
-- **Class (Fri)**: _Pending definition_
-- **Deliverables / Notes**: _TBD_
+### Week 8 — GAMs
+- **Class (Mon)**: Introduction to Generalized Additive Models, additive structure, link functions
+- **Class (Wed)**: Hands-on with pyGAM; comparing splines vs. tree-based fits on weather signals
+- **Class (Fri)**: Multivariate GAM case studies (climate + mobility), factor terms, shape constraints; model diagnostics (QQ plots, residual structure, deviance)
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
 
-### Week 9 — Gams
-- **Class (Mon)**: _Pending definition_
-- **Class (Wed)**: _Pending definition_
-- **Class (Fri)**: _Pending definition_
-- **Deliverables / Notes**: _TBD_
+### Week 9 — Boosting: theory
+- **Class (Mon)**: Gradient boosting fundamentals, bias-variance review, connection to additive models
+- **Class (Wed)**: Boosting algorithms (AdaBoost, gradient boosting), loss functions, regularization
+- **Class (Fri)**: Theoretical properties, convergence analysis, ensemble methods theory
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
+
+### Week 10 — Boosting: XGBoost
+- **Class (Mon)**: XGBoost/LightGBM with Dask, handling categorical/temporal features, hyperparameter sweeps
+- **Class (Wed)**: Model monitoring, feature importance narratives, integrating boosted models into pipelines
+- **Class (Fri)**: Advanced XGBoost techniques, distributed training, production deployment considerations
+- **Deliverables / Notes**: _TBD (HW defined by instructor)_
 
 
 ---
