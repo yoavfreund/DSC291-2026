@@ -1,0 +1,181 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+
+\title{Streaming Algorithms for Heavy Hitters:\\ Misra--Gries and Space-Saving}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+%-------------------------------------------------------
+\section{Problem Setting}
+%-------------------------------------------------------
+
+\begin{frame}{Heavy Hitters in Data Streams}
+We observe a stream of items:
+\[
+x_1, x_2, \ldots, x_m
+\]
+
+Goal: Find the most frequent items using very small memory.
+
+\begin{itemize}
+    \item Cannot store full frequency table.
+    \item Want sublinear space, ideally $O(k)$.
+    \item Focus on \textbf{heavy hitters}: items with frequency $> m/(k+1)$.
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------
+\section{Misra--Gries Algorithm}
+%-------------------------------------------------------
+
+\begin{frame}{Misra--Gries Algorithm (1979)}
+Maintain at most $k$ counters, each storing:
+\[
+(\text{item}, \text{count})
+\]
+
+For each incoming item $x$:
+\begin{enumerate}
+    \item If $x$ already tracked: increment its counter.
+    \item Else if fewer than $k$ counters in use: insert $(x,1)$.
+    \item Else: decrement all counters by 1 and delete those that hit 0.
+\end{enumerate}
+
+\bigskip
+Deterministic and extremely simple.
+\end{frame}
+
+%-------------------------------------------------------
+
+\begin{frame}{Example Illustration}
+Suppose $k = 2$ and the stream is:
+\[
+a, b, c, a, c, c, b, c
+\]
+
+The algorithm maintains at most two counters.
+\begin{itemize}
+    \item When a new item arrives and both counters are occupied, decrement both.
+    \item Items with low frequency are quickly eliminated.
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------
+\section{Analysis of Misra--Gries}
+%-------------------------------------------------------
+
+\begin{frame}{MG: Key Properties}
+Let $f(x)$ = true frequency of item $x$.
+
+If an item appears more than $m/(k+1)$ times:
+\[
+f(x) > \frac{m}{k+1}
+\quad\Rightarrow\quad
+x \text{ will appear in the MG summary.}
+\]
+
+\begin{itemize}
+    \item \textbf{No false negatives} above threshold.
+    \item At most $k$ candidates stored.
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------
+
+\begin{frame}{MG: Error Bound}
+Each counter decrement corresponds to eliminating $(k+1)$ distinct items.
+
+Total number of decrements:
+\[
+\leq \frac{m}{k+1}.
+\]
+
+Estimated count $c(x)$ satisfies:
+\[
+f(x) - c(x) \le \frac{m}{k+1}.
+\]
+
+Thus MG provides deterministic, additive error.
+\end{frame}
+
+%-------------------------------------------------------
+
+\begin{frame}{MG: Space and Time}
+\begin{itemize}
+    \item Space: $O(k)$ counters.
+    \item Worst-case time per update: $O(k)$
+    \item Amortized time: $O(1)$
+\end{itemize}
+
+\medskip
+MG is excellent for \textbf{approximate heavy hitters} with strong guarantees.
+\end{frame}
+
+%-------------------------------------------------------
+\section{Space-Saving Algorithm}
+%-------------------------------------------------------
+
+\begin{frame}{Space-Saving (Metwally, Agrawal, Abbadi, 2005)}
+Also maintains $k$ counters, but instead of decrementing all:
+
+For arriving item $x$:
+\begin{enumerate}
+    \item If $x$ is tracked: increment its counter.
+    \item Else:
+        \begin{itemize}
+            \item Find counter with minimum value $(y, c_{\min})$
+            \item Replace $y$ with $x$
+            \item Set new counter for $x$ to $c_{\min} + 1$
+        \end{itemize}
+\end{enumerate}
+
+\bigskip
+This makes heavy hitters dominate faster and improves accuracy.
+\end{frame}
+
+%-------------------------------------------------------
+
+\begin{frame}{Why Space-Saving Works Well}
+\begin{itemize}
+    \item Low-frequency items are the ones being replaced.
+    \item High-frequency items quickly accumulate large counts.
+    \item Errors are much smaller than the MG bound in practice.
+    \item Update cost is $O(1)$ using a heap or linked structure.
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------
+\section{Comparison}
+%-------------------------------------------------------
+
+\begin{frame}{Comparison: Misra--Gries vs Space-Saving}
+\begin{tabular}{l|c|c}
+ & Misra--Gries & Space-Saving \\
+\hline
+Space & $O(k)$ & $O(k)$ \\
+Updates & amortized $O(1)$ & $O(1)$ \\
+Error & $\le m/(k+1)$ & typically much smaller \\
+Deterministic & Yes & Yes \\
+Behavior & decrement-all & replace-min \\
+Best for & theory guarantees & practical top-$k$ accuracy
+\end{tabular}
+\end{frame}
+
+%-------------------------------------------------------
+\section{Conclusion}
+%-------------------------------------------------------
+
+\begin{frame}{Takeaways}
+\begin{itemize}
+    \item Misra--Gries: strong deterministic guarantees, additive error, simple.
+    \item Space-Saving: improved empirical accuracy, optimized for top-$k$.
+    \item Both scale to massive streams with $O(k)$ space.
+\end{itemize}
+
+Streaming heavy hitters is a solved problem—fast, accurate, and memory-light.
+\end{frame}
+
+\end{document}

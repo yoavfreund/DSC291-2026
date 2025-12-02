@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Problem Setting}{2}{0}{1}
+\beamer@sectionintoc {2}{Misra--Gries Algorithm}{3}{0}{2}
+\beamer@sectionintoc {3}{Analysis of Misra--Gries}{5}{0}{3}
+\beamer@sectionintoc {4}{Space-Saving Algorithm}{8}{0}{4}
+\beamer@sectionintoc {5}{Comparison}{10}{0}{5}
+\beamer@sectionintoc {6}{Conclusion}{11}{0}{6}
