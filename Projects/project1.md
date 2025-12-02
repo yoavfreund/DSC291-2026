@@ -19,6 +19,7 @@ Teams, each consisting of 5 students, with the following roles
 5. **Configuration manager** responsible for maintaining the virtual environment. If there is a persistant problem, communicating with the TA to fix the AIM Image.
 
 ### Resources
+You need to get familiar with a number of tools. Primarily:
 1. Cursor
 2. AWS instances: how to start/stop and monitor and instance from an image.
 3. Connecting to an instance through SSH
