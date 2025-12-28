@@ -1,0 +1,10 @@
+\frametitle{IPC / Feather: share Arrow data on disk}
+\begin{lstlisting}
+import pyarrow as pa
+import pyarrow.feather as feather
+
+t = pa.table({"x": [1, 2, 3], "y": ["a", "b", "c"]})
+
+feather.write_feather(t, "example.feather")
+t2 = feather.read_table("example.feather")
+\end{lstlisting}
