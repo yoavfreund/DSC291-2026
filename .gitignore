@@ -3,6 +3,7 @@
 *.pdf
 .ipynb_checkpoints
 *.gz
+*.DS_Store
 data/accounts.*.csv
 data/accounts.h5
 data/random.hdf5
