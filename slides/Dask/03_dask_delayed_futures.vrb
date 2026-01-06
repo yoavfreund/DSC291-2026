@@ -1,0 +1,27 @@
+\frametitle{Error Handling: Futures}
+\begin{lstlisting}
+# Submit risky task
+future = client.submit(risky_function, arg)
+
+# Check for errors
+try:
+    result = future.result()
+except Exception as e:
+    print(f"Error: {e}")
+    # Handle error appropriately
+\end{lstlisting}
+
+\textbf{Error Behavior:}
+\begin{itemize}
+    \item Errors available immediately
+    \item Can check \texttt{future.status == 'error'}
+    \item Non-blocking error checking
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Advantages:}
+\begin{itemize}
+    \item Immediate error detection
+    \item Don't wait for all tasks
+    \item Better for monitoring
+\end{itemize}

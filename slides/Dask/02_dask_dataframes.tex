@@ -1,0 +1,626 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{url}
+
+% Code listing setup
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    language=Python
+}
+
+\title{Dask DataFrames}
+\subtitle{Parallel Pandas for Large Datasets}
+\author{CSE255 - Scalable Data Analysis}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{DataFrame Architecture}
+\begin{itemize}
+    \item One Dask DataFrame = many pandas DataFrames
+    \item Partitioned along index
+    \item Each partition is a pandas DataFrame
+    \item Operations applied to each partition in parallel
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Key Insight:}
+\begin{itemize}
+    \item Think of Dask DataFrame as a "meta-DataFrame"
+    \item Contains references to many pandas DataFrames
+    \item Each partition can be on different machines
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Blocked Parallel Strategy}
+\textbf{How It Works:}
+\begin{enumerate}
+    \item Data split into blocks (partitions)
+    \item Operations applied to each block independently
+    \item Results combined to form final answer
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{itemize}
+    \item 1TB dataset $\rightarrow$ 10 partitions of 100GB each
+    \item Each partition processed in parallel
+    \item Results merged at the end
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+Large Dataset
+    |
+[Partition 1] [Partition 2] [Partition 3] [Partition 4]
+    |              |              |              |
+[Process 1]   [Process 2]   [Process 3]   [Process 4]
+    |              |              |              |
+    +--------------+--------------+--------------+
+                    |
+              Combined Result
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Creating DataFrames: From Files}
+\begin{lstlisting}
+import dask.dataframe as dd
+
+# Read CSV files
+df = dd.read_csv('data/*.csv')
+
+# Read Parquet files
+df = dd.read_parquet('s3://bucket/data/*.parquet')
+\end{lstlisting}
+
+\textbf{Key Features:}
+\begin{itemize}
+    \item Supports glob patterns (\texttt{*}, \texttt{?}, \texttt{[...]})
+    \item Automatic schema inference
+    \item Lazy loading (no data read until \texttt{.compute()})
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{What Happens:}
+\begin{itemize}
+    \item Dask scans file paths
+    \item Infers schema from first file
+    \item Creates task graph for reading
+    \item Data not loaded until needed
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Creating DataFrames: From Pandas}
+\begin{lstlisting}
+import pandas as pd
+import dask.dataframe as dd
+
+# Create pandas DataFrame
+pandas_df = pd.DataFrame({
+    'col1': range(1000),
+    'col2': range(1000, 2000)
+})
+
+# Convert to Dask DataFrame
+dask_df = dd.from_pandas(pandas_df, npartitions=4)
+\end{lstlisting}
+
+\textbf{Key Points:}
+\begin{itemize}
+    \item Convert existing pandas DataFrames
+    \item Specify number of partitions
+    \item Useful for testing or small-to-medium data
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Partitioning:}
+\begin{itemize}
+    \item \texttt{npartitions=4} splits data into 4 partitions
+    \item Each partition is a pandas DataFrame
+    \item Index determines how data is split
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Lazy Evaluation in Action}
+\textbf{What "Lazy" Means:}
+\begin{itemize}
+    \item \texttt{dd.read\_csv()} doesn't load data
+    \item Just creates task graph
+    \item \texttt{.compute()} triggers actual loading
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{lstlisting}
+df = dd.read_csv('data/*.csv')  # Instant (no data loaded)
+print(df)  # Shows metadata only
+result = df.sum()  # Still no data loaded
+final = result.compute()  # NOW data is loaded
+\end{lstlisting}
+
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item Before compute: Lightweight graph structure
+    \item After compute: Actual data in memory
+    \item Scheduler optimizes execution order
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Basic Operations: Inspection}
+\begin{lstlisting}
+df.head()      # Triggers computation (loads first partition)
+df.tail()      # Triggers computation (loads last partition)
+df.describe()  # Triggers computation (loads all partitions)
+df.dtypes      # No computation needed (metadata)
+df.columns     # No computation needed (metadata)
+\end{lstlisting}
+
+\textbf{Key Distinction:}
+\begin{itemize}
+    \item \textbf{Metadata operations}: No computation (fast)
+    \item \textbf{Data operations}: Trigger computation (slower)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{When Computation Happens:}
+\begin{itemize}
+    \item \texttt{.head()}, \texttt{.tail()}: Loads partial data
+    \item \texttt{.describe()}, \texttt{len()}: Loads all data
+    \item \texttt{.dtypes}, \texttt{.columns}: No data loading
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Filtering and Selection}
+\begin{lstlisting}
+# Filter rows
+filtered = df[df['column'] > 100]
+
+# Select columns
+selected = df[['col1', 'col2']]
+
+# Combined
+result = df[df['value'] > 50][['col1', 'col2']]
+\end{lstlisting}
+
+\textbf{How It Works:}
+\begin{itemize}
+    \item Works exactly like pandas
+    \item Applied to each partition independently
+    \item Filtering reduces data size early
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+Partition 1: [row1, row2, row3, row4, row5]
+    | filter(column > 100)
+Partition 1: [row2, row4]  (filtered)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{GroupBy Operations}
+\begin{lstlisting}
+# Group by category
+grouped = df.groupby('category')
+
+# Aggregate
+result = grouped['value'].sum()
+result.compute()
+
+# Multiple aggregations
+result = grouped.agg({
+    'value': ['sum', 'mean', 'count']
+})
+\end{lstlisting}
+
+\textbf{Key Features:}
+\begin{itemize}
+    \item Distributed groupby
+    \item Handles shuffles efficiently
+    \item Works like pandas groupby
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+Partition 1: [A: 1, B: 2, A: 3]
+Partition 2: [B: 4, A: 5, C: 6]
+    | groupby
+A: [1, 3, 5] -> sum = 9
+B: [2, 4] -> sum = 6
+C: [6] → sum = 6
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Aggregations}
+\begin{lstlisting}
+# Column-wise aggregations
+df.sum()
+df.mean()
+df.count()
+df.max()
+df.min()
+
+# Row-wise aggregations
+df.sum(axis=1)
+\end{lstlisting}
+
+\textbf{How It Works:}
+\begin{itemize}
+    \item Applied per partition, then combined
+    \item Efficient for large datasets
+    \item Same API as pandas
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{verbatim}
+Partition 1: sum = 100
+Partition 2: sum = 200
+Partition 3: sum = 150
+    | combine
+Total sum = 450
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Joins and Merges}
+\begin{lstlisting}
+# Merge two DataFrames
+result = dd.merge(df1, df2, on='key')
+
+# Left join
+result = dd.merge(df1, df2, on='key', how='left')
+
+# Multiple keys
+result = dd.merge(df1, df2, on=['key1', 'key2'])
+\end{lstlisting}
+
+\textbf{Key Features:}
+\begin{itemize}
+    \item Handles large joins efficiently
+    \item Partition-aware (optimizes data movement)
+    \item Same API as pandas merge
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Performance:}
+\begin{itemize}
+    \item Dask optimizes join strategy
+    \item Minimizes data shuffling
+    \item Can handle joins larger than memory
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Reading from S3}
+\begin{lstlisting}
+# Read Parquet from S3
+df = dd.read_parquet('s3://bucket/data/*.parquet')
+
+# Read CSV from S3
+df = dd.read_csv('s3://bucket/data/*.csv')
+\end{lstlisting}
+
+\textbf{Key Features:}
+\begin{itemize}
+    \item Direct S3 access (no download needed)
+    \item Uses IAM roles (no credentials needed on EC2)
+    \item Works with partitioned data
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Setup Required:}
+\begin{itemize}
+    \item IAM role attached to EC2 instance
+    \item Bucket permissions configured
+    \item That's it! No credentials in code
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Reading Parquet Files}
+\textbf{Why Parquet?}
+\begin{itemize}
+    \item \textbf{Columnar format}: Read only needed columns
+    \item \textbf{Efficient compression}: 3-10x smaller than CSV
+    \item \textbf{Schema preservation}: Data types stored with data
+    \item \textbf{Cross-platform}: Works with many tools
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+Parquet File:
++-- Column 1: [val1, val2, val3, ...]
++-- Column 2: [val1, val2, val3, ...]
++-- Column 3: [val1, val2, val3, ...]
+
+Only read columns you need!
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Writing Results}
+\begin{lstlisting}
+# Write to Parquet
+df.to_parquet('s3://bucket/output/')
+
+# Write to CSV
+df.to_csv('s3://bucket/output/*.csv')
+
+# With options
+df.to_parquet(
+    's3://bucket/output/',
+    compression='snappy',
+    write_index=False
+)
+\end{lstlisting}
+
+\textbf{Key Features:}
+\begin{itemize}
+    \item Writes partitioned files
+    \item One file per partition
+    \item Maintains partitioning structure
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Output Structure:}
+\begin{verbatim}
+output/
++-- part.0.parquet
++-- part.1.parquet
++-- part.2.parquet
++-- part.3.parquet
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Index Management}
+\textbf{Index Determines Partitioning:}
+\begin{itemize}
+    \item Index values determine which partition data goes to
+    \item Setting index can be expensive operation
+\end{itemize}
+
+\begin{lstlisting}
+# Set index (may trigger shuffle)
+df = df.set_index('date')
+
+# Repartition
+df = df.repartition(npartitions=8)
+
+# Reset index
+df = df.reset_index()
+\end{lstlisting}
+
+\textbf{Best Practice:}
+\begin{itemize}
+    \item Set index during read if possible
+    \item Avoid setting index on large datasets unnecessarily
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{When Operations Trigger Computation}
+\textbf{Explicit Triggers:}
+\begin{itemize}
+    \item \texttt{.compute()} - explicit trigger
+    \item \texttt{len(df)} - triggers computation
+    \item \texttt{df.head()} - triggers partial computation
+\end{itemize}
+
+\textbf{Lazy Operations:}
+\begin{itemize}
+    \item Most operations are lazy
+    \item Build task graph only
+    \item No data loaded until compute
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{lstlisting}
+df = dd.read_csv('data/*.csv')  # Lazy
+filtered = df[df['col'] > 100]  # Lazy
+grouped = filtered.groupby('cat')  # Lazy
+result = grouped.sum()  # Lazy
+final = result.compute()  # TRIGGERS computation
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{Memory Management}
+\textbf{Key Principles:}
+\begin{itemize}
+    \item Each partition fits in memory
+    \item Operations stream through partitions
+    \item \texttt{.persist()} caches in memory
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{lstlisting}
+# Stream through partitions (low memory)
+result = df.groupby('cat').sum().compute()
+
+# Cache in memory (higher memory, faster)
+df_persisted = df.persist()
+result1 = df_persisted.groupby('cat').sum()
+result2 = df_persisted.groupby('cat').mean()
+\end{lstlisting}
+
+\textbf{Memory Strategy:}
+\begin{itemize}
+    \item Default: Stream (low memory)
+    \item Use persist: When reusing data (higher memory)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Performance Tips: Partition Size}
+\textbf{Partition Size Guidelines:}
+\begin{itemize}
+    \item \textbf{Too small}: Overhead dominates (many small tasks)
+    \item \textbf{Too large}: Memory issues (partition doesn't fit)
+    \item \textbf{Rule of thumb}: 100MB-1GB per partition
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Adjusting Partitions:}
+\begin{lstlisting}
+# Repartition to different size
+df = df.repartition(npartitions=8)  # Fewer, larger partitions
+df = df.repartition(npartitions=32)  # More, smaller partitions
+\end{lstlisting}
+
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item X-axis: Partition size
+    \item Y-axis: Performance
+    \item Sweet spot in middle (100MB-1GB)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Performance Tips: Operations}
+\textbf{Optimization Strategies:}
+
+\begin{enumerate}
+    \item \textbf{Filter early}: Reduces data size
+    \begin{lstlisting}
+# Good: Filter first
+df[df['value'] > 100].groupby('cat').sum()
+
+# Bad: Groupby first
+df.groupby('cat').sum()[result > 100]
+    \end{lstlisting}
+
+    \item \textbf{Use appropriate dtypes}: Smaller dtypes = less memory
+    \begin{lstlisting}
+df['id'] = df['id'].astype('int32')  # Instead of int64
+    \end{lstlisting}
+
+    \item \textbf{Avoid iterating over rows}: Use vectorized operations
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Common Pitfalls: Setting Index}
+\begin{lstlisting}
+# SLOW: Sets index after loading all data
+df = dd.read_parquet('s3://bucket/data/*.parquet')
+df = df.set_index('date')  # Expensive shuffle!
+
+# BETTER: Set index during read
+df = dd.read_parquet(
+    's3://bucket/data/*.parquet',
+    index='date'  # Index set during read
+)
+\end{lstlisting}
+
+\textbf{Why It Matters:}
+\begin{itemize}
+    \item Setting index requires data shuffle
+    \item Can be very expensive for large datasets
+    \item Set index during read when possible
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Common Pitfalls: Iterating}
+\begin{lstlisting}
+# BAD: Iterating over partitions
+for partition in df.to_delayed():
+    process(partition)
+
+# BETTER: Use vectorized operations
+df.apply(func, axis=1)
+
+# BEST: Use built-in operations
+df.groupby('cat').apply(func)
+\end{lstlisting}
+
+\textbf{Key Principle:}
+\begin{itemize}
+    \item Avoid Python loops
+    \item Use vectorized operations
+    \item Leverage Dask's parallelization
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Performance Impact:}
+\begin{itemize}
+    \item Loops: Sequential, slow
+    \item Vectorized: Parallel, fast
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Real-World Example: Flight Data}
+\begin{lstlisting}
+# Read flight data from S3
+df = dd.read_parquet('s3://bucket/flights/*.parquet')
+
+# Filter delayed flights
+delayed_flights = df[df['dep_delay'] > 0]
+
+# Group by airline
+by_airline = delayed_flights.groupby('carrier').size()
+
+# Compute result
+result = by_airline.compute()
+
+# Display
+print(result)
+\end{lstlisting}
+
+\textbf{Complete Workflow:}
+\begin{enumerate}
+    \item Read data (lazy)
+    \item Filter (lazy)
+    \item Group and aggregate (lazy)
+    \item Compute (executes everything)
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{What Happens:}
+\begin{itemize}
+    \item All operations build task graph
+    \item Scheduler optimizes execution
+    \item Data processed in parallel
+    \item Results combined
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+\textbf{Key Takeaways:}
+\begin{itemize}
+    \item Dask DataFrame = many pandas DataFrames
+    \item Lazy evaluation for efficiency
+    \item Pandas-like API (familiar)
+    \item Scales to large datasets
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Best Practices:}
+\begin{itemize}
+    \item Filter early
+    \item Right-size partitions
+    \item Use persist strategically
+    \item Avoid unnecessary index operations
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Next Steps:}
+\begin{itemize}
+    \item Learn delayed and futures
+    \item Explore distributed computing
+    \item Practice with real datasets
+\end{itemize}
+\end{frame}
+
+\end{document}
+

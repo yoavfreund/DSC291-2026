@@ -1,0 +1,629 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+
+% Code listing setup
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    language=Python
+}
+
+\title{Dask Delayed and Futures}
+\subtitle{Parallelizing Arbitrary Python Code}
+\author{CSE255 - Scalable Data Analysis}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{The Problem}
+\textbf{Not All Code is Array/DataFrame Operations:}
+\begin{itemize}
+    \item Custom functions and workflows
+    \item File processing pipelines
+    \item API calls and web scraping
+    \item Complex data transformations
+    \item Machine learning preprocessing
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Need to Parallelize:}
+\begin{itemize}
+    \item For loops with independent iterations
+    \item Batch processing jobs
+    \item Independent function calls
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item Sequential processing: [Task1] $\rightarrow$ [Task2] $\rightarrow$ [Task3] (slow)
+    \item Parallel processing: [Task1, Task2, Task3] simultaneously (fast)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Two Approaches}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Delayed:}
+\begin{itemize}
+    \item Lazy execution
+    \item Builds computation graph first
+    \item Executes when \texttt{.compute()} called
+    \item Good for complex dependencies
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Futures:}
+\begin{itemize}
+    \item Eager execution
+    \item Executes immediately
+    \item Non-blocking
+    \item Good for simple parallelism
+\end{itemize}
+\end{columns}
+
+\vspace{0.5cm}
+\textbf{Key Difference:}
+\begin{itemize}
+    \item Delayed: Plan first, execute later
+    \item Futures: Execute immediately
+\end{itemize}
+\end{frame}
+
+\begin{frame}{What is dask.delayed?}
+\textbf{The \texttt{@delayed} Decorator:}
+\begin{itemize}
+    \item Wraps functions to make them lazy
+    \item Builds computation graph
+    \item Executes when \texttt{.compute()} called
+    \item Enables parallelization
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Basic Concept:}
+\begin{itemize}
+    \item Function call $\rightarrow$ Delayed object (lightweight)
+    \item Compute $\rightarrow$ Actual execution (heavy)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Basic Delayed Example}
+\begin{lstlisting}
+from dask import delayed
+
+@delayed
+def inc(x):
+    return x + 1
+
+# Returns Delayed object (no execution yet)
+result = inc(1)
+print(result)  # <Delayed 'inc-...'>
+
+# Actually executes
+final = result.compute()
+print(final)  # 2
+\end{lstlisting}
+
+\textbf{Key Points:}
+\begin{itemize}
+    \item Simple function decoration
+    \item Returns Delayed object immediately
+    \item Execution happens at \texttt{.compute()}
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Timeline:}
+\begin{enumerate}
+    \item \texttt{@delayed} decorates function
+    \item Function call returns Delayed object
+    \item \texttt{.compute()} triggers execution
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Delayed: Multiple Functions}
+\begin{lstlisting}
+@delayed
+def add(x, y):
+    return x + y
+
+# Create delayed computations
+x = inc(1)  # Delayed
+y = inc(2)  # Delayed
+z = add(x, y)  # Delayed, depends on x and y
+
+# Execute all at once
+z.compute()  # Executes inc(1), inc(2), then add(3, 4)
+\end{lstlisting}
+
+\textbf{Key Features:}
+\begin{itemize}
+    \item Builds dependency graph
+    \item Dependencies executed first
+    \item Parallel execution when possible
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+    inc(1) --+
+            +--> add(3, 4) -> result
+    inc(2) --+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Visualizing Task Graphs}
+\begin{lstlisting}
+# Visualize the computation graph
+z.visualize()
+\end{lstlisting}
+
+\textbf{What You See:}
+\begin{itemize}
+    \item Nodes = tasks (functions to execute)
+    \item Edges = dependencies (data flow)
+    \item Helps understand execution plan
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Benefits:}
+\begin{itemize}
+    \item See computation structure
+    \item Understand dependencies
+    \item Debug complex workflows
+    \item Optimize execution order
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Delayed: For Loops}
+\textbf{Parallelizing Loops:}
+\begin{lstlisting}
+@delayed
+def process_file(filename):
+    data = read_file(filename)
+    return transform(data)
+
+# Create list of delayed tasks
+results = [process_file(f) for f in files]
+
+# Execute all in parallel
+final = dask.compute(*results)
+\end{lstlisting}
+
+\textbf{Key Advantage:}
+\begin{itemize}
+    \item Loop iterations run in parallel
+    \item Much faster than sequential loop
+    \item Automatic dependency handling
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+Sequential: file1 -> file2 -> file3 (slow)
+Parallel:   file1, file2, file3 simultaneously (fast)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Real-World Pattern: Read-Transform-Write}
+\begin{lstlisting}
+@delayed
+def process_file(filename):
+    # Read
+    data = read_file(filename)
+    
+    # Transform
+    processed = transform(data)
+    
+    # Write
+    output_path = f"results/{filename}"
+    write_file(processed, output_path)
+    
+    return output_path
+
+# Process all files in parallel
+files = ['file1.csv', 'file2.csv', 'file3.csv']
+tasks = [process_file(f) for f in files]
+dask.compute(*tasks)
+\end{lstlisting}
+
+\textbf{Common Workflow:}
+\begin{itemize}
+    \item Read data from files
+    \item Apply transformations
+    \item Write results
+    \item All in parallel
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{What are Futures?}
+\textbf{Futures:}
+\begin{itemize}
+    \item Eager, non-blocking execution
+    \item Returns immediately with Future object
+    \item Computation happens in background
+    \item Can check status anytime
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Key Difference from Delayed:}
+\begin{itemize}
+    \item Delayed: Lazy (wait for compute)
+    \item Futures: Eager (start immediately)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+Time 0: Submit task -> Get Future (pending)
+Time 1: Task executing (in background)
+Time 2: Task done -> Future (finished)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Futures: Basic Example}
+\begin{lstlisting}
+from dask.distributed import Client
+
+# Create client
+client = Client()
+
+# Submit task (returns immediately)
+future = client.submit(inc, 1)  # Returns Future object
+
+# Check status
+print(future.status)  # 'pending' or 'finished'
+
+# Get result (blocks until done)
+result = future.result()  # Waits if not done
+\end{lstlisting}
+
+\textbf{Key Features:}
+\begin{itemize}
+    \item Immediate submission
+    \item Non-blocking
+    \item Status tracking
+    \item Result retrieval
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Timeline:}
+\begin{itemize}
+    \item \texttt{submit()}: Returns immediately
+    \item Task executes in background
+    \item \texttt{result()}: Blocks until done
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Futures: Status Tracking}
+\begin{lstlisting}
+# Check status
+future.status  # 'pending', 'finished', 'error'
+
+# Check if done
+if future.done():
+    result = future.result()
+
+# Get result (blocks if not done)
+result = future.result()
+\end{lstlisting}
+
+\textbf{Status States:}
+\begin{itemize}
+    \item \textbf{pending}: Task queued, not started
+    \item \textbf{finished}: Task completed successfully
+    \item \textbf{error}: Task failed
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Use Cases:}
+\begin{itemize}
+    \item Monitor progress
+    \item Handle errors
+    \item Collect results as they complete
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Futures: Map Pattern}
+\begin{lstlisting}
+# Apply function to sequence
+file_list = ['file1.csv', 'file2.csv', 'file3.csv']
+futures = client.map(process_file, file_list)
+
+# Collect results
+results = client.gather(futures)
+\end{lstlisting}
+
+\textbf{Map vs Submit:}
+\begin{itemize}
+    \item \texttt{submit()}: Single function call
+    \item \texttt{map()}: Apply to sequence
+    \item Both return Futures
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+file_list: [f1, f2, f3]
+    | map(process_file)
+futures: [Future1, Future2, Future3]
+    | gather
+results: [result1, result2, result3]
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Delayed vs Futures: Lazy vs Eager}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Delayed:}
+\begin{itemize}
+    \item Build graph first
+    \item Execute later (on \texttt{.compute()})
+    \item Scheduler can optimize
+    \item Good for complex dependencies
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Futures:}
+\begin{itemize}
+    \item Execute immediately
+    \item No graph building
+    \item Start as soon as submitted
+    \item Good for simple parallelism
+\end{itemize}
+\end{columns}
+
+\vspace{0.5cm}
+\textbf{Timeline Comparison:}
+\begin{itemize}
+    \item Delayed: Build graph $\rightarrow$ Optimize $\rightarrow$ Execute
+    \item Futures: Submit $\rightarrow$ Execute immediately
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Delayed vs Futures: When to Use}
+\begin{columns}
+\column{0.5\textwidth}
+\textbf{Use Delayed when:}
+\begin{itemize}
+    \item Complex dependencies
+    \item Want graph optimization
+    \item Need to see computation structure
+    \item Building complex workflows
+\end{itemize}
+
+\column{0.5\textwidth}
+\textbf{Use Futures when:}
+\begin{itemize}
+    \item Simple parallelism
+    \item Need immediate feedback
+    \item Real-time monitoring
+    \item Independent tasks
+\end{itemize}
+\end{columns}
+
+\vspace{0.5cm}
+\textbf{Decision Flow:}
+\begin{enumerate}
+    \item Complex dependencies? $\rightarrow$ Delayed
+    \item Need immediate execution? $\rightarrow$ Futures
+    \item Want optimization? $\rightarrow$ Delayed
+    \item Simple parallelism? $\rightarrow$ Futures
+\end{enumerate}
+\end{frame}
+
+\begin{frame}[fragile]{Futures: Real-Time Monitoring}
+\begin{lstlisting}
+# Submit multiple tasks
+futures = [client.submit(process, f) for f in files]
+
+# Monitor as they complete
+for future in futures:
+    if future.done():
+        try:
+            result = future.result()
+            print(f"Completed: {result}")
+        except Exception as e:
+            print(f"Error: {e}")
+\end{lstlisting}
+
+\textbf{Benefits:}
+\begin{itemize}
+    \item See progress in real-time
+    \item Handle results as they complete
+    \item Identify failures early
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Use Cases:}
+\begin{itemize}
+    \item Long-running tasks
+    \item Progress reporting
+    \item Early error detection
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Combining Delayed and Futures}
+\begin{lstlisting}
+@delayed
+def complex_task(data):
+    # Can submit futures inside delayed
+    futures = [client.submit(process, chunk) 
+               for chunk in data]
+    return client.gather(futures)
+
+# Use delayed for outer structure
+result = complex_task(large_data)
+final = result.compute()
+\end{lstlisting}
+
+\textbf{Hybrid Approach:}
+\begin{itemize}
+    \item Delayed for overall structure
+    \item Futures for inner parallelism
+    \item Best of both worlds
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item Outer: Delayed graph (optimized)
+    \item Inner: Futures (immediate execution)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Error Handling: Delayed}
+\begin{lstlisting}
+@delayed
+def risky_function(x):
+    if x < 0:
+        raise ValueError("Negative not allowed")
+    return x * 2
+
+try:
+    result = risky_function(-1).compute()
+except ValueError as e:
+    print(f"Error: {e}")
+\end{lstlisting}
+
+\textbf{Error Behavior:}
+\begin{itemize}
+    \item Errors raised at compute time
+    \item Can catch exceptions normally
+    \item Graph execution stops on error
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Best Practice:}
+\begin{itemize}
+    \item Validate inputs early
+    \item Use try/except around compute
+    \item Check for None results
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Error Handling: Futures}
+\begin{lstlisting}
+# Submit risky task
+future = client.submit(risky_function, arg)
+
+# Check for errors
+try:
+    result = future.result()
+except Exception as e:
+    print(f"Error: {e}")
+    # Handle error appropriately
+\end{lstlisting}
+
+\textbf{Error Behavior:}
+\begin{itemize}
+    \item Errors available immediately
+    \item Can check \texttt{future.status == 'error'}
+    \item Non-blocking error checking
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Advantages:}
+\begin{itemize}
+    \item Immediate error detection
+    \item Don't wait for all tasks
+    \item Better for monitoring
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Best Practices: Delayed}
+\textbf{Use Delayed for:}
+\begin{itemize}
+    \item Complex workflows with dependencies
+    \item When you want graph optimization
+    \item Building reusable computation pipelines
+    \item Debugging computation structure
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Tips:}
+\begin{itemize}
+    \item Leverage graph optimization
+    \item Batch operations when possible
+    \item Use \texttt{.visualize()} to understand structure
+    \item Keep functions pure (no side effects)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Key Principles:}
+\begin{itemize}
+    \item Build clear dependency graphs
+    \item Minimize data movement
+    \item Use persist for repeated computations
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Best Practices: Futures}
+\textbf{Use Futures for:}
+\begin{itemize}
+    \item Simple parallelism
+    \item Independent tasks
+    \item Real-time monitoring needs
+    \item When immediate execution is important
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Tips:}
+\begin{itemize}
+    \item Monitor progress regularly
+    \item Handle errors promptly
+    \item Use \texttt{gather()} for collecting results
+    \item Don't create too many futures at once
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Key Principles:}
+\begin{itemize}
+    \item Submit tasks in batches
+    \item Monitor status regularly
+    \item Clean up completed futures
+    \item Handle errors gracefully
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+\textbf{Key Takeaways:}
+\begin{itemize}
+    \item \textbf{Delayed}: Lazy, graph-based, optimized
+    \item \textbf{Futures}: Eager, immediate, simple
+    \item Choose based on use case
+    \item Both enable parallel execution
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{When to Use What:}
+\begin{itemize}
+    \item Complex workflows $\rightarrow$ Delayed
+    \item Simple parallelism $\rightarrow$ Futures
+    \item Need optimization $\rightarrow$ Delayed
+    \item Need monitoring $\rightarrow$ Futures
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Next Steps:}
+\begin{itemize}
+    \item Practice with real examples
+    \item Learn distributed computing
+    \item Explore performance optimization
+\end{itemize}
+\end{frame}
+
+\end{document}
+

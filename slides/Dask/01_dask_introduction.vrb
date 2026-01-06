@@ -1,0 +1,21 @@
+\frametitle{Basic Example}
+\begin{lstlisting}
+import dask.dataframe as dd
+
+# Read data (lazy - no data loaded yet)
+df = dd.read_csv('data/*.csv')
+
+# Build computation (still lazy)
+result = df.groupby('column').sum()
+
+# Actually execute
+result.compute()  # NOW data is loaded and processed
+\end{lstlisting}
+
+\vspace{0.3cm}
+\textbf{What Happens:}
+\begin{enumerate}
+    \item \texttt{read\_csv()}: Creates task graph for reading files
+    \item \texttt{groupby().sum()}: Adds grouping tasks to graph
+    \item \texttt{compute()}: Executes all tasks in parallel
+\end{enumerate}

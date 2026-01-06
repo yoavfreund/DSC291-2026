@@ -1,0 +1,581 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+
+% Code listing setup
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    language=Python
+}
+
+\title{Distributed Dask}
+\subtitle{Scaling Across Machines}
+\author{CSE255 - Scalable Data Analysis}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Schedulers Overview}
+\textbf{Three Types of Schedulers:}
+
+\begin{enumerate}
+    \item \textbf{Threaded}: Single machine, shared memory
+    \begin{itemize}
+        \item Uses threads (lightweight)
+        \item Good for I/O-bound tasks
+        \item Limited by Python GIL
+    \end{itemize}
+    
+    \item \textbf{Processes}: Single machine, separate memory
+    \begin{itemize}
+        \item Uses processes (heavier)
+        \item Good for CPU-bound tasks
+        \item Bypasses Python GIL
+    \end{itemize}
+    
+    \item \textbf{Distributed}: Multiple machines, network
+    \begin{itemize}
+        \item Uses network communication
+        \item Scales to clusters
+        \item Best for large-scale computing
+    \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Why Distributed?}
+\textbf{When Single Machine Isn't Enough:}
+\begin{itemize}
+    \item Need more memory (data $>$ single machine RAM)
+    \item Need more CPU cores
+    \item Need to scale to cluster
+    \item Want fault tolerance
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Benefits:}
+\begin{itemize}
+    \item Scale beyond single machine limits
+    \item Utilize multiple machines
+    \item Handle larger datasets
+    \item Better resource utilization
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item Single machine: Limited resources
+    \item Distributed: Combined resources from multiple machines
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Client-Worker Architecture}
+\textbf{Three Components:}
+
+\begin{enumerate}
+    \item \textbf{Client}: 
+    \begin{itemize}
+        \item Submits tasks
+        \item Your Python session
+        \item Coordinates computation
+    \end{itemize}
+    
+    \item \textbf{Workers}: 
+    \begin{itemize}
+        \item Execute tasks
+        \item Hold data in memory
+        \item Report status to scheduler
+    \end{itemize}
+    
+    \item \textbf{Scheduler}: 
+    \begin{itemize}
+        \item Coordinates execution
+        \item Assigns tasks to workers
+        \item Manages dependencies
+    \end{itemize}
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+Client (your code)
+    |
+Scheduler (coordinates)
+    |
+Workers (execute tasks)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Creating a Client}
+\begin{lstlisting}
+from dask.distributed import Client
+
+# Local cluster (single machine)
+client = Client(n_workers=4)
+
+# Remote cluster (multiple machines)
+client = Client('tcp://scheduler-address:8786')
+\end{lstlisting}
+
+\textbf{Local vs Remote:}
+\begin{itemize}
+    \item \textbf{Local}: All on one machine (good for testing)
+    \item \textbf{Remote}: Across multiple machines (production)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Common Setup:}
+\begin{itemize}
+    \item Development: Local client
+    \item Production: Remote cluster (EC2 instances)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Client Configuration}
+\begin{lstlisting}
+client = Client(
+    n_workers=4,              # Number of worker processes
+    threads_per_worker=2,     # Threads per worker
+    memory_limit='8GB'        # Memory per worker
+)
+\end{lstlisting}
+
+\textbf{Configuration Options:}
+\begin{itemize}
+    \item \texttt{n\_workers}: Number of worker processes
+    \item \texttt{threads\_per\_worker}: Threads per worker
+    \item \texttt{memory\_limit}: Memory limit per worker
+    \item \texttt{processes}: Use processes vs threads
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Resource Planning:}
+\begin{itemize}
+    \item Balance workers vs threads
+    \item Consider available memory
+    \item Match to your workload
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Workers and Cores}
+\textbf{Worker Structure:}
+\begin{itemize}
+    \item Each worker = separate process
+    \item Workers have cores (threads)
+    \item Balance workers vs cores per worker
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{itemize}
+    \item 8 CPU cores available
+    \item Option 1: 4 workers $\times$ 2 threads = 8 threads
+    \item Option 2: 8 workers $\times$ 1 thread = 8 threads
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+Machine with 8 cores:
++-- Worker 1 (2 threads)
++-- Worker 2 (2 threads)
++-- Worker 3 (2 threads)
++-- Worker 4 (2 threads)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{The Dashboard}
+\textbf{Real-Time Monitoring:}
+\begin{itemize}
+    \item Task stream visualization
+    \item Worker status
+    \item Memory usage
+    \item Performance metrics
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Access:}
+\begin{itemize}
+    \item URL shown when creating Client
+    \item Usually: \texttt{http://localhost:8787/status}
+    \item Opens in browser
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Key Views:}
+\begin{itemize}
+    \item Task Stream: See tasks executing
+    \item Worker Memory: Memory usage per worker
+    \item Progress: Overall computation progress
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Dashboard: Task Stream}
+\textbf{What You See:}
+\begin{itemize}
+    \item Tasks executing over time
+    \item Worker utilization
+    \item Bottlenecks and idle time
+    \item Task dependencies
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Use Cases:}
+\begin{itemize}
+    \item Identify performance bottlenecks
+    \item See if workers are busy
+    \item Understand computation flow
+    \item Debug slow operations
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item Timeline showing tasks
+    \item Color-coded by worker
+    \item Gaps show idle time
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Dashboard: Worker Memory}
+\textbf{Memory Monitoring:}
+\begin{itemize}
+    \item Memory usage per worker
+    \item Identify memory pressure
+    \item Optimize partition sizes
+    \item Prevent out-of-memory errors
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{What to Look For:}
+\begin{itemize}
+    \item Workers near memory limit
+    \item Uneven memory distribution
+    \item Memory leaks
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item Bar chart per worker
+    \item Shows current memory usage
+    \item Red zone = near limit
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Performance Monitoring}
+\begin{lstlisting}
+# Get performance info
+client.profile()      # Detailed profiling
+client.nthreads()     # Total threads
+client.ncores()       # Total cores
+client.scheduler_info # Scheduler details
+\end{lstlisting}
+
+\textbf{Monitoring Tools:}
+\begin{itemize}
+    \item Client methods for info
+    \item Dashboard for visualization
+    \item Logs for debugging
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Key Metrics:}
+\begin{itemize}
+    \item Worker count
+    \item Memory usage
+    \item Task completion rate
+    \item Network traffic
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Persist vs Compute}
+\begin{lstlisting}
+# Compute: execute and return result
+result = df.sum().compute()
+# Result is a pandas Series (small)
+# DataFrame is discarded
+
+# Persist: execute and keep in memory
+df_persisted = df.persist()
+# DataFrame stays in memory
+# Can reuse without recomputation
+\end{lstlisting}
+
+\textbf{When to Use:}
+\begin{itemize}
+    \item \textbf{Compute}: One-time results, final output
+    \item \textbf{Persist}: Intermediate results, reused data
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item Compute: Execute $\rightarrow$ Return $\rightarrow$ Discard
+    \item Persist: Execute $\rightarrow$ Keep in memory $\rightarrow$ Reuse
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Memory Management}
+\textbf{Key Principles:}
+\begin{itemize}
+    \item Each worker has memory limit
+    \item Partitions should fit in worker memory
+    \item Monitor memory usage
+    \item Use persist strategically
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Best Practices:}
+\begin{itemize}
+    \item Right-size partitions (100MB-1GB)
+    \item Monitor dashboard
+    \item Use persist for repeated computations
+    \item Clear persisted data when done
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+Worker 1: [Partition 1, Partition 2] (4GB used / 8GB limit)
+Worker 2: [Partition 3, Partition 4] (3GB used / 8GB limit)
+Worker 3: [Partition 5] (2GB used / 8GB limit)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Performance Optimization: Partitioning}
+\textbf{Partitioning Strategy:}
+\begin{itemize}
+    \item Right-size partitions
+    \item Align with worker memory
+    \item Consider data locality
+    \item Balance partition count
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Guidelines:}
+\begin{itemize}
+    \item 100MB-1GB per partition
+    \item Match to worker memory
+    \item More partitions = more parallelism (but more overhead)
+    \item Fewer partitions = less overhead (but less parallelism)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Example:}
+\begin{itemize}
+    \item 10GB dataset, 4 workers with 4GB each
+    \item Good: 10-20 partitions of 500MB-1GB each
+    \item Bad: 1000 partitions of 10MB each (too much overhead)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Performance Optimization: Caching}
+\begin{lstlisting}
+# Cache intermediate results
+df_filtered = df[df['value'] > 100].persist()
+
+# Reuse cached data
+result1 = df_filtered.groupby('cat').sum()
+result2 = df_filtered.groupby('cat').mean()
+result3 = df_filtered.groupby('cat').count()
+\end{lstlisting}
+
+\textbf{Benefits:}
+\begin{itemize}
+    \item Avoid recomputation
+    \item Faster subsequent operations
+    \item Uses more memory
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item Without persist: Filter $\rightarrow$ Groupby $\rightarrow$ Filter $\rightarrow$ Groupby (recomputes filter)
+    \item With persist: Filter $\rightarrow$ Persist $\rightarrow$ Groupby $\rightarrow$ Groupby (reuses filtered data)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Debugging: Task Failures}
+\textbf{When Tasks Fail:}
+\begin{enumerate}
+    \item Check dashboard for errors
+    \item Review task status
+    \item Check worker logs
+    \item Look for error messages
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Common Issues:}
+\begin{itemize}
+    \item Out of memory errors
+    \item Network connectivity
+    \item Data format issues
+    \item Worker crashes
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Debugging Steps:}
+\begin{enumerate}
+    \item Check dashboard error view
+    \item Review task tracebacks
+    \item Check worker logs
+    \item Verify data format
+    \item Test with smaller data
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Debugging: Slow Performance}
+\textbf{Identifying Bottlenecks:}
+\begin{itemize}
+    \item Check task stream for idle workers
+    \item Verify data locality (minimize network transfer)
+    \item Check network bandwidth
+    \item Look for straggler tasks
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Common Causes:}
+\begin{itemize}
+    \item Data shuffling (network transfer)
+    \item Uneven partition sizes
+    \item Worker overload
+    \item Network latency
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Optimization Strategies:}
+\begin{itemize}
+    \item Co-locate data and computation
+    \item Balance partition sizes
+    \item Increase workers if CPU-bound
+    \item Increase memory if memory-bound
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Scaling Considerations}
+\textbf{Scaling Strategies:}
+\begin{itemize}
+    \item Add more workers (horizontal scaling)
+    \item Increase worker memory (vertical scaling)
+    \item Optimize data partitioning
+    \item Consider data locality
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Trade-offs:}
+\begin{itemize}
+    \item More workers = more parallelism but more overhead
+    \item Larger workers = more memory but fewer workers
+    \item Network transfer can be bottleneck
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{itemize}
+    \item Start: 2 workers
+    \item Scale up: 4 workers, 8 workers, 16 workers
+    \item Each step adds capacity
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Connecting to EC2 Cluster}
+\begin{lstlisting}
+# On EC2 instance
+from dask.distributed import Client
+
+# Connect to scheduler
+client = Client('tcp://scheduler-ip:8786')
+
+# Or create local cluster on instance
+client = Client(n_workers=4)
+\end{lstlisting}
+
+\textbf{EC2 Setup:}
+\begin{itemize}
+    \item Scheduler on one EC2 instance
+    \item Workers on other EC2 instances
+    \item Client can be anywhere (laptop, EC2, etc.)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+EC2 Instance 1: Scheduler
+EC2 Instance 2: Worker 1
+EC2 Instance 3: Worker 2
+EC2 Instance 4: Worker 3
+Your Laptop: Client (submits tasks)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Best Practices}
+\textbf{Resource Management:}
+\begin{itemize}
+    \item Right-size partitions
+    \item Use persist strategically
+    \item Monitor memory usage
+    \item Clean up when done
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Performance:}
+\begin{itemize}
+    \item Monitor dashboard regularly
+    \item Optimize data partitioning
+    \item Minimize data shuffling
+    \item Use appropriate number of workers
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Reliability:}
+\begin{itemize}
+    \item Handle errors gracefully
+    \item Use try/except blocks
+    \item Check task status
+    \item Log important operations
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+\textbf{Key Takeaways:}
+\begin{itemize}
+    \item Distributed enables scaling beyond single machine
+    \item Client coordinates workers via scheduler
+    \item Dashboard provides real-time monitoring
+    \item Optimize for your specific workload
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{Next Steps:}
+\begin{itemize}
+    \item Practice with local cluster
+    \item Explore dashboard features
+    \item Optimize your workflows
+    \item Scale to EC2 cluster
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Core Concepts:}
+\begin{itemize}
+    \item Client-Worker-Scheduler architecture
+    \item Persist vs compute
+    \item Memory management
+    \item Performance optimization
+\end{itemize}
+\end{frame}
+
+\end{document}
+

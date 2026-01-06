@@ -1,0 +1,28 @@
+\frametitle{Connecting to EC2 Cluster}
+\begin{lstlisting}
+# On EC2 instance
+from dask.distributed import Client
+
+# Connect to scheduler
+client = Client('tcp://scheduler-ip:8786')
+
+# Or create local cluster on instance
+client = Client(n_workers=4)
+\end{lstlisting}
+
+\textbf{EC2 Setup:}
+\begin{itemize}
+    \item Scheduler on one EC2 instance
+    \item Workers on other EC2 instances
+    \item Client can be anywhere (laptop, EC2, etc.)
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Visual Concept:}
+\begin{verbatim}
+EC2 Instance 1: Scheduler
+EC2 Instance 2: Worker 1
+EC2 Instance 3: Worker 2
+EC2 Instance 4: Worker 3
+Your Laptop: Client (submits tasks)
+\end{verbatim}
