@@ -6,7 +6,6 @@ This guide explains how to log into AWS and start an EC2 instance.
 
 - AWS account access (UCSD institutional account)
 - SSH client installed (pre-installed on macOS/Linux)
-- Key pair (.pem file) for SSH access
 
 
 ## Logging into AWS Console
