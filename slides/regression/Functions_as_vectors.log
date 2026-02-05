@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  28 JAN 2026 08:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  29 JAN 2026 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**02_dask_dataframes.tex
-(./02_dask_dataframes.tex
+**Functions_as_vectors.tex
+(./Functions_as_vectors.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/beamer/beamer.cls
@@ -707,42 +707,14 @@ y))) (/usr/local/texlive/2025/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty
 (/usr/local/texlive/2025/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.st
 y)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.
-sty)) (/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count345
-\lst@gtempboxa=\box77
-\lst@token=\toks46
-\lst@length=\count346
-\lst@currlwidth=\dimen295
-\lst@column=\count347
-\lst@pos=\count348
-\lst@lostspace=\dimen296
-\lst@width=\dimen297
-\lst@newlines=\count349
-\lst@lineno=\count350
-\lst@maxwidth=\dimen298
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstpatch.sty
-File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
-\c@lstnumber=\count351
-\lst@skipnumbers=\count352
-\lst@framebox=\box78
-)
-(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2024/09/23 1.10c listings configuration
-))
-Package: listings 2024/09/23 1.10c (Carsten Heinz)
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+sty)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box79
+\pgfnodeparttextbox=\box77
 )
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
@@ -751,8 +723,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen299
-\pgf@nodesepend=\dimen300
+\pgf@nodesepstart=\dimen295
+\pgf@nodesepend=\dimen296
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
@@ -761,10 +733,10 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen301
-\pgffor@skip=\dimen302
-\pgffor@stack=\toks47
-\pgffor@toks=\toks48
+\pgffor@iter=\dimen297
+\pgffor@skip=\dimen298
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
 ))
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -773,68 +745,204 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count353
-\pgfplotmarksize=\dimen303
+\pgf@plot@mark@count=\count345
+\pgfplotmarksize=\dimen299
 )
-\tikz@lastx=\dimen304
-\tikz@lasty=\dimen305
-\tikz@lastxsaved=\dimen306
-\tikz@lastysaved=\dimen307
-\tikz@lastmovetox=\dimen308
-\tikz@lastmovetoy=\dimen309
-\tikzleveldistance=\dimen310
-\tikzsiblingdistance=\dimen311
-\tikz@figbox=\box80
-\tikz@figbox@bg=\box81
-\tikz@tempbox=\box82
-\tikz@tempbox@bg=\box83
-\tikztreelevel=\count354
-\tikznumberofchildren=\count355
-\tikznumberofcurrentchild=\count356
-\tikz@fig@count=\count357
+\tikz@lastx=\dimen300
+\tikz@lasty=\dimen301
+\tikz@lastxsaved=\dimen302
+\tikz@lastysaved=\dimen303
+\tikz@lastmovetox=\dimen304
+\tikz@lastmovetoy=\dimen305
+\tikzleveldistance=\dimen306
+\tikzsiblingdistance=\dimen307
+\tikz@figbox=\box78
+\tikz@figbox@bg=\box79
+\tikz@tempbox=\box80
+\tikz@tempbox@bg=\box81
+\tikztreelevel=\count346
+\tikznumberofchildren=\count347
+\tikznumberofcurrentchild=\count348
+\tikz@fig@count=\count349
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count358
-\pgfmatrixcurrentcolumn=\count359
-\pgf@matrix@numberofcolumns=\count360
+\pgfmatrixcurrentrow=\count350
+\pgfmatrixcurrentcolumn=\count351
+\pgf@matrix@numberofcolumns=\count352
 )
-\tikz@expandcount=\count361
+\tikz@expandcount=\count353
 
 (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2024/09/23 1.10c listings language file
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks48
+\t@pgfplots@tokb=\toks49
+\t@pgfplots@tokc=\toks50
+\pgfplots@tmpa=\dimen308
+\c@pgfplots@coordindex=\count354
+\c@pgfplots@scanlineindex=\count355
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks51
+\t@pgf@tokb=\toks52
+\t@pgf@tokc=\toks53
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfutil-common-lists.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex
+\c@pgfplotsarray@tmp=\count356
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex
+\c@pgfplotstable@counta=\count357
+\t@pgfplotstable@a=\toks54
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count358
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-pdftex.def)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen309
+\pgfdecoratedremainingdistance=\dimen310
+\pgfdecoratedinputsegmentcompleteddistance=\dimen311
+\pgfdecoratedinputsegmentremainingdistance=\dimen312
+\pgf@decorate@distancetomove=\dimen313
+\pgf@decorate@repeatstate=\count359
+\pgfdecorationsegmentamplitude=\dimen314
+\pgfdecorationsegmentlength=\dimen315
+)
+\tikz@lib@dec@box=\box82
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
+ts.contourlua.code.tex)
+\pgfplots@numplots=\count360
+\pgfplots@xmin@reg=\dimen316
+\pgfplots@xmax@reg=\dimen317
+\pgfplots@ymin@reg=\dimen318
+\pgfplots@ymax@reg=\dimen319
+\pgfplots@zmin@reg=\dimen320
+\pgfplots@zmax@reg=\dimen321
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibrarypattern
+s.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
+meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen322
+\pgfarrowlength=\dimen323
+\pgfarrowwidth=\dimen324
+\pgfarrowlinewidth=\dimen325
 )
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count362
-\l__pdf_internal_box=\box84
+\l__color_backend_stack_int=\count361
+\l__pdf_internal_box=\box83
 )
-(./02_dask_dataframes.aux)
-\openout1 = `02_dask_dataframes.aux'.
+(./Functions_as_vectors.aux)
+\openout1 = `Functions_as_vectors.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -872,17 +980,17 @@ LaTeX Font Info:    ... okay on input line 29.
 
 (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count363
-\scratchdimen=\dimen312
-\scratchbox=\box85
-\nofMPsegments=\count364
-\nofMParguments=\count365
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count366
-\MPscratchDim=\dimen313
-\MPnumerator=\count367
-\makeMPintoPDFobject=\count368
-\everyMPtoPDFconversion=\toks50
+\scratchcounter=\count362
+\scratchdimen=\dimen326
+\scratchbox=\box84
+\nofMPsegments=\count363
+\nofMParguments=\count364
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count365
+\MPscratchDim=\dimen327
+\MPnumerator=\count366
+\makeMPintoPDFobject=\count367
+\everyMPtoPDFconversion=\toks56
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -892,64 +1000,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 22.
 
-(./02_dask_dataframes.out) (./02_dask_dataframes.out)
+(./Functions_as_vectors.out) (./Functions_as_vectors.out)
 \@outlinefile=\write5
-\openout5 = `02_dask_dataframes.out'.
+\openout5 = `Functions_as_vectors.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 29.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 22.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 29.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 22.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 29.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 29.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 29.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 29.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 22.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 29.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 29.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 29.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 22.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 29.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 29.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 29.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 22.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 29.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 29.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 22.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 29.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 22.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 29.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 29.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 29.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 29.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 29.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 22.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 29.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 29.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 22.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 22.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 2
-9.
+2.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 2
-9.
+2.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 29.
+ut line 22.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/translator/translator-basic-dicti
 onary-English.dict
@@ -975,8 +1083,10 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-\c@lstlisting=\count369
- (./02_dask_dataframes.nav)
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
+
+(./Functions_as_vectors.nav)
 
 [1
 
@@ -985,28 +1095,24 @@ Dictionary: translator-theorem-dictionary, Language: English
 [2
 
 ]
-\openout4 = `02_dask_dataframes.vrb'.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
 
- (./02_dask_dataframes.vrb
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
-
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
 
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 13.
+ut line 77.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-))
+)
 
 [3
 
@@ -1015,12 +1121,6 @@ thkerncmss.
 [4
 
 ]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <6> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 4.
-)
 
 [5
 
@@ -1029,12 +1129,6 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <6> not available
 [6
 
 ]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 4.
-)
 
 [7
 
@@ -1043,9 +1137,6 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
 [8
 
 ]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
 
 [9
 
@@ -1054,264 +1145,54 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
 [10
 
 ]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
 
 [11
 
 ]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[12
-
-]
-
-[13
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[14
-
-]
-
-[15
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[16
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[17
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-Overfull \vbox (9.61328pt too high) detected at line 449
- []
-
-
-
-[18
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb
-LaTeX Font Info:    Trying to load font information for OMS+cmss on input line 
-14.
-LaTeX Font Info:    No file OMScmss.fd. on input line 14.
-
-
-LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 14.
-
-)
-
-[19
-
-{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[20
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[21
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-Overfull \vbox (8.3266pt too high) detected at line 593
- []
-
-
-
-[22
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[23
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[24
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[25
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[26
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[27
-
-]
-
-[28
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[29
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[30
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[31
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[32
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[33
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[34
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-Overfull \vbox (2.41882pt too high) detected at line 911
- []
-
-
-
-[35
-
-]
-\openout4 = `02_dask_dataframes.vrb'.
-
- (./02_dask_dataframes.vrb)
-
-[36
-
-]
-
-[37
-
-]
-
-[38
-
-]
 \tf@nav=\write6
-\openout6 = `02_dask_dataframes.nav'.
+\openout6 = `Functions_as_vectors.nav'.
 
 \tf@toc=\write7
-\openout7 = `02_dask_dataframes.toc'.
+\openout7 = `Functions_as_vectors.toc'.
 
 \tf@snm=\write8
-\openout8 = `02_dask_dataframes.snm'.
+\openout8 = `Functions_as_vectors.snm'.
 
- (./02_dask_dataframes.aux)
+ (./Functions_as_vectors.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package rerunfilecheck Info: File `02_dask_dataframes.out' has not changed.
+Package rerunfilecheck Info: File `Functions_as_vectors.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27305 strings out of 473190
- 529400 string characters out of 5715801
- 1174942 words of memory out of 5000000
- 49912 multiletter control sequences out of 15000+600000
- 570287 words of font info for 78 fonts, out of 8000000 for 9000
+ 35768 strings out of 473190
+ 861724 string characters out of 5715801
+ 1395053 words of memory out of 5000000
+ 58365 multiletter control sequences out of 15000+600000
+ 566388 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,410b,1403s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Navigation39} has been referenced but does not exis
-t, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Navigation45} has been referenced but does not exis
-t, replaced by a fixed one
-
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
-local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/lo
+ 128i,21n,123p,716b,2585s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr
+/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/
+local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
+ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
 ocal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/lo
 cal/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
-/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/te
-xlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texl
-ive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texliv
-e/2025/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb>
-Output written on 02_dask_dataframes.pdf (38 pages, 255634 bytes).
+al/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local
+/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
+exlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Functions_as_vectors.pdf (11 pages, 183215 bytes).
 PDF statistics:
- 1195 PDF objects out of 1200 (max. 8388607)
- 1037 compressed objects within 11 object streams
- 79 named destinations out of 1000 (max. 500000)
+ 414 PDF objects out of 1000 (max. 8388607)
+ 342 compressed objects within 4 object streams
+ 23 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

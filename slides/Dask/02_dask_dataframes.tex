@@ -458,15 +458,43 @@ result = dd.merge(df1, df2, on=['key1', 'key2'])
 \end{itemize}
 
 \vspace{0.1cm}
+\textbf{Original DataFrame (df):}
 \begin{lstlisting}[basicstyle=\tiny]
-# Pivot a DataFrame
+# Example: Long format
+df = pd.DataFrame({
+    'date': ['2024-01-01', '2024-01-01', '2024-01-02', '2024-01-02'],
+    'category': ['A', 'B', 'A', 'B'],
+    'value': [10, 20, 15, 25]
+})
+\end{lstlisting}
+
+\vspace{0.1cm}
+\textbf{Pivot with Aggregation:}
+\begin{lstlisting}[basicstyle=\tiny]
 df_pivot = df.pivot_table(
     index='date',
     columns='category',
     values='value',
     aggfunc='sum'
 )
+\end{lstlisting}
+\end{frame}
 
+\begin{frame}[fragile]{Pivoting: Long to Wide Tables (Alternative)}
+\footnotesize
+\textbf{Original DataFrame (df):}
+\begin{lstlisting}[basicstyle=\tiny]
+# Example: Long format
+df = pd.DataFrame({
+    'date': ['2024-01-01', '2024-01-01', '2024-01-02', '2024-01-02'],
+    'category': ['A', 'B', 'A', 'B'],
+    'value': [10, 20, 15, 25]
+})
+\end{lstlisting}
+
+\vspace{0.1cm}
+\textbf{Pivot without Aggregation:}
+\begin{lstlisting}[basicstyle=\tiny]
 # Alternative: pivot (no aggregation)
 df_pivot = df.pivot(
     index='id',
@@ -474,6 +502,13 @@ df_pivot = df.pivot(
     values='value'
 )
 \end{lstlisting}
+
+\vspace{0.1cm}
+\textbf{Note:}
+\begin{itemize}
+    \item \texttt{pivot()} requires unique index-column combinations
+    \item \texttt{pivot\_table()} handles duplicates with aggregation
+\end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Pivoting: Visualization}
@@ -919,8 +954,8 @@ result = by_airline.compute()
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Summary}
-\small
+\begin{frame}\small
+Summary
 \textbf{Key Takeaways:}
 \begin{itemize}
     \item Dask DataFrame = many pandas DataFrames
@@ -929,7 +964,6 @@ result = by_airline.compute()
     \item Scales to large datasets
 \end{itemize}
 
-\vspace{0.1cm}
 \textbf{Best Practices:}
 \begin{itemize}
     \item Filter early
@@ -938,13 +972,7 @@ result = by_airline.compute()
     \item Avoid unnecessary index operations
 \end{itemize}
 
-\vspace{0.15cm}
-\textbf{Next Steps:}
-\begin{itemize}
-    \item Learn delayed and futures
-    \item Explore distributed computing
-    \item Practice with real datasets
-\end{itemize}
+\textbf{Next Steps:} Learn delayed and futures, explore distributed computing, practice with real datasets
 \end{frame}
 
 \end{document}

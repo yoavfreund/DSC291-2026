@@ -1,0 +1,15 @@
+\frametitle{Parquet I/O with Arrow Engine}
+\small
+\textbf{Dask uses Arrow for Parquet:}
+\begin{itemize}
+    \item Default engine: \texttt{pyarrow} (Arrow-based)
+    \item Alternative: \texttt{fastparquet} (legacy)
+    \item Arrow provides better performance
+\end{itemize}
+
+\begin{lstlisting}
+import dask.dataframe as dd
+
+# Read Parquet with Arrow engine (default)
+df = dd.read_parquet('data/*.parquet', engine='pyarrow')
+\end{lstlisting}

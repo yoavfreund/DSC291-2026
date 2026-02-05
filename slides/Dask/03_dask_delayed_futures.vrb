@@ -1,4 +1,5 @@
-\frametitle{Error Handling: Futures}
+\small
+Error Handling: Futures
 \begin{lstlisting}
 # Submit risky task
 future = client.submit(risky_function, arg)
@@ -18,7 +19,7 @@ except Exception as e:
     \item Non-blocking error checking
 \end{itemize}
 
-\vspace{0.3cm}
+\vspace{0.1cm}
 \textbf{Advantages:}
 \begin{itemize}
     \item Immediate error detection

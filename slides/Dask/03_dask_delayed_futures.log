@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  6 JAN 2026 11:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  27 JAN 2026 19:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -981,27 +981,23 @@ Dictionary: translator-theorem-dictionary, Language: English
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \vbox (71.26163pt too high) detected at line 70
- []
-
-
 
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 100
+.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 100
+.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 99.
+ut line 100.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1012,7 +1008,7 @@ thkerncmss.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 116.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 117.
 
 
 [4
@@ -1021,13 +1017,9 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 \openout4 = `03_dask_delayed_futures.vrb'.
 
  (./03_dask_delayed_futures.vrb
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 4.
 )
-Overfull \vbox (64.17052pt too high) detected at line 149
- []
-
-
 
 [5
 
@@ -1035,17 +1027,10 @@ Overfull \vbox (64.17052pt too high) detected at line 149
 \openout4 = `03_dask_delayed_futures.vrb'.
 
  (./03_dask_delayed_futures.vrb)
-Overfull \vbox (43.46332pt too high) detected at line 192
- []
-
-
 
 [6
 
 ]
-\openout4 = `03_dask_delayed_futures.vrb'.
-
- (./03_dask_delayed_futures.vrb)
 
 [7
 
@@ -1053,10 +1038,6 @@ Overfull \vbox (43.46332pt too high) detected at line 192
 \openout4 = `03_dask_delayed_futures.vrb'.
 
  (./03_dask_delayed_futures.vrb)
-Overfull \vbox (121.8479pt too high) detected at line 259
- []
-
-
 
 [8
 
@@ -1064,21 +1045,10 @@ Overfull \vbox (121.8479pt too high) detected at line 259
 \openout4 = `03_dask_delayed_futures.vrb'.
 
  (./03_dask_delayed_futures.vrb)
-Overfull \vbox (68.53043pt too high) detected at line 290
- []
-
-
 
 [9
 
 ]
-\openout4 = `03_dask_delayed_futures.vrb'.
-
- (./03_dask_delayed_futures.vrb)
-Overfull \vbox (19.24861pt too high) detected at line 330
- []
-
-
 
 [10
 
@@ -1086,32 +1056,14 @@ Overfull \vbox (19.24861pt too high) detected at line 330
 \openout4 = `03_dask_delayed_futures.vrb'.
 
  (./03_dask_delayed_futures.vrb)
-Overfull \vbox (76.24965pt too high) detected at line 364
- []
-
-
 
 [11
 
 ]
-\openout4 = `03_dask_delayed_futures.vrb'.
-
- (./03_dask_delayed_futures.vrb)
-Overfull \vbox (19.86635pt too high) detected at line 393
- []
-
-
 
 [12
 
 ]
-\openout4 = `03_dask_delayed_futures.vrb'.
-
- (./03_dask_delayed_futures.vrb)
-Overfull \vbox (98.14833pt too high) detected at line 440
- []
-
-
 
 [13
 
@@ -1120,17 +1072,13 @@ Overfull \vbox (98.14833pt too high) detected at line 440
 [14
 
 ]
+\openout4 = `03_dask_delayed_futures.vrb'.
+
+ (./03_dask_delayed_futures.vrb)
 
 [15
 
 ]
-\openout4 = `03_dask_delayed_futures.vrb'.
-
- (./03_dask_delayed_futures.vrb)
-Overfull \vbox (41.86635pt too high) detected at line 531
- []
-
-
 
 [16
 
@@ -1138,7 +1086,7 @@ Overfull \vbox (41.86635pt too high) detected at line 531
 \openout4 = `03_dask_delayed_futures.vrb'.
 
  (./03_dask_delayed_futures.vrb)
-Overfull \vbox (51.83415pt too high) detected at line 567
+Overfull \vbox (0.67575pt too high) detected at line 415
  []
 
 
@@ -1149,21 +1097,10 @@ Overfull \vbox (51.83415pt too high) detected at line 567
 \openout4 = `03_dask_delayed_futures.vrb'.
 
  (./03_dask_delayed_futures.vrb)
-Overfull \vbox (28.73718pt too high) detected at line 597
- []
-
-
 
 [18
 
 ]
-\openout4 = `03_dask_delayed_futures.vrb'.
-
- (./03_dask_delayed_futures.vrb)
-Overfull \vbox (19.86635pt too high) detected at line 626
- []
-
-
 
 [19
 
@@ -1172,20 +1109,64 @@ Overfull \vbox (19.86635pt too high) detected at line 626
 [20
 
 ]
-Overfull \vbox (13.2023pt too high) detected at line 681
- []
-
-
 
 [21
 
 ]
-Overfull \vbox (5.29276pt too high) detected at line 708
+\openout4 = `03_dask_delayed_futures.vrb'.
+
+ (./03_dask_delayed_futures.vrb)
+
+[22
+
+]
+
+[23
+
+]
+\openout4 = `03_dask_delayed_futures.vrb'.
+
+ (./03_dask_delayed_futures.vrb)
+
+[24
+
+]
+
+[25
+
+]
+\openout4 = `03_dask_delayed_futures.vrb'.
+
+ (./03_dask_delayed_futures.vrb)
+Overfull \vbox (6.83711pt too high) detected at line 632
  []
 
 
 
-[22
+[26
+
+]
+\openout4 = `03_dask_delayed_futures.vrb'.
+
+ (./03_dask_delayed_futures.vrb)
+
+[27
+
+]
+
+[28
+
+]
+Overfull \vbox (1.82138pt too high) detected at line 717
+ []
+
+
+
+[29
+
+]
+
+[30
 
 ]
 \tf@nav=\write6
@@ -1207,25 +1188,24 @@ Package rerunfilecheck Info: File `03_dask_delayed_futures.out' has not changed
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26958 strings out of 473190
- 524749 string characters out of 5715801
- 1174975 words of memory out of 5000000
- 49633 multiletter control sequences out of 15000+600000
- 567415 words of font info for 67 fonts, out of 8000000 for 9000
+ 26989 strings out of 473190
+ 524978 string characters out of 5715801
+ 1171975 words of memory out of 5000000
+ 49651 multiletter control sequences out of 15000+600000
+ 567278 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,415b,1344s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,415b,1358s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
 ></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb>
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></
-usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
-sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr
-/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on 03_dask_delayed_futures.pdf (22 pages, 172367 bytes).
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on 03_dask_delayed_futures.pdf (30 pages, 168492 bytes).
 PDF statistics:
- 700 PDF objects out of 1000 (max. 8388607)
- 604 compressed objects within 7 object streams
- 45 named destinations out of 1000 (max. 500000)
+ 916 PDF objects out of 1000 (max. 8388607)
+ 805 compressed objects within 9 object streams
+ 61 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

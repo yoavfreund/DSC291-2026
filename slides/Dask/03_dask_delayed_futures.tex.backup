@@ -10,7 +10,7 @@
 
 % Code listing setup
 \lstset{
-    basicstyle=\ttfamily\scriptsize,
+    basicstyle=\ttfamily\footnotesize,
     keywordstyle=\color{blue}\bfseries,
     commentstyle=\color{green!60!black},
     stringstyle=\color{red},
@@ -29,8 +29,7 @@
 
 \frame{\titlepage}
 
-\begin{frame}\small
-The Problem
+\begin{frame}{The Problem}
 \textbf{Not All Code is Array/DataFrame Operations:}
 \begin{itemize}
     \item Custom functions and workflows
@@ -40,7 +39,7 @@ The Problem
     \item Machine learning preprocessing
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Need to Parallelize:}
 \begin{itemize}
     \item For loops with independent iterations
@@ -48,22 +47,22 @@ The Problem
     \item Independent function calls
 \end{itemize}
 
-\vspace{0.05cm}
+\vspace{0.2cm}
 \begin{center}
-\begin{tikzpicture}[scale=0.55, every node/.style={font=\scriptsize}]
-    % Sequential - explicit positioning with much more spacing
-    \node[text width=2.5cm, align=center, font=\small] (seq-label) at (-5,2) {\textbf{Sequential (slow):}};
-    \node[draw, rectangle, fill=blue!20, text width=1cm, align=center] (t1) at (-6.5,0.5) {Task1};
-    \node[draw, rectangle, fill=blue!20, text width=1cm, align=center] (t2) at (-5,0.5) {Task2};
-    \node[draw, rectangle, fill=blue!20, text width=1cm, align=center] (t3) at (-3.5,0.5) {Task3};
+\begin{tikzpicture}[node distance=1cm, auto, scale=0.8, every node/.style={font=\footnotesize}]
+    % Sequential
+    \node[text width=3cm, align=center, font=\small] (seq-label) {\textbf{Sequential (slow):}};
+    \node[draw, rectangle, fill=blue!20, below of=seq-label, xshift=-1cm] (t1) {Task1};
+    \node[draw, rectangle, fill=blue!20, below of=seq-label] (t2) {Task2};
+    \node[draw, rectangle, fill=blue!20, below of=seq-label, xshift=1cm] (t3) {Task3};
     \draw[->, thick] (t1) -- (t2);
     \draw[->, thick] (t2) -- (t3);
     
-    % Parallel - explicit positioning with much more spacing
-    \node[text width=2.5cm, align=center, font=\small] (par-label) at (5,2) {\textbf{Parallel (fast):}};
-    \node[draw, rectangle, fill=green!20, text width=1cm, align=center] (p1) at (3.5,0.5) {Task1};
-    \node[draw, rectangle, fill=green!20, text width=1cm, align=center] (p2) at (5,0.5) {Task2};
-    \node[draw, rectangle, fill=green!20, text width=1cm, align=center] (p3) at (6.5,0.5) {Task3};
+    % Parallel
+    \node[text width=3cm, align=center, font=\small, below of=t2, yshift=-0.7cm] (par-label) {\textbf{Parallel (fast):}};
+    \node[draw, rectangle, fill=green!20, below of=par-label, xshift=-1cm] (p1) {Task1};
+    \node[draw, rectangle, fill=green!20, below of=par-label] (p2) {Task2};
+    \node[draw, rectangle, fill=green!20, below of=par-label, xshift=1cm] (p3) {Task3};
     \draw[<->, thick, dashed] (p1) -- (p2);
     \draw[<->, thick, dashed] (p2) -- (p3);
 \end{tikzpicture}
@@ -91,7 +90,7 @@ The Problem
 \end{itemize}
 \end{columns}
 
-\vspace{0.2cm}
+\vspace{0.5cm}
 \textbf{Key Difference:}
 \begin{itemize}
     \item Delayed: Plan first, execute later
@@ -108,7 +107,7 @@ The Problem
     \item Enables parallelization
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Basic Concept:}
 \begin{itemize}
     \item Function call $\rightarrow$ Delayed object (lightweight)
@@ -116,8 +115,7 @@ The Problem
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]\scriptsize
-Basic Delayed Example
+\begin{frame}[fragile]{Basic Delayed Example}
 \begin{lstlisting}
 from dask import delayed
 
@@ -141,7 +139,7 @@ print(final)  # 2
     \item Execution happens at \texttt{.compute()}
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Timeline:}
 \begin{enumerate}
     \item \texttt{@delayed} decorates function
@@ -150,8 +148,7 @@ print(final)  # 2
 \end{enumerate}
 \end{frame}
 
-\begin{frame}[fragile]\small
-Delayed: Multiple Functions
+\begin{frame}[fragile]{Delayed: Multiple Functions}
 \begin{lstlisting}
 @delayed
 def add(x, y):
@@ -165,10 +162,7 @@ z = add(x, y)  # Delayed, depends on x and y
 # Execute all at once
 z.compute()  # Executes inc(1), inc(2), then add(3, 4)
 \end{lstlisting}
-\end{frame}
 
-\begin{frame}\small
-Delayed: Multiple Functions - Visualization
 \textbf{Key Features:}
 \begin{itemize}
     \item Builds dependency graph
@@ -176,18 +170,18 @@ Delayed: Multiple Functions - Visualization
     \item Parallel execution when possible
 \end{itemize}
 
-\vspace{0.05cm}
+\vspace{0.2cm}
 \begin{center}
-\begin{tikzpicture}[scale=0.6, every node/.style={font=\scriptsize}]
-    % Input nodes - explicit positioning with more spacing
-    \node[draw, rectangle, fill=blue!20, text width=1.2cm, align=center] (inc1) at (-3,1.2) {inc(1)};
-    \node[draw, rectangle, fill=blue!20, text width=1.2cm, align=center] (inc2) at (-3,-0.8) {inc(2)};
+\begin{tikzpicture}[node distance=1.2cm, auto, scale=0.85, every node/.style={font=\footnotesize}]
+    % Input nodes
+    \node[draw, rectangle, fill=blue!20] (inc1) {inc(1)};
+    \node[draw, rectangle, fill=blue!20, below of=inc1] (inc2) {inc(2)};
     
-    % Add node - more space
-    \node[draw, rectangle, fill=green!20, text width=1.5cm, align=center] (add) at (0,0.2) {add(3, 4)};
+    % Add node
+    \node[draw, rectangle, fill=green!20, right of=inc1, xshift=1.5cm, yshift=-0.6cm] (add) {add(3, 4)};
     
-    % Result node - more space
-    \node[draw, rectangle, fill=red!20, text width=1.2cm, align=center] (result) at (3.5,0.2) {result};
+    % Result node
+    \node[draw, rectangle, fill=red!20, right of=add, xshift=1.2cm] (result) {result};
     
     % Edges
     \draw[->, thick] (inc1) -- (add);
@@ -210,7 +204,7 @@ z.visualize()
     \item Helps understand execution plan
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Benefits:}
 \begin{itemize}
     \item See computation structure
@@ -220,8 +214,7 @@ z.visualize()
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]\small
-Delayed: For Loops
+\begin{frame}[fragile]{Delayed: For Loops}
 \textbf{Parallelizing Loops:}
 \begin{lstlisting}
 @delayed
@@ -235,10 +228,7 @@ results = [process_file(f) for f in files]
 # Execute all in parallel
 final = dask.compute(*results)
 \end{lstlisting}
-\end{frame}
 
-\begin{frame}\small
-Delayed: For Loops - Visualization
 \textbf{Key Advantage:}
 \begin{itemize}
     \item Loop iterations run in parallel
@@ -246,30 +236,29 @@ Delayed: For Loops - Visualization
     \item Automatic dependency handling
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.2cm}
 \begin{center}
-\begin{tikzpicture}[scale=0.55, every node/.style={font=\scriptsize}]
-    % Sequential - explicit positioning with much more spacing
-    \node[text width=2.5cm, align=center, font=\small] (seq-label) at (-5,2) {\textbf{Sequential (slow):}};
-    \node[draw, rectangle, fill=blue!20, text width=1cm, align=center] (f1) at (-6.5,0.5) {file1};
-    \node[draw, rectangle, fill=blue!20, text width=1cm, align=center] (f2) at (-5,0.5) {file2};
-    \node[draw, rectangle, fill=blue!20, text width=1cm, align=center] (f3) at (-3.5,0.5) {file3};
+\begin{tikzpicture}[node distance=1cm, auto, scale=0.8, every node/.style={font=\footnotesize}]
+    % Sequential
+    \node[text width=2.5cm, align=center, font=\small] (seq-label) {\textbf{Sequential (slow):}};
+    \node[draw, rectangle, fill=blue!20, below of=seq-label, xshift=-0.8cm] (f1) {file1};
+    \node[draw, rectangle, fill=blue!20, below of=seq-label] (f2) {file2};
+    \node[draw, rectangle, fill=blue!20, below of=seq-label, xshift=0.8cm] (f3) {file3};
     \draw[->, thick] (f1) -- (f2);
     \draw[->, thick] (f2) -- (f3);
     
-    % Parallel - explicit positioning with much more spacing
-    \node[text width=2.5cm, align=center, font=\small] (par-label) at (5,2) {\textbf{Parallel (fast):}};
-    \node[draw, rectangle, fill=green!20, text width=1cm, align=center] (p1) at (3.5,0.5) {file1};
-    \node[draw, rectangle, fill=green!20, text width=1cm, align=center] (p2) at (5,0.5) {file2};
-    \node[draw, rectangle, fill=green!20, text width=1cm, align=center] (p3) at (6.5,0.5) {file3};
+    % Parallel
+    \node[text width=2.5cm, align=center, font=\small, below of=f2, yshift=-0.7cm] (par-label) {\textbf{Parallel (fast):}};
+    \node[draw, rectangle, fill=green!20, below of=par-label, xshift=-0.8cm] (p1) {file1};
+    \node[draw, rectangle, fill=green!20, below of=par-label] (p2) {file2};
+    \node[draw, rectangle, fill=green!20, below of=par-label, xshift=0.8cm] (p3) {file3};
     \draw[<->, thick, dashed] (p1) -- (p2);
     \draw[<->, thick, dashed] (p2) -- (p3);
 \end{tikzpicture}
 \end{center}
 \end{frame}
 
-\begin{frame}[fragile]\small
-Real-World Pattern: Read-Transform-Write
+\begin{frame}[fragile]{Real-World Pattern: Read-Transform-Write}
 \begin{lstlisting}
 @delayed
 def process_file(filename):
@@ -290,10 +279,7 @@ files = ['file1.csv', 'file2.csv', 'file3.csv']
 tasks = [process_file(f) for f in files]
 dask.compute(*tasks)
 \end{lstlisting}
-\end{frame}
 
-\begin{frame}\small
-Real-World Pattern: Benefits
 \textbf{Common Workflow:}
 \begin{itemize}
     \item Read data from files
@@ -303,8 +289,7 @@ Real-World Pattern: Benefits
 \end{itemize}
 \end{frame}
 
-\begin{frame}\small
-What are Futures?
+\begin{frame}[fragile]{What are Futures?}
 \textbf{Futures:}
 \begin{itemize}
     \item Eager, non-blocking execution
@@ -313,31 +298,28 @@ What are Futures?
     \item Can check status anytime
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Key Difference from Delayed:}
 \begin{itemize}
     \item Delayed: Lazy (wait for compute)
     \item Futures: Eager (start immediately)
 \end{itemize}
-\end{frame}
 
-\begin{frame}\small
-What are Futures? - Visualization
-\vspace{0.1cm}
+\vspace{0.2cm}
 \begin{center}
-\begin{tikzpicture}[scale=0.6, every node/.style={font=\scriptsize}]
-    % Time 0 - explicit positioning with more spacing
-    \node[draw, rectangle, fill=blue!20, text width=2cm, align=center] (submit) at (-3,2.5) {Submit task};
-    \node[draw, rectangle, fill=yellow!20, text width=2cm, align=center] (pending) at (1,2.5) {Future\\(pending)};
+\begin{tikzpicture}[node distance=1.2cm, auto, scale=0.85, every node/.style={font=\footnotesize}]
+    % Time 0
+    \node[draw, rectangle, fill=blue!20, text width=2cm, align=center] (submit) {Submit task};
+    \node[draw, rectangle, fill=yellow!20, right of=submit, xshift=0.4cm, text width=2cm, align=center] (pending) {Future\\(pending)};
     \draw[->, thick] (submit) -- node[above, font=\tiny] {Time 0} (pending);
     
-    % Time 1 - explicit positioning with more spacing
-    \node[draw, rectangle, fill=orange!20, text width=2cm, align=center] (exec) at (-1,0) {Task executing};
+    % Time 1
+    \node[draw, rectangle, fill=orange!20, below of=submit, text width=2cm, align=center] (exec) {Task executing};
     \node[below of=exec, yshift=0.2cm, font=\tiny] {Time 1};
     
-    % Time 2 - explicit positioning with more spacing
-    \node[draw, rectangle, fill=green!20, text width=2cm, align=center] (done) at (-3,-2.5) {Task done};
-    \node[draw, rectangle, fill=green!20, text width=2cm, align=center] (finished) at (1,-2.5) {Future\\(finished)};
+    % Time 2
+    \node[draw, rectangle, fill=green!20, below of=exec, text width=2cm, align=center] (done) {Task done};
+    \node[draw, rectangle, fill=green!20, right of=done, xshift=0.4cm, text width=2cm, align=center] (finished) {Future\\(finished)};
     \draw[->, thick] (done) -- node[above, font=\tiny] {Time 2} (finished);
     
     % Vertical flow
@@ -347,8 +329,7 @@ What are Futures? - Visualization
 \end{center}
 \end{frame}
 
-\begin{frame}[fragile]\small
-Futures: Basic Example
+\begin{frame}[fragile]{Futures: Basic Example}
 \begin{lstlisting}
 from dask.distributed import Client
 
@@ -364,10 +345,7 @@ print(future.status)  # 'pending' or 'finished'
 # Get result (blocks until done)
 result = future.result()  # Waits if not done
 \end{lstlisting}
-\end{frame}
 
-\begin{frame}\small
-Futures: Basic Example - Features
 \textbf{Key Features:}
 \begin{itemize}
     \item Immediate submission
@@ -376,7 +354,7 @@ Futures: Basic Example - Features
     \item Result retrieval
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Timeline:}
 \begin{itemize}
     \item \texttt{submit()}: Returns immediately
@@ -405,7 +383,7 @@ result = future.result()
     \item \textbf{error}: Task failed
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Use Cases:}
 \begin{itemize}
     \item Monitor progress
@@ -414,8 +392,7 @@ result = future.result()
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]\small
-Futures: Map Pattern
+\begin{frame}[fragile]{Futures: Map Pattern}
 \begin{lstlisting}
 # Apply function to sequence
 file_list = ['file1.csv', 'file2.csv', 'file3.csv']
@@ -431,29 +408,26 @@ results = client.gather(futures)
     \item \texttt{map()}: Apply to sequence
     \item Both return Futures
 \end{itemize}
-\end{frame}
 
-\begin{frame}\small
-Futures: Map Pattern - Visualization
-\vspace{0.1cm}
+\vspace{0.2cm}
 \begin{center}
-\begin{tikzpicture}[scale=0.6, every node/.style={font=\scriptsize}]
-    % File list - explicit positioning with more vertical spacing
-    \node[draw, rectangle, fill=blue!20, text width=2.5cm, align=center] (files) at (0,3.5) {file\_list:\\
+\begin{tikzpicture}[node distance=1.2cm, auto, scale=0.85, every node/.style={font=\footnotesize}]
+    % File list
+    \node[draw, rectangle, fill=blue!20, text width=2.5cm, align=center] (files) {file\_list:\\
         f1, f2, f3};
     
-    % Map operation - explicit positioning
-    \node[draw, rectangle, fill=orange!20, text width=2.5cm, align=center] (map) at (0,1.8) {map(process\_file)};
+    % Map operation
+    \node[draw, rectangle, fill=orange!20, below of=files, text width=2.5cm, align=center] (map) {map(process\_file)};
     
-    % Futures - explicit positioning
-    \node[draw, rectangle, fill=yellow!20, text width=2.5cm, align=center] (futures) at (0,0) {futures:\\
+    % Futures
+    \node[draw, rectangle, fill=yellow!20, below of=map, text width=2.5cm, align=center] (futures) {futures:\\
         F1, F2, F3};
     
-    % Gather operation - explicit positioning
-    \node[draw, rectangle, fill=orange!20, text width=2.5cm, align=center] (gather) at (0,-1.8) {gather};
+    % Gather operation
+    \node[draw, rectangle, fill=orange!20, below of=futures, text width=2.5cm, align=center] (gather) {gather};
     
-    % Results - explicit positioning
-    \node[draw, rectangle, fill=green!20, text width=2.5cm, align=center] (results) at (0,-3.5) {results:\\
+    % Results
+    \node[draw, rectangle, fill=green!20, below of=gather, text width=2.5cm, align=center] (results) {results:\\
         r1, r2, r3};
     
     % Edges
@@ -486,7 +460,7 @@ Futures: Map Pattern - Visualization
 \end{itemize}
 \end{columns}
 
-\vspace{0.2cm}
+\vspace{0.5cm}
 \textbf{Timeline Comparison:}
 \begin{itemize}
     \item Delayed: Build graph $\rightarrow$ Optimize $\rightarrow$ Execute
@@ -515,7 +489,7 @@ Futures: Map Pattern - Visualization
 \end{itemize}
 \end{columns}
 
-\vspace{0.2cm}
+\vspace{0.5cm}
 \textbf{Decision Flow:}
 \begin{enumerate}
     \item Complex dependencies? $\rightarrow$ Delayed
@@ -525,8 +499,7 @@ Futures: Map Pattern - Visualization
 \end{enumerate}
 \end{frame}
 
-\begin{frame}[fragile]\small
-Futures: Real-Time Monitoring
+\begin{frame}[fragile]{Futures: Real-Time Monitoring}
 \begin{lstlisting}
 # Submit multiple tasks
 futures = [client.submit(process, f) for f in files]
@@ -540,10 +513,7 @@ for future in futures:
         except Exception as e:
             print(f"Error: {e}")
 \end{lstlisting}
-\end{frame}
 
-\begin{frame}\small
-Futures: Real-Time Monitoring - Benefits
 \textbf{Benefits:}
 \begin{itemize}
     \item See progress in real-time
@@ -551,7 +521,7 @@ Futures: Real-Time Monitoring - Benefits
     \item Identify failures early
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Use Cases:}
 \begin{itemize}
     \item Long-running tasks
@@ -560,8 +530,7 @@ Futures: Real-Time Monitoring - Benefits
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]\small
-Combining Delayed and Futures
+\begin{frame}[fragile]{Combining Delayed and Futures}
 \begin{lstlisting}
 @delayed
 def complex_task(data):
@@ -574,10 +543,7 @@ def complex_task(data):
 result = complex_task(large_data)
 final = result.compute()
 \end{lstlisting}
-\end{frame}
 
-\begin{frame}\small
-Combining Delayed and Futures - Visualization
 \textbf{Hybrid Approach:}
 \begin{itemize}
     \item Delayed for overall structure
@@ -585,14 +551,14 @@ Combining Delayed and Futures - Visualization
     \item Best of both worlds
 \end{itemize}
 
-\vspace{0.05cm}
+\vspace{0.2cm}
 \begin{center}
-\begin{tikzpicture}[scale=0.65, every node/.style={font=\scriptsize}]
-    % Outer delayed graph - explicit positioning with more spacing
-    \node[draw, rectangle, fill=blue!20, text width=3cm, align=center, minimum height=1.2cm] (outer) at (0,1.5) {\textbf{Outer:}\\Delayed graph\\(optimized)};
+\begin{tikzpicture}[node distance=1.2cm, auto, scale=0.85, every node/.style={font=\footnotesize}]
+    % Outer delayed graph
+    \node[draw, rectangle, fill=blue!20, text width=3cm, align=center, minimum height=1.2cm] (outer) {\textbf{Outer:}\\Delayed graph\\(optimized)};
     
-    % Inner futures - explicit positioning with more spacing
-    \node[draw, rectangle, fill=green!20, text width=3cm, align=center, minimum height=1.2cm] (inner) at (0,-1.5) {\textbf{Inner:}\\Futures\\(immediate)};
+    % Inner futures
+    \node[draw, rectangle, fill=green!20, below of=outer, text width=3cm, align=center, minimum height=1.2cm] (inner) {\textbf{Inner:}\\Futures\\(immediate)};
     
     % Connection
     \draw[<->, thick, dashed] (outer.south) -- (inner.north);
@@ -600,8 +566,7 @@ Combining Delayed and Futures - Visualization
 \end{center}
 \end{frame}
 
-\begin{frame}[fragile]\small
-Error Handling: Delayed
+\begin{frame}[fragile]{Error Handling: Delayed}
 \begin{lstlisting}
 @delayed
 def risky_function(x):
@@ -622,7 +587,7 @@ except ValueError as e:
     \item Graph execution stops on error
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Best Practice:}
 \begin{itemize}
     \item Validate inputs early
@@ -631,8 +596,7 @@ except ValueError as e:
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile]\small
-Error Handling: Futures
+\begin{frame}[fragile]{Error Handling: Futures}
 \begin{lstlisting}
 # Submit risky task
 future = client.submit(risky_function, arg)
@@ -652,7 +616,7 @@ except Exception as e:
     \item Non-blocking error checking
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Advantages:}
 \begin{itemize}
     \item Immediate error detection
@@ -670,7 +634,7 @@ except Exception as e:
     \item Debugging computation structure
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Tips:}
 \begin{itemize}
     \item Leverage graph optimization
@@ -679,7 +643,7 @@ except Exception as e:
     \item Keep functions pure (no side effects)
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Key Principles:}
 \begin{itemize}
     \item Build clear dependency graphs
@@ -697,7 +661,7 @@ except Exception as e:
     \item When immediate execution is important
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Tips:}
 \begin{itemize}
     \item Monitor progress regularly
@@ -706,7 +670,7 @@ except Exception as e:
     \item Don't create too many futures at once
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Key Principles:}
 \begin{itemize}
     \item Submit tasks in batches
@@ -725,7 +689,7 @@ except Exception as e:
     \item Both enable parallel execution
 \end{itemize}
 
-\vspace{0.2cm}
+\vspace{0.5cm}
 \textbf{When to Use What:}
 \begin{itemize}
     \item Complex workflows $\rightarrow$ Delayed
@@ -734,7 +698,7 @@ except Exception as e:
     \item Need monitoring $\rightarrow$ Futures
 \end{itemize}
 
-\vspace{0.1cm}
+\vspace{0.3cm}
 \textbf{Next Steps:}
 \begin{itemize}
     \item Practice with real examples

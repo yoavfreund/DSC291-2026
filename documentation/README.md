@@ -18,7 +18,7 @@ While filling the sheet, please follow the instructions shared by the professor 
 
 - **Treasurer**: Responsible for starting and stopping EC2 instances and monitoring AWS costs. 
 
-- **Code Manager**: Responsible for code organization and maintaining the GitHub repository.
+- **Code Manager**: Responsible for code organization and maintaining the team's GitHub repository.
 
 - **Communicator**: Responsible for compiling and submitting the final report for each project stage.
 
