@@ -34,6 +34,12 @@ Do aws s3 ls if that succeeds → **S3 CLI access is working.** This command lis
 aws s3 ls
 ```
 
+If `aws s3 ls` doesn’t work, try listing the course bucket directly:
+
+```bash
+aws s3 ls s3://dsc291-ucsd/
+```
+
 <p align="center">
   <img src="assets/aws_s3_cli.png" alt="aws s3 cli">
 </p>

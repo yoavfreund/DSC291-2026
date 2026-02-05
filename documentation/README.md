@@ -71,6 +71,12 @@ Choose how you want to work with S3 datasets (CLI is the preferred route):
 **Using Python** (for data analysis - recommended)  
 📖 **[S3_python_usage.md](Students/S3_python_usage.md)**
 
+### Step 4: Monitor Your EC2 Instance
+
+Monitor CPU, RAM, Network, and Storage so you can avoid bottlenecks and manage cost.
+
+📖 **[monitoring.md](Students/monitoring.md)**
+
 ---
 
 ## Troubleshooting
