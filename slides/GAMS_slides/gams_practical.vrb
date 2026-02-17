@@ -1,0 +1,17 @@
+\frametitle{Code: choosing terms}
+\begin{lstlisting}
+from pygam import LinearGAM, PoissonGAM, l, s, f, te
+
+# Linear only: straight-line effects
+gam_linear = LinearGAM(l(0) + l(1)).fit(X, y)  # .fit() trains the model
+
+# Smooth (default for continuous): flexible non-linear effects
+gam_smooth = LinearGAM(s(0) + s(1)).fit(X, y)
+
+# Mixed: linear + smooth + factor (categorical)
+gam_mixed = LinearGAM(l(0) + s(1) + f(2)).fit(X, y)
+
+# With interaction: tensor-product surface over features 1 and 2
+gam_int = PoissonGAM(s(0) + te(1, 2) + s(3)).fit(X, y)
+# te(1,2) learns a 2D smooth f(x1, x2) that is not just f1(x1)+f2(x2)
+\end{lstlisting}
