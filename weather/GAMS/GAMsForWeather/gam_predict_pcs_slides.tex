@@ -1,0 +1,187 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\lstset{basicstyle=\ttfamily\small, breaklines=true, language=Python}
+
+\title{GAMs to Predict TAVG PC Coefficients from Geography}
+\author{CSE255}
+\institute{}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%==============================================================================
+\section{Introduction}
+%==============================================================================
+
+\begin{frame}{Overview}
+\begin{itemize}
+\item Use PCA of yearly TAVG (temperature) profiles
+\item Predict PC1, PC2, PC3 from latitude, distance to coast, longitude, elevation
+\item Start with visualizing the PCA structure, then fit GAMs
+\end{itemize}
+\end{frame}
+
+%==============================================================================
+\section{PCA Visualization}
+%==============================================================================
+
+\begin{frame}{Load PCA Results}
+Load pre-computed TAVG PCA from pickle:
+\begin{lstlisting}
+with open(PCA_PATH, 'rb') as f:
+    pca_results = pickle.load(f)
+pca_mean = pca_results['mean']        # shape (365,)
+pca_components = pca_results['components']  # shape (10, 365)
+evr = pca_results['explained_variance_ratios']
+\end{lstlisting}
+\vspace{0.3em}
+Top 3 variance ratios: PC1 $\approx$ 76\%, PC2 $\approx$ 17\%, PC3 $\approx$ 3\%
+\end{frame}
+
+\begin{frame}{Mean and Top 3 Eigenvectors}
+\begin{itemize}
+\item \textbf{Left y-axis:} mean TAVG profile (day 1--365)
+\item \textbf{Right y-axis (twin):} PC1, PC2, PC3 eigenvectors
+\item PC1 captures main seasonal cycle; PC2/PC3 capture phase and higher-order patterns
+\end{itemize}
+\vspace{0.3em}
+% Export from notebook and uncomment:
+% \includegraphics[width=0.85\textwidth]{mean_and_pcs.pdf}
+\end{frame}
+
+\begin{frame}{Variance Explained}
+\begin{itemize}
+\item Bar chart: percentage variance explained per PC (PC1--PC10)
+\item Cumulative line overlay (e.g., red)
+\item Top 3 PCs explain $\approx$ 95\% of variance for TAVG
+\end{itemize}
+\vspace{0.3em}
+% \includegraphics[width=0.85\textwidth]{variance_explained.pdf}
+\end{frame}
+
+%==============================================================================
+\section{Data Preparation}
+%==============================================================================
+
+\begin{frame}{Compute PC Coefficients}
+Project each station-year's daily TAVG onto PCA components:
+\begin{lstlisting}
+daily_values = np.nan_to_num(tavg[daily_cols].values, nan=0.0)
+normalized = daily_values - pca_mean[np.newaxis, :]
+for i in range(3):
+    tavg[f'PC{i+1}'] = normalized @ pca_components[i]
+\end{lstlisting}
+PC coefficient = (data $-$ mean) $\cdot$ component
+\end{frame}
+
+\begin{frame}{Aggregate by Station}
+\begin{lstlisting}
+agg = tavg.groupby('ID').agg({
+    'latitude': 'first', 'longitude': 'first', 'elevation': 'first',
+    'dist_to_coast': 'first', 'PC1': 'mean', 'PC2': 'mean', 'PC3': 'mean'
+}).reset_index()
+\end{lstlisting}
+\begin{itemize}
+\item One row per station
+\item Mean PC coefficients across years
+\item Drop invalid elevation ($-999.9$)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Predictor Matrix}
+\begin{lstlisting}
+predictor_cols = ['latitude', 'dist_to_coast', 'longitude', 'elevation']
+X = agg[predictor_cols].to_numpy(dtype=float)
+\end{lstlisting}
+Optional: subsample to 50k rows if large. Response: $y \in \{\mathrm{PC1}, \mathrm{PC2}, \mathrm{PC3}\}$.
+\end{frame}
+
+%==============================================================================
+\section{GAM Modeling}
+%==============================================================================
+
+\begin{frame}{GAM Specification}
+For each response PC1, PC2, PC3:
+\begin{lstlisting}
+gam = LinearGAM(s(0, n_splines=20) + l(1) + l(2) + l(3))
+gam.gridsearch(X, y, progress=False)
+\end{lstlisting}
+\begin{itemize}
+\item \texttt{s(0)}: spline on latitude
+\item \texttt{l(1)}, \texttt{l(2)}, \texttt{l(3)}: linear terms for dist\_to\_coast, longitude, elevation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Partial Dependence Plots}
+\begin{itemize}
+\item 3$\times$4 grid: rows = PC1, PC2, PC3; columns = predictors
+\item For each term: \texttt{generate\_X\_grid}, \texttt{partial\_dependence(..., width=0.95)}
+\item Shaded bands show 95\% confidence intervals
+\end{itemize}
+\vspace{0.3em}
+% \includegraphics[width=0.9\textwidth]{partial_dependence.pdf}
+\end{frame}
+
+%==============================================================================
+\section{Goodness of Fit}
+%==============================================================================
+
+\begin{frame}{Metrics Table}
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{R²} & \textbf{MAE} & \textbf{RMSE} & \textbf{AIC} \\
+\midrule
+PC1 & 0.77 & 531 & 739 & 265653 \\
+PC2 & 0.57 & 333 & 468 & 248486 \\
+PC3 & 0.33 & 88 & 120 & 197497 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Column Definitions}
+\begin{itemize}
+\item \textbf{Model}: PC coefficient predicted
+\item \textbf{R²}: Pseudo R² (deviance explained); higher = better fit
+\item \textbf{MAE}: Mean absolute error; lower = better
+\item \textbf{RMSE}: Root mean squared error; lower = better
+\item \textbf{AIC}: Akaike Information Criterion; lower = better (balances fit vs.\ complexity)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Akaike Information Criterion (AIC)}
+\textbf{Formula:} AIC $= 2k - 2\ln(\hat{L})$
+\begin{itemize}
+\item $k$ = number of parameters
+\item $\hat{L}$ = maximized likelihood
+\item Equivalently: AIC $= D + 2k$, with deviance $D = -2\ln(\hat{L})$
+\end{itemize}
+\vspace{0.5em}
+\textbf{Interpretation:}
+\begin{itemize}
+\item $-2\ln(\hat{L})$ measures lack of fit
+\item $2k$ penalizes complexity
+\item Lower AIC is better; $\Delta$AIC $> 2$ often meaningful, $> 6$ strong preference
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Summary}
+\begin{itemize}
+\item TAVG PCA: mean + top 3 eigenvectors, variance explained
+\item Geographic predictors: latitude (spline), dist\_to\_coast, longitude, elevation (linear)
+\item LinearGAM fits PC1, PC2, PC3; PC1 best explained (R² $\approx$ 0.77)
+\item Partial dependence plots reveal non-linear effects of latitude
+\end{itemize}
+\end{frame}
+
+\end{document}
