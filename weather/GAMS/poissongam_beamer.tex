@@ -56,15 +56,23 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Fit PoissonGAM per Year}
+\begin{frame}[fragile]{Fit PoissonGAM per Year}
   \begin{itemize}
     \item $s(0)$ = smooth spline on day of year
     \item \texttt{n\_splines=12}, \texttt{spline\_order=3}
     \item Separate model per year for year-specific seasonal patterns
+    \item \texttt{gridsearch} tunes the smoothing penalty $\lambda$ (reported in the notebook)
   \end{itemize}
   \begin{exampleblock}{Code (sparingly)}
 \begin{lstlisting}
-gam = PoissonGAM(s(0, n_splines=12, spline_order=3)).fit(X, y)
+# Build the model (structure) first...
+gam = PoissonGAM(s(0, n_splines=12, spline_order=3))
+
+# ...then tune the smoothing penalty lambda via CV grid search
+gam = gam.gridsearch(X, y)
+
+# Selected smoothing strength (lambda) used for this fit:
+print("selected lambda =", gam.lam)
 \end{lstlisting}
   \end{exampleblock}
 \end{frame}
@@ -78,6 +86,9 @@ gam = PoissonGAM(s(0, n_splines=12, spline_order=3)).fit(X, y)
   \end{itemize}
   \begin{center}
     \includegraphics[width=0.75\textwidth]{beamer_figures/fig_02.png}
+    
+    \vspace{1mm}
+    \scriptsize Selected smoothing $\lambda$ (CV \texttt{gridsearch}): \texttt{[[63.0957344480193]]}
   \end{center}
 \end{frame}
 
@@ -86,18 +97,16 @@ gam = PoissonGAM(s(0, n_splines=12, spline_order=3)).fit(X, y)
     \column{0.5\textwidth}
     \textbf{2013--2023 aggregate}\\
     \includegraphics[width=\textwidth]{beamer_figures/fig_03.png}
+    
+    \vspace{1mm}
+    \scriptsize Selected smoothing $\lambda$: \texttt{[[1.0]]}
     \column{0.5\textwidth}
     \textbf{All years aggregate}\\
     \includegraphics[width=\textwidth]{beamer_figures/fig_04.png}
+    
+    \vspace{1mm}
+    \scriptsize Selected smoothing $\lambda$: \texttt{[[0.015848931924611134]]}
   \end{columns}
-\end{frame}
-
-\begin{frame}{Year-to-Year Fit Summary}
-  \begin{itemize}
-    \item \textbf{Top:} Year-level means (aggregated)---observed and predicted can look very close even when period-level errors exist
-    \item \textbf{Middle:} Period-level scatter---spread around diagonal expected for Poisson counts
-    \item \textbf{Bottom:} AIC by year---lower is better
-  \end{itemize}
 \end{frame}
 
 \begin{frame}{Why Deviance Residuals Instead of Raw?}
@@ -156,7 +165,7 @@ gam = PoissonGAM(s(0, n_splines=12, spline_order=3)).fit(X, y)
     \item Log link ensures positive predictions
     \item Spline terms model non-linear relationships
     \item Deviance residuals preferred over raw for diagnostics
-    \item Year-level aggregates can look good even with period-level spread
+    \item Year-level totals can match well even if individual 2-week periods are noisy: errors can cancel when you sum/average over the whole year
   \end{enumerate}
 \end{frame}
 

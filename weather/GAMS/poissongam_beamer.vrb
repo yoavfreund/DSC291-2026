@@ -1,0 +1,19 @@
+\frametitle{Fit PoissonGAM per Year}
+\begin{itemize}
+    \item $s(0)$ = smooth spline on day of year
+    \item \texttt{n\_splines=12}, \texttt{spline\_order=3}
+    \item Separate model per year for year-specific seasonal patterns
+    \item \texttt{gridsearch} tunes the smoothing penalty $\lambda$ (reported in the notebook)
+  \end{itemize}
+  \begin{exampleblock}{Code (sparingly)}
+\begin{lstlisting}
+# Build the model (structure) first...
+gam = PoissonGAM(s(0, n_splines=12, spline_order=3))
+
+# ...then tune the smoothing penalty lambda via CV grid search
+gam = gam.gridsearch(X, y)
+
+# Selected smoothing strength (lambda) used for this fit:
+print("selected lambda =", gam.lam)
+\end{lstlisting}
+  \end{exampleblock}
